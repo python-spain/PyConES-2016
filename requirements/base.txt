@@ -1,0 +1,12 @@
+Django==1.7.7
+django-braces==1.4.0
+django-extensions==1.5
+django-model-utils==2.2
+ipython==2.4.1
+logutils==0.3.3
+django-pipeline==1.4.6
+sphinx-rtd-theme==0.1.6
+Sphinx==1.2.3
+django-suit==0.2.12
+django-modeltranslation==0.8
+easy-thumbnails==2.2
