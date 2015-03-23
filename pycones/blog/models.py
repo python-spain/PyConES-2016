@@ -8,6 +8,7 @@ from django.utils.encoding import python_2_unicode_compatible
 from django.utils.text import slugify
 from django.utils.translation import ugettext as _
 from django_extensions.db.models import TimeStampedModel
+from markupfield.fields import MarkupField
 
 from blog.managers import ArticlesManager
 from core.helpers.files import UploadToDir
@@ -26,7 +27,9 @@ class AbstractArticle(TimeStampedModel):
     author = models.ForeignKey(settings.AUTH_USER_MODEL)
     title = models.TextField()
     slug = models.SlugField(blank=True, unique=True)
-    content = models.TextField(null=True, blank=True)
+    content = MarkupField(default="", blank=True)
+
+    scheduled_at = models.DateTimeField(null=True, blank=True)
 
     outstanding_image = models.ImageField(upload_to=UploadToDir('images', random_name=False), null=True, blank=True)
 

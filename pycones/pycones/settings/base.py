@@ -61,6 +61,14 @@ TIME_ZONE = 'UTC'
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#language-code
 LANGUAGE_CODE = 'es-es'
+ugettext = lambda s: s
+LANGUAGES = (
+    ('en', ugettext('English')),
+    ('es', ugettext('Spanish')),
+)
+LOCALE_PATHS = (
+    normpath(join(SITE_ROOT, 'locale')),
+)
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#site-id
 SITE_ID = 1
@@ -202,7 +210,12 @@ INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS
 
 ########## DJANGO SUIT CONFIGURATION
 SUIT_CONFIG = {
-    'ADMIN_NAME': 'PyConES 2015'
+    'ADMIN_NAME': 'PyConES 2015',
+    'MENU_ICONS': {
+        'auth': 'icon-lock',
+        'blog': 'icon-pencil',
+        'sites': 'icon-leaf',
+    }
 }
 ########## END DJANGO SUIT CONFIGURATION
 
@@ -297,3 +310,29 @@ STATICFILES_FINDERS += (
 ########## TEST CONFIGURATION
 TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 ########## END TEST CONFIGURATION
+
+########## MARKUP FIELD CONFIGURATION
+INSTALLED_APPS += (
+    'markupfield',
+)
+
+import markdown
+from docutils.core import publish_parts
+
+
+def render_rest(markup):
+    parts = publish_parts(source=markup, writer_name="html4css1")
+    return parts["fragment"]
+
+
+MARKUP_FIELD_TYPES = (
+    ('markdown', markdown.markdown),
+    ('ReST', render_rest),
+)
+########## END MARKUP FIELD CONFIGURATION
+
+########## MODELTRANSLATION CONFIGURATION
+INSTALLED_APPS += (
+    'modeltranslation',
+)
+########## END MODELTRANSLATION CONFIGURATION
