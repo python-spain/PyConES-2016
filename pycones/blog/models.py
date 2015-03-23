@@ -27,7 +27,7 @@ class AbstractArticle(TimeStampedModel):
     author = models.ForeignKey(settings.AUTH_USER_MODEL)
     title = models.TextField()
     slug = models.SlugField(blank=True, unique=True)
-    content = MarkupField(default="", blank=True)
+    content = MarkupField(default="", default_markup_type="markdown", blank=True)
 
     scheduled_at = models.DateTimeField(null=True, blank=True)
 
@@ -52,16 +52,16 @@ class Post(AbstractArticle):
         <p><a href="{% url "post" slug=post.slug %}">{% trans "Seguir leyendo..." %}</a></p>
         @return:
         """
-        return u'<p><a href="{}">{}</a></p>'.format(
+        return '<p><a href="{}">{}</a></p>'.format(
             reverse("post", kwargs={'slug': self.slug}),
-            _(u"Seguir leyendo...")
+            _("Seguir leyendo...")
         )
 
     def summary(self):
         """Split content using <!--more-->"""
-        split_content = self.content.split(u"<!--more-->")
-        read_more = self._read_more_tag() if len(split_content) > 1 else u""
-        return u"{}{}".format(
+        split_content = self.content.raw.split("<!--more-->")
+        read_more = self._read_more_tag() if len(split_content) > 1 else ""
+        return "{}{}".format(
             split_content[0],
             read_more
         )
