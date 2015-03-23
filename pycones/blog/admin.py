@@ -10,6 +10,6 @@ from blog.models import Post
 class PostAdmin(admin.ModelAdmin):
     list_display = ['id', 'title', 'created', 'status']
     list_filter = ('status', )
-    
+
 
 admin.site.register(Post, PostAdmin)
