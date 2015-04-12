@@ -6,6 +6,7 @@ Javascript Dependencies
 
 The web uses bower to handle Javascript external dependencies::
 
+    $ npm install
     $ bower install
 
 
