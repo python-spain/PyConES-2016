@@ -47,3 +47,4 @@ pycones/static/vendor/*
 docs/_build/*
 pycones/assets
 pycones/media/*
+node_modules
