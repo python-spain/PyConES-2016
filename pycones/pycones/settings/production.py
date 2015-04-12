@@ -52,7 +52,7 @@ SERVER_EMAIL = EMAIL_HOST_USER
 ########## DATABASE CONFIGURATION
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': get_env_setting('DB_ENGINE'),
         'NAME': get_env_setting('DB_NAME'),
         'USER': get_env_setting('DB_USER'),
         'PASSWORD': get_env_setting('DB_PASSWORD'),
