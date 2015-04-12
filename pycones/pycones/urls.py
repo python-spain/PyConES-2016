@@ -18,3 +18,9 @@ if settings.DEBUG:
     import debug_toolbar
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     urlpatterns += patterns('', url(r'^__debug__/', include(debug_toolbar.urls)), )
+
+if 'rosetta' in settings.INSTALLED_APPS:
+    urlpatterns += patterns(
+        '',
+        url(r'^rosetta/', include('rosetta.urls')),
+    )

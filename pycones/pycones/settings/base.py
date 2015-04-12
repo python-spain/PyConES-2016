@@ -3,6 +3,8 @@ from __future__ import unicode_literals
 from os.path import abspath, basename, dirname, join, normpath
 from sys import path
 
+from django.utils.translation import ugettext_lazy as _
+
 
 ########## PATH CONFIGURATION
 # Absolute filesystem path to the Django project directory:
@@ -57,14 +59,17 @@ DATABASES = {
 
 ########## GENERAL CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#time-zone
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Madrid'
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#language-code
 LANGUAGE_CODE = 'es-es'
 ugettext = lambda s: s
 LANGUAGES = (
-    ('en', ugettext('English')),
-    ('es', ugettext('Spanish')),
+    ('es', _(u'Español')),
+    ('ca', _(u'Català')),
+    ('eu', _(u'Euskera')),
+    ('ga', _(u'Galego')),
+    ('en', _(u'English')),
 )
 LOCALE_PATHS = (
     normpath(join(SITE_ROOT, 'locale')),
@@ -196,6 +201,7 @@ DJANGO_APPS = (
     'suit',
     'django.contrib.admin',
     # 'django.contrib.admindocs',
+    'rosetta',
 )
 
 # Apps specific for this project go here.
@@ -336,3 +342,10 @@ INSTALLED_APPS += (
     'modeltranslation',
 )
 ########## END MODELTRANSLATION CONFIGURATION
+
+# Rosetta settings
+ROSETTA_MESSAGES_SOURCE_LANGUAGE_CODE = 'es'
+ROSETTA_MESSAGES_SOURCE_LANGUAGE_NAME = u'Español'
+ROSETTA_STORAGE_CLASS = 'rosetta.storage.CacheRosettaStorage'
+ROSETTA_MESSAGES_PER_PAGE = 25
+
