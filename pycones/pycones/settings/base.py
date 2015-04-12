@@ -304,6 +304,7 @@ PIPELINE_JS = {
         'output_filename': 'js/pycones.js'
     }
 }
+PIPELINE_LESS_BINARY = "%s/node_modules/.bin/lessc" % dirname(dirname(DJANGO_ROOT))
 PIPELINE_LESS_ARGUMENTS = '--clean-css'
 PIPELINE_JS_COMPRESSOR = 'pipeline.compressors.yuglify.YuglifyCompressor'
 PIPELINE_YUGLIFY_JS_ARGUMENTS = '--terminal'
