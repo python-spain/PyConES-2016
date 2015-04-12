@@ -305,6 +305,7 @@ PIPELINE_JS = {
     }
 }
 PIPELINE_LESS_BINARY = "%s/node_modules/.bin/lessc" % dirname(dirname(DJANGO_ROOT))
+PIPELINE_YUGLIFY_BINARY = "%s/node_modules/.bin/yuglify" % dirname(dirname(DJANGO_ROOT))
 PIPELINE_LESS_ARGUMENTS = '--clean-css'
 PIPELINE_JS_COMPRESSOR = 'pipeline.compressors.yuglify.YuglifyCompressor'
 PIPELINE_YUGLIFY_JS_ARGUMENTS = '--terminal'
