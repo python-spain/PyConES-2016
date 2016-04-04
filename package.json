@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "less": "2.2.0",
-    "less-plugin-clean-css": "latest",
-    "bower": "1.3.12",
-    "yuglify": "latest"
-  }
-}
