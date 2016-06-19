@@ -1,0 +1,61 @@
+.schedule {
+  .day {
+    text-align: center;
+    background-color: @brand-info;
+    h2 {
+      color: #fff;
+    }
+    margin-top: 10px;
+    margin-bottom: 7px;
+  }
+  .track-title {
+    color:#fff;
+    h2, h3, h4 {
+      font-weight: bold;
+      color:#444;
+    }
+    text-align: center;
+    margin-bottom: 7px;
+    &-basic {
+      background-color: @brand-warning;
+    }
+    &-advanced {
+      background-color: @brand-primary;
+    }
+    &-science {
+      background-color: @brand-danger;
+    }
+  }
+  .slot {
+    h2, h3, h4 {
+      color: #444;
+    }
+    h3 {
+      font-size: 18px;
+    }
+    margin-bottom: 15px;
+    .slot-inner {
+      cursor: pointer;
+      padding: 5px 7px;
+    }
+    &-plenary {
+      height: auto;
+      background-color: lighten(@palette-color-2, 25%);
+      color: #fff;
+      text-align: center;
+      font-size: 18px;
+      > .slot-inner {
+        border: none;
+      }
+    }
+    &-basic {
+      border-left: 4px solid @brand-warning;
+    }
+    &-advanced {
+      border-left: 4px solid @brand-primary;
+    }
+    &-science {
+      border-left: 4px solid @brand-danger;
+    }
+  }
+}

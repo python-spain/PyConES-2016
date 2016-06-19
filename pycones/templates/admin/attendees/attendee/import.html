@@ -1,0 +1,21 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block content %}
+    <div id="content-main">
+        <div class="row-fluid">
+            <div class="span12">
+                <h2>{% trans "Import CSV file with attendees" %}</h2>
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ import_form.as_table }}
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <button class="btn btn-primary" type="submit">{% trans "Import" %}</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

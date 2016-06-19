@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+    <div class="row">
+        <div class="col-xs-12" style="min-height: 300px">
+
+            <h2><i class="icon-arrow"></i>{% trans "Accede a la zona de asistentes" %}</h2>
+            <p>
+                {% url "attendees:request_restore_password" as request_restore_password%}
+                {% blocktrans %}
+                Accede a la zona de asistentes usando el localizador de tu entrada de Ticketea y tu contraseña (si no
+                tienes contraseña la puedes generar entrando <a href="{{ request_restore_password }}">aquí</a>).
+                {% endblocktrans %}
+            </p>
+            <p>
+                {% blocktrans%}
+                Este año el acceso a la red WiFi durante el evento es personalizado, por lo que necesitamos que nos indiques
+                tu DNI para poder darte los credenciales de acceso.
+                {% endblocktrans %}
+            </p>
+            <form method="post" class="form-horizontal" style="margin-top: 50px">
+                {% csrf_token %}
+                {% for field in form %}
+                    <div class="form-group {% if field.errors %}has-error{% endif %}">
+                        <label class="col-sm-2 control-label">{{ field.label }}</label>
+                        <div class="col-sm-10">
+                            {{ field }}
+                            {% if field.errors %}
+                                <span class="help-block">{{ field.errors }}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary">{% trans "Entrar" %}</button>
+                    </div>
+                    <div class="col-sm-offset-2 col-sm-10 text-center" style="margin-top: 30px">
+                        <a href="{% url "attendees:request_restore_password" %}">{% trans "¿No tienes contraseña o la has olvidado?" %}</a>
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+{% endblock content %}

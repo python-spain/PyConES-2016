@@ -1,0 +1,151 @@
+{% load i18n %}
+{% load staticfiles %}
+{% load pipeline %}
+
+{% get_current_language as LANGUAGE_CODE %}
+
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}PyConES 2016{% endblock title %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="alternate" type="application/rss+xml" title="PyConES 2016 - RSS" href="{% url "blog:blog_feed" %}">
+    <link rel="alternate" type="application/atom+xml" title="PyConES 2016 - Atom" href="{% url "blog:blog_atom" %}">
+
+    <!-- Le styles -->
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- This file store project specific CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    {% stylesheet 'pycones' %}
+
+    <!-- Use this to quickly test CSS changes in a template,
+        then move to pycones.css -->
+    {% block extra_css %}{% endblock extra_css %}
+</head>
+
+<body>
+
+{% block header %}
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button"
+                        class="navbar-toggle collapsed"
+                        data-toggle="collapse"
+                        data-target="#navbar-sections-collapse">
+                    <span class="sr-only">{% trans "Toggle navigation" %}</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-sections-collapse">
+                <ul class="nav navbar-nav navbar">
+                    <li><a href="{% url "home" %}">{% trans "PyConES 2016" %}</a></li>
+                    <li><a href="{% url "info" %}">{% trans "Información del evento" %}</a></li>
+                    <li><a href="{% url "proposals:submit" %}">{% trans "Envía tu propuesta" %}</a></li>
+                    <li><a href="{% url "blog:list" %}">{% trans "Blog" %}</a></li>
+                    {#                    <li><a href="{% url "home" %}">{% trans "PyConES 2016" %}</a></li>#}
+                    {#                    <li><a href="{% url "info" %}">{% trans "Información del evento" %}</a></li>#}
+                    {#                    <li><a href="{% url "keynoters" %}">{% trans "Oradores Plenarios" %}</a></li>#}
+                    {#                    {% if is_schedule_active %}#}
+                    {#                    <li><a href="{% url "schedule:show" %}">{% trans "Agenda" %}</a></li>#}
+                    {#                    {% endif %}#}
+                    {#                    <li><a href="{% url "blog:list" %}">{% trans "Blog" %}</a></li>#}
+                    {#                    <li><a href="{% static "photos/index.html" %}">{% trans "Fotos" %}</a></li>#}
+                    {#                    {% if not request.user.is_authenticated %}#}
+                    {#                        <li><a href="{% url "attendees:sign_in" %}">{% trans "Zona de Asistentes" %}</a></li>#}
+                    {#                    {% else %}#}
+                    {#                        <li><a href="{% url "attendees:profile" %}">{% trans "Editar Datos" %}</a></li>#}
+                    {#                        <li><a href="{% url "attendees:log_out" %}">{% trans "Salir" %}</a></li>#}
+                    {#                    {% endif %}#}
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+{% endblock header %}
+
+<div class="wrapper-claim">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 claim text-center relative">
+                <div class="center-block claim-picture"></div>
+                <div class="center-block pycones-logo"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% block container %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-md-offset-3">
+                {% block content %}
+                {% endblock content %}
+            </div>
+        </div>
+    </div>
+{% endblock container %}
+
+{% block footer %}
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-5 col-md-offset-2">
+                    <ul class="list-unstyled">
+                        <li><a href="{% url "code_of_conduct" %}">{% trans "Código de conducta" %}</a></li>
+                        <li>{% trans "Contacta con nosotros" %}: <a href="mailto:contacto2016@es.pycon.org">contacto2016@es.pycon.org</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-2">
+                    <form action="{% url 'set_language' %}" method="post" class="form-inline">{% csrf_token %}
+                        <div class="form-group">
+                            <input name="next" type="hidden" value="/" />
+                            <select name="language" class="form-control" onchange="this.form.submit()" style="text-transform: capitalize">
+                                {% get_current_language as LANGUAGE_CODE %}
+                                {% get_available_languages as LANGUAGES %}
+                                {% get_language_info_list for LANGUAGES as languages %}
+                                {% for language in languages %}
+                                    <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected="selected"{% endif %}>
+                                        {{ language.name_local }}
+                                    </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 text-center" style="font-size: 32px;">
+                    <a href="https://twitter.com/pycones"><span class="icon-twitter"></span></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+{% endblock footer %}
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="{% static "vendor/jquery/dist/jquery.min.js" %}"><\/script>')</script>
+
+
+<!-- place project specific Javascript in this file -->
+{% javascript 'vendor' %}
+{% javascript 'pycones' %}
+
+
+{% block extra_js %}{% endblock extra_js %}
+</body>
+</html>

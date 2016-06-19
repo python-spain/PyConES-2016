@@ -1,0 +1,35 @@
+{% load i18n %}
+<div class="row">
+    <div class="col-xs-12">
+        <div class="slot-inner" data-slot="{{ slot.id }}">
+            {% if slot.content %}
+                <strong>{{ slot.start }}</strong>
+                <h3>{{ slot.content.get_title }}</h3>
+                <p><strong>{{ slot.content_ptr.speaker.name }}</strong></p>
+            {% else %}
+                <strong>{{ slot.start }}</strong>
+                {{ slot.content_override }}
+            {% endif %}
+            {% if slot.get_video_url or slot.get_keynote_url %}
+                <ul class="list-unstyled">
+                    {% if slot.get_keynote_url %}
+                        <li><a href="{{ slot.get_keynote_url }}" target="_blank">{% trans "Descargar presentación" %}</a></li>
+                    {% endif %}
+                    {% if slot.get_video_url %}
+                        <li><a href="{{ slot.get_video_url }}" target="_blank">{% trans "Ver vídeo" %}</a></li>
+                    {% endif %}
+                </ul>
+            {% endif %}
+            {% if not slot.kind.plenary %}
+            <p class="text-center no-margin">
+                <i class="fa fa-angle-down"></i>
+            </p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<div id="slot-description-{{ slot.id }}" class="row" style="display: none">
+    <div class="col-xs-12">
+        <p>{{ slot.content.get_description|linebreaksbr }}</p>
+    </div>
+</div>

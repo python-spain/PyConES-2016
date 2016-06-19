@@ -48,3 +48,4 @@ docs/_build/*
 pycones/assets
 pycones/media/*
 node_modules
+pycones/settings/manny.py

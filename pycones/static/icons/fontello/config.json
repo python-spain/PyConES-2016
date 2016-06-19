@@ -1,0 +1,42 @@
+{
+  "name": "pycones",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "1c05c2b43f508931757b5d1f45e5c0c2",
+      "css": "arrow",
+      "code": 59392,
+      "src": "custom_icons",
+      "selected": true,
+      "svg": {
+        "path": "M268.2 42.6C352.7 118.5 493.7 252.1 569 322.3 644.5 392.4 659.2 572.7 571.2 654.4 483.3 736.2 305.3 907.1 237 966.4 143.8 1047.3 0 987.4 0 874.5L0 131.2C0 23.1 164.4-50.7 268.2 42.6Z",
+        "width": 626
+      },
+      "search": [
+        "arrow"
+      ]
+    },
+    {
+      "uid": "9a76bc135eac17d2c8b8ad4a5774fc87",
+      "css": "download",
+      "code": 59395,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "0f6a2573a7b6df911ed199bb63717e27",
+      "css": "github-circled",
+      "code": 59394,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "627abcdb627cb1789e009c08e2678ef9",
+      "css": "twitter",
+      "code": 59393,
+      "src": "fontawesome"
+    }
+  ]
+}

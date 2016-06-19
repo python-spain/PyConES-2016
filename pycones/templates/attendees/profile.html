@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+    <div class="row">
+        <div class="col-xs-12" style="min-height: 300px">
+
+            <h2><i class="icon-arrow"></i>{% trans "Datos del asistente" %}</h2>
+
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert {{ message.tags }} alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+
+            <p>{% trans "Este año el acceso a WiFi durante el evento será personal para cada asistente, y para ello necesitamos que nos indiques el DNI. Los credenciales de acceso a la red se darán junto al welcome pack a aquellos que hayan completado sus datos." %}</p>
+
+            <form class="form-horizontal" style="margin-top: 50px">
+                {% csrf_token %}
+                {% for field in form %}
+                    <div class="form-group {% if field.errors %}has-error{% endif %}">
+                        {% if field.is_hidden %}
+                            {{ field }}
+                            {% if field.errors %}
+                                <span class="help-block">{{ field.errors }}</span>
+                            {% endif %}
+                        {% else %}
+                        <label class="col-sm-4 control-label">{{ field.label }}</label>
+                        <div class="col-sm-8">
+                            {{ field }}
+                            {% if field.errors %}
+                            <span class="help-block">{{ field.errors }}</span>
+                            {% else %}
+                            <span class="help-block">{{ field.help_text }}</span>
+                            {% endif %}
+                        </div>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+{#                <div class="form-group">#}
+{#                    <div class="col-sm-offset-4 col-sm-8">#}
+{#                        <button type="submit" class="btn btn-primary">{% trans "Guardar" %}</button>#}
+{#                    </div>#}
+{#                </div>#}
+            </form>
+
+        </div>
+    </div>
+{% endblock %}
