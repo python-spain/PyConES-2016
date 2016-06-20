@@ -519,7 +519,7 @@ msgstr ""
 
 #: templates/base.html:106 templates/pages/code_of_conduct.html:8
 #: templates/pages/info.html:114
-msgid "Código de conducta"
+msgid "Codigo de conducta"
 msgstr "Code of Conduct"
 
 #: templates/base.html:107
