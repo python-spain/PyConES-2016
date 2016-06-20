@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 from django.shortcuts import render, redirect
 from django.views.generic import View
 from blog.models import Post
+from configurations.models import Option
 
 from proposals.forms import ProposalFrom
 
@@ -14,7 +15,8 @@ class SubmitProposalView(View):
     @staticmethod
     def get_more_info_link():
         try:
-            more_info_link = Post.objects.get(pk=2).get_absolute_url()
+            post_pk = Option.objects.get_value("submit_proposal_post_pk", 2)
+            more_info_link = Post.objects.get(pk=post_pk).get_absolute_url()
         except Post.DoesNotExist:
             return ""
         return more_info_link
