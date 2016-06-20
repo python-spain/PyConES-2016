@@ -22,14 +22,20 @@ class SubmitProposalView(View):
         return more_info_link
 
     def get(self, request):
-        form = ProposalFrom()
-        data = {
-            "form": form,
-            "more_info_link": self.get_more_info_link()
-        }
-        return render(request, "proposals/create.html", data)
+        is_submit_proposal_opened = bool(Option.objects.get_value("submit_proposal_opened", 1))
+        if is_submit_proposal_opened:
+            form = ProposalFrom()
+            data = {
+                "form": form,
+                "more_info_link": self.get_more_info_link()
+            }
+            return render(request, "proposals/create.html", data)
+        return render(request, "proposals/close.html")
 
     def post(self, request):
+        is_submit_proposal_opened = bool(Option.objects.get_value("submit_proposal_opened", 1))
+        if not is_submit_proposal_opened:
+            return render(request, "proposals/close.html")
         form = ProposalFrom(request.POST)
         data = {
             "form": form,

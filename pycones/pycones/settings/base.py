@@ -163,6 +163,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'django.core.context_processors.request',
                 'schedule.context_processors.schedule_active',
+                'proposals.context_processors.submit_proposals',
             ],
             'loaders': [
                 'django.template.loaders.filesystem.Loader',
