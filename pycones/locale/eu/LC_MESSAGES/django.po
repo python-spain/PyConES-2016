@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Web PyConES 2015\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-19 19:33+0200\n"
+"POT-Creation-Date: 2016-06-20 23:37+0200\n"
 "PO-Revision-Date: 2015-07-09 10:31+0000\n"
 "Last-Translator: Aitzol Naberan <anaberan@codesyntax.com>\n"
 "Language-Team: Basque (http://www.transifex.com/python-espana/web-"
@@ -506,8 +506,7 @@ msgstr ""
 msgid "Blog"
 msgstr "Bloga"
 
-#: templates/base.html:106 templates/pages/code_of_conduct.html:8
-#: templates/pages/info.html:114
+#: templates/base.html:106
 msgid "Código de conducta"
 msgstr "Jarrera kodea"
 
@@ -528,6 +527,12 @@ msgid ""
 "Estamos preparando la nueva edición de la PyConES, dentro de poco habrá más "
 "novedades."
 msgstr "Hurrengo PyConES ari gara antolatzen. Laster izango duzu gure berri."
+
+#: templates/pages/code_of_conduct.html:8 templates/pages/info.html:114
+#, fuzzy
+#| msgid "Código de conducta"
+msgid "Codigo de conducta"
+msgstr "Jarrera kodea"
 
 #: templates/pages/code_of_conduct.html:9
 msgid ""
@@ -638,7 +643,7 @@ msgid ""
 msgstr ""
 "Zerbait bereziki larria baduzu, jo ezazu ondorengo lagunetako batengana:"
 
-#: templates/pages/code_of_conduct.html:34
+#: templates/pages/code_of_conduct.html:30
 msgid ""
 "El personal de la conferencia ayudará gustosamente a los participantes a que "
 "se pongan en contacto con el personal de seguridad del lugar o la policía "
@@ -651,16 +656,16 @@ msgstr ""
 "izango duzu konferentziak irauten duen bitartean ziur senti zaitezen. Zure "
 "ongizatea da gure lehentasuna."
 
-#: templates/pages/code_of_conduct.html:35
+#: templates/pages/code_of_conduct.html:31
 msgid "Gracias por hacer de este un evento abierto a la comunidad y amistoso."
 msgstr ""
 " Eskerrik asko jardunaldi ireki eta adiskidetsua sortzen laguntzearren."
 
-#: templates/pages/code_of_conduct.html:36
+#: templates/pages/code_of_conduct.html:32
 msgid "Licencia"
 msgstr "Lizentzia"
 
-#: templates/pages/code_of_conduct.html:38
+#: templates/pages/code_of_conduct.html:34
 msgid ""
 "\n"
 "                        Este Código de Conducta se basa en los códigos de "
@@ -761,108 +766,13 @@ msgstr ""
 
 #: templates/pages/home.html:125
 #, fuzzy
-#| msgid "Folleto (ES)"
-msgid "Folleto"
-msgstr "Eskuorria (ES)"
+#| msgid "Folleto (EN)"
+msgid "Folleto (ES)"
+msgstr "Eskuorria (EN)"
 
-#: templates/pages/info.html:10
-msgid "Localización"
-msgstr ""
-
-#: templates/pages/info.html:14
-msgid ""
-"\n"
-"                        La PyConES 2015 se celebra en la Escuela Técnica "
-"Superior de Informática (ETSINF) de la\n"
-"                        Universidad Politécnica de Valencia en el Campus de "
-"Vera,\n"
-"                        <strong>del 20 al 22 de noviembre de 2015</strong>. "
-"Se accede por la Avenida de los\n"
-"                        Naranjos (Avinguda deis Taronjers) y la puerta más "
-"recomendable para acceder es la puerta P.\n"
-"                        Desde ahí podéis acceder a los edificios donde se "
-"celebra la conferencia que son los\n"
-"                        etiquetados como <strong>1G</strong>  (ETSINF) y "
-"<strong>1F</strong> (DSIIC).\n"
-"                        Las charlas plenarias serán en el Paraninfo "
-"(<strong>3A</strong>).\n"
-"                    "
-msgstr ""
-
-#: templates/pages/info.html:35
-msgid ""
-"Los talleres del viernes serán en el edificio DSIIC, frente a la ETSINF."
-msgstr ""
-
-#: templates/pages/info.html:36
-msgid ""
-"Las aulas para las charlas del sábado y domingo se encuentran en la planta "
-"baja de la ETSINF."
-msgstr ""
-
-#: templates/pages/info.html:37
-msgid ""
-"Las charlas plenarias, apertura y cierre del congreso serán en el Paraninfo "
-"(Edificio 3A)."
-msgstr ""
-
-#: templates/pages/info.html:38
-msgid ""
-"El cátering para las comidas será en la Cafetería La Vella. Los cafés en la "
-"planta baja de la ETSINF."
-msgstr ""
-
-#: templates/pages/info.html:54 templates/schedule/show.html:28
-msgid "Talleres"
-msgstr ""
-
-#: templates/pages/info.html:73
-msgid "Cómo llegar"
-msgstr ""
-
-#: templates/pages/info.html:74
-msgid ""
-"El campus de Vera está situado al norte de la ciudad de Valencia en un "
-"entorno tranquilo que limita con la huerta."
-msgstr ""
-
-#: templates/pages/info.html:75
-msgid ""
-"Puedes llegar además de utilizando el coche y andando en trasporte público:"
-msgstr ""
-
-#: templates/pages/info.html:77 templates/pages/info.html:80
-msgid "líneas"
-msgstr ""
-
-#: templates/pages/info.html:80
-msgid "Parada"
-msgstr ""
-
-#: templates/pages/info.html:84
-msgid "Dirección"
-msgstr ""
-
-#: templates/pages/info.html:85
-msgid "Escuela Técnica Superior de Ingeniería Informática"
-msgstr "Escuela Técnica Superior de Ingeniería Informática"
-
-#: templates/pages/info.html:86
-msgid "Universidad Politécnica de Valencia"
-msgstr "Universidad Politécnica de Valencia"
-
-#: templates/pages/info.html:94
-#, python-format
-msgid "30 %% descuento RENFE"
-msgstr ""
-
-#: templates/pages/info.html:100
-msgid "¡Comparte coche!"
-msgstr ""
-
-#: templates/pages/info.html:105
-msgid "Comparte coche a Valencia"
-msgstr ""
+#: templates/pages/home.html:128
+msgid "Folleto (EN)"
+msgstr "Eskuorria (EN)"
 
 #: templates/pages/info.html:116
 #, fuzzy
@@ -1063,7 +973,7 @@ msgstr ""
 msgid ""
 "\n"
 "            ¡Está abierta la llamada a propuestas para la PyConES 2016! El "
-"plazo termina el <ins>9</ins> de septiembre a\n"
+"plazo termina el <ins>15</ins> de julio a\n"
 "            las 00:00.\n"
 "        "
 msgstr ""
@@ -1098,6 +1008,10 @@ msgstr ""
 msgid "Track BigML (científico)"
 msgstr ""
 
+#: templates/schedule/show.html:28
+msgid "Talleres"
+msgstr ""
+
 #: templates/schedule/show.html:56
 msgid "Descargar en PDF"
 msgstr ""
@@ -1113,6 +1027,17 @@ msgstr ""
 #: templates/schedule/show.html:65
 msgid "Descargar en Pentabarf XML"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Folleto (ES)"
+#~ msgid "Folleto"
+#~ msgstr "Eskuorria (ES)"
+
+#~ msgid "Escuela Técnica Superior de Ingeniería Informática"
+#~ msgstr "Escuela Técnica Superior de Ingeniería Informática"
+
+#~ msgid "Universidad Politécnica de Valencia"
+#~ msgstr "Universidad Politécnica de Valencia"
 
 #~ msgid "Valencia 2015"
 #~ msgstr "Valencia 2015"
@@ -1150,9 +1075,6 @@ msgstr ""
 #~ "ekartzea) eta akreditazioa emango dizugu, \n"
 #~ "                    WelcomePack-arekin batera.\n"
 #~ "                "
-
-#~ msgid "Folleto (EN)"
-#~ msgstr "Eskuorria (EN)"
 
 #~ msgid "¿Cuándo?"
 #~ msgstr "Noiz?"
