@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-20 23:37+0200\n"
+"POT-Creation-Date: 2016-06-21 12:53+0200\n"
 "PO-Revision-Date: 2015-07-14 10:24+0100\n"
 "Last-Translator: b'  <organizacion2015@lists.es.python.org>'\n"
 "Language-Team: \n"
@@ -148,6 +148,30 @@ msgstr ""
 
 #: conference/models.py:20
 msgid "sections"
+msgstr ""
+
+#: configurations/models.py:16
+msgid "Float"
+msgstr ""
+
+#: configurations/models.py:17
+msgid "Integer"
+msgstr ""
+
+#: configurations/models.py:18
+msgid "String"
+msgstr ""
+
+#: configurations/models.py:21
+msgid "Parameter"
+msgstr ""
+
+#: configurations/models.py:27
+msgid "Public name of the parameter"
+msgstr ""
+
+#: configurations/models.py:41
+msgid "Value"
 msgstr ""
 
 #: proposals/forms.py:19
@@ -509,19 +533,23 @@ msgstr "PyConES 2016"
 msgid "Información del evento"
 msgstr "About the event"
 
-#: templates/base.html:55
+#: templates/base.html:56
+msgid "Compra tu entradas"
+msgstr "Buy your tickets"
+
+#: templates/base.html:59
 msgid "Envía tu propuesta"
 msgstr "Submit your proposal"
 
-#: templates/base.html:56
+#: templates/base.html:61
 msgid "Blog"
 msgstr ""
 
-#: templates/base.html:106
+#: templates/base.html:111
 msgid "Código de conducta"
 msgstr "Code of Conduct"
 
-#: templates/base.html:107
+#: templates/base.html:112
 msgid "Contacta con nosotros"
 msgstr "Contact"
 
@@ -736,28 +764,46 @@ msgstr ""
 msgid "Ediciones anteriores"
 msgstr "Previous editions"
 
+#: templates/pages/home.html:81
+msgid "Compra de entradas"
+msgstr "Registration"
+
+#: templates/pages/home.html:88 templates/pages/tickets.html:18
+msgid "¡Entradas agotadas!"
+msgstr "Sold out!"
+
 #: templates/pages/home.html:92
+msgid ""
+"Con tu entrada podrás acceder los tres días de la conferencia completos. En "
+"la entrada del edificio te cambiaremos tu entrada de ticketea (no olvides "
+"traerla) por tu acreditación y te entregaremos el WelcomePack."
+msgstr ""
+"With your ticket you will have access for the whole conference. At the "
+"entrance we will give you your acreditation (don't forget your ticketea "
+"ticket) and your Welcome Pack."
+
+#: templates/pages/home.html:100
 msgid "Patrocinadores"
 msgstr "Sponsors"
 
-#: templates/pages/home.html:116
+#: templates/pages/home.html:124
 #, python-format
 msgid ""
 "\n"
-"                        ¿Quieres ser el primer patrocinador %(level_name)s? "
-"<a href=\"mailto:patrocinadores2016@es.pycon.org\" target=\"_blank"
-"\">¡Contacta con nosotros!</a>\n"
+"                            ¿Quieres ser el primer patrocinador "
+"%(level_name)s? <a href=\"mailto:patrocinadores2016@es.pycon.org\" target="
+"\"_blank\">¡Contacta con nosotros!</a>\n"
 "                        "
 msgstr ""
 "\n"
 "Do you want to be the first %(level_name)s sponsor? <a href=\"mailto:"
 "patrocinadores2016@es.pycon.org\" target=\"_blank\">Contact with us!</a>"
 
-#: templates/pages/home.html:125
+#: templates/pages/home.html:133
 msgid "Folleto (ES)"
 msgstr "Leaflet (ES)"
 
-#: templates/pages/home.html:128
+#: templates/pages/home.html:136
 msgid "Folleto (EN)"
 msgstr "Leaflet (EN)"
 
@@ -912,6 +958,10 @@ msgid ""
 "orden. Hay quien asegura haberme escuchado afirmar \"entre un código "
 "elegante que no funcione y uno feo que funcione, ¡prefiero el elegante!\"."
 msgstr ""
+
+#: templates/pages/tickets.html:11
+msgid "Compra aquí tus tickets"
+msgstr "Buy here your tickets"
 
 #: templates/proposals/base.html:13 templates/proposals/create.html:115
 msgid "Enviar propuesta"
@@ -1124,21 +1174,6 @@ msgstr "Download in Pentabarf XML"
 #~ msgid "¡Conoce más de nuestros keynoters!"
 #~ msgstr "Learn more about our keynoters!"
 
-#~ msgid "Compra de entradas"
-#~ msgstr "Registration"
-
-#~ msgid "¡Entradas agotadas!"
-#~ msgstr "Sold out!"
-
-#~ msgid ""
-#~ "Con tu entrada podrás acceder los tres días de la conferencia completos. "
-#~ "En la entrada del edificio te cambiaremos tu entrada de ticketea (no "
-#~ "olvides traerla) por tu acreditación y te entregaremos el WelcomePack."
-#~ msgstr ""
-#~ "With your ticket you will have access for the whole conference. At the "
-#~ "entrance we will give you your acreditation (don't forget your ticketea "
-#~ "ticket) and your Welcome Pack."
-
 #~ msgid ""
 #~ "<strong>Charla</strong>: 30 minutos + 5 de preguntas + 5 de pausa. Sábado "
 #~ "21 y domingo 22."
@@ -1163,9 +1198,6 @@ msgstr "Download in Pentabarf XML"
 
 #~ msgid "Nombre"
 #~ msgstr "Name"
-
-#~ msgid "Compra tus entradas"
-#~ msgstr "Buy your tickets"
 
 #~ msgid "Llamada a propuestas"
 #~ msgstr "Call for proposals"
