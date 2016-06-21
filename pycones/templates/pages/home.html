@@ -15,12 +15,12 @@
                     <a href="http://pycon.org" target="_blank">PyCon</a>.
                 {% endblocktrans %}
             </p>
-{#            <p class="loud indented">#}
-{#                {% blocktrans %}#}
-{#                    Concretamente, la conferencia tendrá lugar en la <strong>Universidad Politécnica de Valencia (UPV)</strong> y#}
-{#                    será organizada conjuntamente por la comunidad local y la asociación Python España.#}
-{#                {% endblocktrans %}#}
-{#            </p>#}
+            {#            <p class="loud indented">#}
+            {#                {% blocktrans %}#}
+            {#                    Concretamente, la conferencia tendrá lugar en la <strong>Universidad Politécnica de Valencia (UPV)</strong> y#}
+            {#                    será organizada conjuntamente por la comunidad local y la asociación Python España.#}
+            {#                {% endblocktrans %}#}
+            {#            </p>#}
             <h3 class="indented">{% trans "Ediciones anteriores" %}:</h3>
             <p class="text-center loud indented">
                 <a href="http://2013.es.pycon.org/" target="_blank">PyConES 2013</a> |
@@ -30,62 +30,70 @@
         </div>
     </div>
 
-{#    <div class="row">#}
-{#        <div class="col-xs-12">#}
-{#            <h2><i class="icon-arrow"></i> {% trans "Llamada a propuestas" %}</h2>#}
-{#            <p class="text-center" style="margin: 35px 0 35px 0">#}
-{#                <a href="{% url "proposals:submit" %}" class="btn btn-primary btn-lg" >{% trans "¡Envía tu propuesta!" %}</a>#}
-{#            </p>#}
-{#            <p class="loud">#}
-{#                {% blocktrans %}#}
-{#                    ¡Está abierta la llamada a propuestas para la PyConES 2015! El plazo termina el <del>1</del> <ins>9</ins> de septiembre a#}
-{#                    las 00:00. Estos son los tipos aceptados:#}
-{#                {% endblocktrans %}#}
-{#            </p>#}
-{#            <ul class="loud">#}
-{#                <li>{% trans "<strong>Charla</strong>: 30 minutos + 5 de preguntas + 5 de pausa. Sábado 21 y domingo 22." %}</li>#}
-{#                <li>{% trans "<strong>Taller/Tutorial</strong>: 2-3 horas. Viernes 20." %}</li>#}
-{#            </ul>#}
-{#        </div>#}
-{#    </div>#}
+    {#    <div class="row">#}
+    {#        <div class="col-xs-12">#}
+    {#            <h2><i class="icon-arrow"></i> {% trans "Llamada a propuestas" %}</h2>#}
+    {#            <p class="text-center" style="margin: 35px 0 35px 0">#}
+    {#                <a href="{% url "proposals:submit" %}" class="btn btn-primary btn-lg" >{% trans "¡Envía tu propuesta!" %}</a>#}
+    {#            </p>#}
+    {#            <p class="loud">#}
+    {#                {% blocktrans %}#}
+    {#                    ¡Está abierta la llamada a propuestas para la PyConES 2015! El plazo termina el <del>1</del> <ins>9</ins> de septiembre a#}
+    {#                    las 00:00. Estos son los tipos aceptados:#}
+    {#                {% endblocktrans %}#}
+    {#            </p>#}
+    {#            <ul class="loud">#}
+    {#                <li>{% trans "<strong>Charla</strong>: 30 minutos + 5 de preguntas + 5 de pausa. Sábado 21 y domingo 22." %}</li>#}
+    {#                <li>{% trans "<strong>Taller/Tutorial</strong>: 2-3 horas. Viernes 20." %}</li>#}
+    {#            </ul>#}
+    {#        </div>#}
+    {#    </div>#}
 
-{#    <div class="row">#}
-{#        <div class="col-xs-12">#}
-{#            <div class="row">#}
-{##}
-{#                <h2><i class="icon-arrow"></i> {% trans "Oradores Plenarios" %}</h2>#}
-{##}
-{#                <div class="col-xs-6 text-center">#}
-{#                    <h3>{% trans "Yamila Moreno" %}</h3>#}
-{#                    <img src="{% static "img/yami-web-square.png" %}" class="img-responsive img-circle img-thumbnail">#}
-{#                    <h4>{% trans "Python y Plutarco: el poder de una historia" %}</h4>#}
-{#                </div>#}
-{#                <div class="col-xs-6 text-center">#}
-{#                    <h3>{% trans "Víctor Terrón" %}</h3>#}
-{#                    <img src="{% static "img/vterron-2.jpg" %}" class="img-responsive img-circle img-thumbnail">#}
-{#                    <h4>{% trans "Dijkstra es mi pastor, nada me falta" %}</h4>#}
-{#                </div>#}
-{#                <div class="col-xs-12">#}
-{#                    <p class="text-center" style="margin: 35px 0 35px 0">#}
-{#                        <a href="{% url "keynoters" %}" class="btn btn-primary btn-lg" >{% trans "¡Conoce más de nuestros keynoters!" %}</a>#}
-{#                    </p>#}
-{#                </div>#}
-{##}
-{#            </div>#}
-{#        </div>#}
-{#    </div>#}
+    {#    <div class="row">#}
+    {#        <div class="col-xs-12">#}
+    {#            <div class="row">#}
+    {##}
+    {#                <h2><i class="icon-arrow"></i> {% trans "Oradores Plenarios" %}</h2>#}
+    {##}
+    {#                <div class="col-xs-6 text-center">#}
+    {#                    <h3>{% trans "Yamila Moreno" %}</h3>#}
+    {#                    <img src="{% static "img/yami-web-square.png" %}" class="img-responsive img-circle img-thumbnail">#}
+    {#                    <h4>{% trans "Python y Plutarco: el poder de una historia" %}</h4>#}
+    {#                </div>#}
+    {#                <div class="col-xs-6 text-center">#}
+    {#                    <h3>{% trans "Víctor Terrón" %}</h3>#}
+    {#                    <img src="{% static "img/vterron-2.jpg" %}" class="img-responsive img-circle img-thumbnail">#}
+    {#                    <h4>{% trans "Dijkstra es mi pastor, nada me falta" %}</h4>#}
+    {#                </div>#}
+    {#                <div class="col-xs-12">#}
+    {#                    <p class="text-center" style="margin: 35px 0 35px 0">#}
+    {#                        <a href="{% url "keynoters" %}" class="btn btn-primary btn-lg" >{% trans "¡Conoce más de nuestros keynoters!" %}</a>#}
+    {#                    </p>#}
+    {#                </div>#}
+    {##}
+    {#            </div>#}
+    {#        </div>#}
+    {#    </div>#}
 
-{#    <div class="row">#}
-{#        <div class="col-xs-12">#}
-{#            <h2><i class="icon-arrow"></i> {% trans "Compra de entradas" %}</h2>#}
-{#            <p class="text-center" style="margin: 35px 0 35px 0">#}
-{#                <a href="javascript:void(0)" class="btn btn-danger btn-lg">{% trans "¡Entradas agotadas!" %}</a>#}
-{#            </p>#}
-{#            <p class="loud">#}
-{#                {% blocktrans %}Con tu entrada podrás acceder los tres días de la conferencia completos. En la entrada del edificio te cambiaremos tu entrada de ticketea (no olvides traerla) por tu acreditación y te entregaremos el WelcomePack.{% endblocktrans %}#}
-{#            </p>#}
-{#        </div>#}
-{#    </div>#}
+    {% if is_activated_tickets_sale_button %}
+        <div class="row">
+            <div class="col-xs-12">
+                <h2><i class="icon-arrow"></i> {% trans "Compra de entradas" %}</h2>
+                <p class="text-center" style="margin: 35px 0 35px 0">
+                    {% if not sold_out %}
+                        <a href="https://www.ticketea.com/entradas-conferencia-pycones-2016/" title="Buy your tickets here">
+                            <img src="https://d18t9gwja9h9h.cloudfront.net/assets/images/buttons/es/buyhere.png" alt="Compra aquí tus tickets" />
+                        </a>
+                    {% else %}
+                        <a href="javascript:void(0)" class="btn btn-danger btn-lg">{% trans "¡Entradas agotadas!" %}</a>
+                    {% endif %}
+                </p>
+                <p class="loud">
+                    {% blocktrans %}Con tu entrada podrás acceder los tres días de la conferencia completos. En la entrada del edificio te cambiaremos tu entrada de ticketea (no olvides traerla) por tu acreditación y te entregaremos el WelcomePack.{% endblocktrans %}
+                </p>
+            </div>
+        </div>
+    {% endif %}
 
     <div class="row">
         <div class="col-xs-12">
@@ -114,7 +122,7 @@
                     <h3>{{ level.name }}</h3>
                     <p class="loud">
                         {% blocktrans with level_name=level.name|lower %}
-                        ¿Quieres ser el primer patrocinador {{ level_name }}? <a href="mailto:patrocinadores2016@es.pycon.org" target="_blank">¡Contacta con nosotros!</a>
+                            ¿Quieres ser el primer patrocinador {{ level_name }}? <a href="mailto:patrocinadores2016@es.pycon.org" target="_blank">¡Contacta con nosotros!</a>
                         {% endblocktrans %}
                     </p>
                 {% endif %}

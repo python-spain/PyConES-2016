@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Web PyConES 2015\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-20 23:37+0200\n"
+"POT-Creation-Date: 2016-06-21 12:53+0200\n"
 "PO-Revision-Date: 2015-07-12 17:01+0000\n"
 "Last-Translator: Miguel González <migonzalvar@gmail.com>\n"
 "Language-Team: Galician (http://www.transifex.com/python-espana/web-"
@@ -148,6 +148,30 @@ msgstr "sección"
 #: conference/models.py:20
 msgid "sections"
 msgstr "seccións"
+
+#: configurations/models.py:16
+msgid "Float"
+msgstr ""
+
+#: configurations/models.py:17
+msgid "Integer"
+msgstr ""
+
+#: configurations/models.py:18
+msgid "String"
+msgstr ""
+
+#: configurations/models.py:21
+msgid "Parameter"
+msgstr ""
+
+#: configurations/models.py:27
+msgid "Public name of the parameter"
+msgstr ""
+
+#: configurations/models.py:41
+msgid "Value"
+msgstr ""
 
 #: proposals/forms.py:19
 msgid "Nombre del ponente"
@@ -500,19 +524,25 @@ msgstr "PyConES 2015"
 msgid "Información del evento"
 msgstr "Información do evento"
 
-#: templates/base.html:55
+#: templates/base.html:56
+#, fuzzy
+#| msgid "Compra tus entradas"
+msgid "Compra tu entradas"
+msgstr "Merca as túas entradas"
+
+#: templates/base.html:59
 msgid "Envía tu propuesta"
 msgstr ""
 
-#: templates/base.html:56
+#: templates/base.html:61
 msgid "Blog"
 msgstr "Blog"
 
-#: templates/base.html:106
+#: templates/base.html:111
 msgid "Código de conducta"
 msgstr "Código de comportamento"
 
-#: templates/base.html:107
+#: templates/base.html:112
 msgid "Contacta con nosotros"
 msgstr "Contacta con nós"
 
@@ -749,11 +779,37 @@ msgstr ""
 msgid "Ediciones anteriores"
 msgstr "Edicións anteriores"
 
+#: templates/pages/home.html:81
+msgid "Compra de entradas"
+msgstr "Merca de entradas"
+
+#: templates/pages/home.html:88 templates/pages/tickets.html:18
+msgid "¡Entradas agotadas!"
+msgstr ""
+
 #: templates/pages/home.html:92
+#, fuzzy
+#| msgid ""
+#| "Con tu entrada podrás acceder los dos días de la conferencia completos. "
+#| "En la entrada del edificio te cambiaremos tu entrada de ticketea (no "
+#| "olvides traerla) por tu acreditación y te entregaremos el WelcomePack."
+msgid ""
+"Con tu entrada podrás acceder los tres días de la conferencia completos. En "
+"la entrada del edificio te cambiaremos tu entrada de ticketea (no olvides "
+"traerla) por tu acreditación y te entregaremos el WelcomePack."
+msgstr ""
+"                    Coa túa entrada poderás acceder os dous días da "
+"conferencia completos. Na entrada do edificio\n"
+"                    cambiarémoste a túa entrada de ticketea (non esquezas "
+"traela) pola túa acreditación e \n"
+"                    entregarémoste o WelcomePack.\n"
+"                "
+
+#: templates/pages/home.html:100
 msgid "Patrocinadores"
 msgstr "Patrocinadores"
 
-#: templates/pages/home.html:116
+#: templates/pages/home.html:124
 #, fuzzy, python-format
 #| msgid ""
 #| "\n"
@@ -763,9 +819,9 @@ msgstr "Patrocinadores"
 #| "                        "
 msgid ""
 "\n"
-"                        ¿Quieres ser el primer patrocinador %(level_name)s? "
-"<a href=\"mailto:patrocinadores2016@es.pycon.org\" target=\"_blank"
-"\">¡Contacta con nosotros!</a>\n"
+"                            ¿Quieres ser el primer patrocinador "
+"%(level_name)s? <a href=\"mailto:patrocinadores2016@es.pycon.org\" target="
+"\"_blank\">¡Contacta con nosotros!</a>\n"
 "                        "
 msgstr ""
 "\n"
@@ -774,13 +830,13 @@ msgstr ""
 "\">¡Contacta connosco!</a>\n"
 "                        "
 
-#: templates/pages/home.html:125
+#: templates/pages/home.html:133
 #, fuzzy
 #| msgid "Folleto (EN)"
 msgid "Folleto (ES)"
 msgstr "Folleto (EN)"
 
-#: templates/pages/home.html:128
+#: templates/pages/home.html:136
 msgid "Folleto (EN)"
 msgstr "Folleto (EN)"
 
@@ -962,6 +1018,12 @@ msgid ""
 "elegante que no funcione y uno feo que funcione, ¡prefiero el elegante!\"."
 msgstr ""
 
+#: templates/pages/tickets.html:11
+#, fuzzy
+#| msgid "Compra tus entradas"
+msgid "Compra aquí tus tickets"
+msgstr "Merca as túas entradas"
+
 #: templates/proposals/base.html:13 templates/proposals/create.html:115
 msgid "Enviar propuesta"
 msgstr ""
@@ -1060,26 +1122,6 @@ msgstr ""
 #~ "Politécnica de Valencia (UPV)</strong> e será organizada conxuntamente "
 #~ "pola comunidad local e pola asociación Python España."
 
-#~ msgid "Compra de entradas"
-#~ msgstr "Merca de entradas"
-
-#, fuzzy
-#~| msgid ""
-#~| "Con tu entrada podrás acceder los dos días de la conferencia completos. "
-#~| "En la entrada del edificio te cambiaremos tu entrada de ticketea (no "
-#~| "olvides traerla) por tu acreditación y te entregaremos el WelcomePack."
-#~ msgid ""
-#~ "Con tu entrada podrás acceder los tres días de la conferencia completos. "
-#~ "En la entrada del edificio te cambiaremos tu entrada de ticketea (no "
-#~ "olvides traerla) por tu acreditación y te entregaremos el WelcomePack."
-#~ msgstr ""
-#~ "                    Coa túa entrada poderás acceder os dous días da "
-#~ "conferencia completos. Na entrada do edificio\n"
-#~ "                    cambiarémoste a túa entrada de ticketea (non esquezas "
-#~ "traela) pola túa acreditación e \n"
-#~ "                    entregarémoste o WelcomePack.\n"
-#~ "                "
-
 #~ msgid "¿Cuándo?"
 #~ msgstr "Cándo?"
 
@@ -1090,9 +1132,6 @@ msgstr ""
 
 #~ msgid "¿Dónde?"
 #~ msgstr "Ónde?"
-
-#~ msgid "Compra tus entradas"
-#~ msgstr "Merca as túas entradas"
 
 #~ msgid "Detailed Abstract"
 #~ msgstr "Resumo Detallado"

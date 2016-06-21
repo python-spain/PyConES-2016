@@ -52,6 +52,9 @@
                 <ul class="nav navbar-nav navbar">
                     <li><a href="{% url "home" %}">{% trans "PyConES 2016" %}</a></li>
                     <li><a href="{% url "info" %}">{% trans "Información del evento" %}</a></li>
+                    {% if is_activated_tickets_sale_page %}
+                    <li><a href="{% url "tickets" %}">{% trans "Compra tu entradas" %}</a></li>
+                    {% endif %}
                     {% if is_submit_proposal_opened %}
                     <li><a href="{% url "proposals:submit" %}">{% trans "Envía tu propuesta" %}</a></li>
                     {% endif %}
