@@ -89,6 +89,7 @@ class ProposalBase(models.Model):
     )
     abstract = MarkupField(
         _("Resumen detallado"),
+        blank=True,
         default="",
         default_markup_type='markdown',
         help_text=_("Detailed outline. Will be made public if your proposal is accepted. Edit "
