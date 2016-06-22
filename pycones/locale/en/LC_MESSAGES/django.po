@@ -984,7 +984,7 @@ msgid ""
 "        "
 msgstr ""
 "\n"
-"                    the call for proposals for PyConES 2019 is open! The "
+"                    The call for proposals for PyConES 2016 is open! The "
 "deadline is July <ins>15th</ins> 00:00.\n"
 "                                   "
 
