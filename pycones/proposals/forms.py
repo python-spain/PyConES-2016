@@ -29,11 +29,23 @@ class ProposalFrom(TranslationModelForm):
 
     class Meta:
         model = Proposal
-        exclude = ["speaker", "additional_speakers", "cancelled",
-                   "additional_notes_markup_type", "abstract_markup_type",
-                   "additional_notes_es_markup_type", "abstract_es_markup_type",
-                   "additional_notes_en_markup_type", "abstract_en_markup_type",
-                   ]
+        exclude = [
+            "speaker",
+            "additional_speakers",
+            "cancelled",
+            "additional_notes_markup_type",
+            "additional_notes_es_markup_type",
+            "additional_notes_en_markup_type",
+            "additional_notes_ca_markup_type",
+            "additional_notes_eu_markup_type",
+            "additional_notes_gl_markup_type",
+            "abstract_markup_type",
+            "abstract_es_markup_type",
+            "abstract_en_markup_type",
+            "abstract_ca_markup_type",
+            "abstract_eu_markup_type",
+            "abstract_gl_markup_type",
+       ]
         widgets = {
             "kind": forms.Select(attrs={"class": "form-control"}),
             "audience_level": forms.Select(attrs={"class": "form-control"}),
@@ -47,6 +59,8 @@ class ProposalFrom(TranslationModelForm):
 
     def clean_abstract(self):
         abstract = self.cleaned_data["abstract"]
+        if not abstract:
+            raise forms.ValidationError(_("Este campo no puede estar vacío."))
         words = "".join(character if character.isalnum() else " " for character in abstract).split()
         if len(words) < 80:
             raise forms.ValidationError(_("¡El resumen es demasiado corto! Tiene que tener al menos 80 palabras. "
@@ -68,7 +82,10 @@ class ProposalFrom(TranslationModelForm):
                 user=user, name=name[:100],
                 biography="", biography_markup_type='markdown',
                 biography_es="", biography_es_markup_type='markdown',
-                biography_en="", biography_en_markup_type='markdown'
+                biography_en="", biography_en_markup_type='markdown',
+                biography_ca="", biography_ca_markup_type='markdown',
+                biography_eu="", biography_eu_markup_type='markdown',
+                biography_gl="", biography_gl_markup_type='markdown',
             )
         return speaker
 
@@ -78,8 +95,14 @@ class ProposalFrom(TranslationModelForm):
         proposal.abstract_markup_type = 'markdown'
         proposal.abstract_es_markup_type = 'markdown'
         proposal.abstract_en_markup_type = 'markdown'
+        proposal.abstract_ca_markup_type = 'markdown'
+        proposal.abstract_eu_markup_type = 'markdown'
+        proposal.abstract_gl_markup_type = 'markdown'
         proposal.additional_notes_markup_type = 'markdown'
-        proposal.additional_notes_es_markup_type = 'markdown'
         proposal.additional_notes_en_markup_type = 'markdown'
+        proposal.additional_notes_es_markup_type = 'markdown'
+        proposal.additional_notes_ca_markup_type = 'markdown'
+        proposal.additional_notes_eu_markup_type = 'markdown'
+        proposal.additional_notes_gl_markup_type = 'markdown'
         proposal.save()
         return proposal

@@ -23,6 +23,7 @@ class Speaker(models.Model):
                                                        "conference program."))
     biography = MarkupField(
         blank=True,
+        default="",
         default_markup_type='markdown',
         help_text=("A little bit about you.  Edit using "
                    "<a href='http://warpedvisions.org/projects/"
