@@ -20,7 +20,7 @@ def get_env_setting(setting):
 
 ########## HOST CONFIGURATION
 # See: https://docs.djangoproject.com/en/1.5/releases/1.5/#allowed-hosts-required-in-production
-ALLOWED_HOSTS = ["2015.es.pycon.org", "marcosgabarda.pythonanywhere.com"]
+ALLOWED_HOSTS = ["2016.es.pycon.org", "marcosgabarda.pythonanywhere.com"]
 ########## END HOST CONFIGURATION
 
 ########## EMAIL CONFIGURATION
