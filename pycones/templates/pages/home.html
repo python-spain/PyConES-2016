@@ -105,7 +105,13 @@
                     <h3>{{ level.name }}</h3>
                     <div class="row">
                         {% for sponsor in sponsors %}
-                            <div class="col-xs-6 {% if level.order < 2 %}col-sm-6{% else %}col-sm-4{% endif %} col-vertical-middle-fixed">
+                            <div class="
+                                {% if level.order == 0 %}
+                                    col-xs-8 col-xs-offset-2 text-center
+                                {% else %}
+                                    col-xs-6 {% if level.order < 2 %}col-sm-6{% else %}col-sm-4{% endif %} col-vertical-middle-fixed
+                                {% endif %}
+                                ">
                                 <a href="{{ sponsor.external_url }}" target="_blank">
                                     <img src="{{ sponsor.website_logo.url }}" title="{{ sponsor.name }}" alt="{{ sponsor.name }}" class="img-responsive">
                                 </a>
