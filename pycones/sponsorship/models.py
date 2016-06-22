@@ -21,6 +21,7 @@ BENEFIT_TYPE_CHOICES = [
     (BENEFIT_SIMPLE, _("Simple"))
 ]
 
+
 @python_2_unicode_compatible
 class SponsorLevel(models.Model):
 
