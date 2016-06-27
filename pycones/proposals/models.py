@@ -175,7 +175,9 @@ class Proposal(ProposalBase):
     language = models.CharField(
         verbose_name=_("Idioma"), max_length=2, choices=PROPOSAL_LANGUAGES, default="es"
     )
-    duration = models.PositiveIntegerField(verbose_name=_("Duración"), choices=PROPOSAL_DURATIONS, default=30)
+    duration = models.PositiveIntegerField(
+        verbose_name=_("Duración"), choices=PROPOSAL_DURATIONS, default=30, null=True, blank=True
+    )
 
 
 class AdditionalSpeaker(models.Model):
