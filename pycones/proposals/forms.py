@@ -33,6 +33,7 @@ class ProposalFrom(TranslationModelForm):
             "speaker",
             "additional_speakers",
             "cancelled",
+            "duration",
             "additional_notes_markup_type",
             "additional_notes_es_markup_type",
             "additional_notes_en_markup_type",
@@ -45,7 +46,7 @@ class ProposalFrom(TranslationModelForm):
             "abstract_ca_markup_type",
             "abstract_eu_markup_type",
             "abstract_gl_markup_type",
-       ]
+        ]
         widgets = {
             "kind": forms.Select(attrs={"class": "form-control"}),
             "audience_level": forms.Select(attrs={"class": "form-control"}),
@@ -54,7 +55,6 @@ class ProposalFrom(TranslationModelForm):
             "abstract": MarkupTextarea(attrs={"class": "form-control"}),
             "additional_notes": MarkupTextarea(attrs={"class": "form-control"}),
             "language": forms.Select(attrs={"class": "form-control"}),
-            "duration": forms.Select(attrs={"class": "form-control"}),
         }
 
     def clean_abstract(self):

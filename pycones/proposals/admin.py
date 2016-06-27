@@ -17,7 +17,6 @@ admin.site.register(
         "kind",
         "audience_level",
         "language",
-        "duration",
         "cancelled",
     ],
     list_filter=[
@@ -32,7 +31,6 @@ admin.site.register(
         "kind",
         "audience_level",
         "language",
-        "duration",
     ])]
 )
 admin.site.register(ProposalSection)
