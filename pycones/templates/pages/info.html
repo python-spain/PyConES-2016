@@ -5,110 +5,150 @@
 {% block container %}
     <div class="container">
 
-{#        <div class="row">#}
-{#            <div class="col-md-8 col-md-offset-2">#}
-{#                <h2><i class="icon-arrow"></i>{% trans "Localización" %}</h2>#}
-{#            </div>#}
-{#            <div class="col-md-8 col-md-offset-2">#}
-{#                <p class="loud">#}
-{#                    {% blocktrans %}#}
-{#                        La PyConES 2015 se celebra en la Escuela Técnica Superior de Informática (ETSINF) de la#}
-{#                        Universidad Politécnica de Valencia en el Campus de Vera,#}
-{#                        <strong>del 20 al 22 de noviembre de 2015</strong>. Se accede por la Avenida de los#}
-{#                        Naranjos (Avinguda deis Taronjers) y la puerta más recomendable para acceder es la puerta P.#}
-{#                        Desde ahí podéis acceder a los edificios donde se celebra la conferencia que son los#}
-{#                        etiquetados como <strong>1G</strong>  (ETSINF) y <strong>1F</strong> (DSIIC).#}
-{#                        Las charlas plenarias serán en el Paraninfo (<strong>3A</strong>).#}
-{#                    {% endblocktrans %}#}
-{#                </p>#}
-{#            </div>#}
-{#            <div class="col-md-8 col-md-offset-2">#}
-{#                <img src="{% static "img/upv_map_1.png" %}" class="img-responsive" />#}
-{#            </div>#}
-{#        </div>#}
-{##}
-{#        <div class="row" style="margin-top: 30px">#}
-{#            <div class="col-md-8 col-md-offset-2">#}
-{#                <div class="row color-danger">#}
-{#                    <div class="col-xs-12">#}
-{#                        <ul class="list-unstyled loud">#}
-{#                            <li><i class="icon-arrow"></i> {% trans "Los talleres del viernes serán en el edificio DSIIC, frente a la ETSINF." %}</li>#}
-{#                            <li><i class="icon-arrow"></i> {% trans "Las aulas para las charlas del sábado y domingo se encuentran en la planta baja de la ETSINF." %}</li>#}
-{#                            <li><i class="icon-arrow"></i> {% trans "Las charlas plenarias, apertura y cierre del congreso serán en el Paraninfo (Edificio 3A)." %}</li>#}
-{#                            <li><i class="icon-arrow"></i> {% trans "El cátering para las comidas será en la Cafetería La Vella. Los cafés en la planta baja de la ETSINF." %}</li>#}
-{#                        </ul>#}
-{#                    </div>#}
-{#                </div>#}
-{#                <div class="row typo-generica loud">#}
-{#                    <div class="col-xs-4">#}
-{#                        <img src="{% static "img/etsinf.png" %}" class="img-responsive" />#}
-{#                        <p class="text-center">#}
-{#                            ETSInf<br />#}
-{#                            PyConES#}
-{#                        </p>#}
-{#                    </div>#}
-{#                    <div class="col-xs-4">#}
-{#                        <img src="{% static "img/dsic.png" %}" class="img-responsive" />#}
-{#                        <p class="text-center">#}
-{#                            DSIIC<br />#}
-{#                            {% trans "Talleres" %}#}
-{#                        </p>#}
-{#                    </div>#}
-{#                    <div class="col-xs-4">#}
-{#                        <img src="{% static "img/lavella.png" %}" class="img-responsive" />#}
-{#                        <p class="text-center">#}
-{#                            La Vella<br />#}
-{#                            Comidas#}
-{#                        </p>#}
-{#                    </div>#}
-{#                </div>#}
-{#            </div>#}
-{#            <div class="col-md-8 col-md-offset-2">#}
-{#                <img src="{% static "img/upv_map_2.png" %}" class="img-responsive" />#}
-{#            </div>#}
-{#        </div>#}
-{##}
-{#        <div class="row">#}
-{#            <div class="col-md-8 col-md-offset-2">#}
-{#                <h2><i class="icon-arrow"></i>{% trans "Cómo llegar" %}</h2>#}
-{#                <p class="loud">{% trans "El campus de Vera está situado al norte de la ciudad de Valencia en un entorno tranquilo que limita con la huerta." %}</p>#}
-{#                <p class="loud">{% trans "Puedes llegar además de utilizando el coche y andando en trasporte público:" %}</p>#}
-{#                <p class="loud">#}
-{#                 <span class="emt">Autobus EMT</span>, {% trans "líneas" %} <span class="emt">9</span>, <span class="emt">18</span>, <span class="emt">29</span>, <span class="emt">40</span>, <span class="emt">41</span> y <span class="emt">71</span>#}
-{#                </p>#}
-{#                <p class="loud">#}
-{#                    <span class="metro">Metro Valencia</span>, {% trans "líneas" %} <span class="metro-4">4</span> y <span class="metro-6">9</span>. {% trans "Parada" %} <strong>Universitat Politécnica</strong>#}
-{#                </p>#}
-{#                <div class="row">#}
-{#                    <div class="col-xs-12">#}
-{#                        <h3>{% trans "Dirección" %}</h3>#}
-{#                        <p class="loud">{% trans "Escuela Técnica Superior de Ingeniería Informática" %}</p>#}
-{#                        <p class="loud">{% trans "Universidad Politécnica de Valencia" %}</p>#}
-{#                        <p>#}
-{#                            Camino de Vera, s/n<br/>#}
-{#                            46022 Valencia#}
-{#                        </p>#}
-{#                        <p>#}
-{#                            <iframe width="100%" height="450" frameborder="0" style="border:0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=-0.3549528121948242%2C39.48004647954756%2C-0.34218549728393555%2C39.485859505473975&amp;layer=mapnik&amp;marker=39.48253%2C-0.34695"></iframe>#}
-{#                        </p>#}
-{#                        <p class="loud text-center"><a href="{% static "pdf/TES_2015_01987.pdf" %}" class="btn btn-primary btn-lg">{% trans "30 % descuento RENFE" %}</a> <a href="http://www.renfe.com/viajeros/tarifas/eventos_tutorial.html" target="_blank">¿Cómo aplicar el descuento?</a></p>#}
-{#                    </div>#}
-{#                </div>#}
-{##}
-{#                <div class="row">#}
-{#                    <div class="col-sm-6">#}
-{#                        <h3 id="share-car">{% trans "¡Comparte coche!" %}</h3>#}
-{#                        <iframe src="http://www.blablacar.es/widget/ES_WID_PUBLIC-pyconesvlc_PSGR&amp;?from=&amp;?to=Valencia" style="border:0; padding:0;margin: 35px 0 0 0;" width="100%" height="270px" frameborder="0" scrolling="no"></iframe>#}
-{#                    </div>#}
-{#                    <div class="col-sm-6">#}
-{#                        <p class="text-center" style="margin-top: 200px">#}
-{#                            <a href="http://www.blablacar.es/coche-compartido/a-Valencia/#&amp;utm_source=WID&amp;utm_medium=Link&amp;utm_campaign=ES_WID_PUBLIC-pyconesvlc_PSGR&amp;comuto_cmkt=ES_WID_PUBLIC-pyconesvlc_PSGR" class="btn btn-primary btn-lg">{% trans "Comparte coche a Valencia" %}</a>#}
-{#                        </p>#}
-{#                    </div>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{##}
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h2>{% trans "Localizacion" %}</h2>
+            </div>
+            <div class="col-md-8 col-md-offset-2">
+                <p class="loud">
+                    {% blocktrans %}
+                        La sede de PyConES 2016 está en el campus de la Universidad de Almería, concretamente en los edificios Paraninfo y de la Facultad de Ciencias Sociales.
+                    {% endblocktrans %}
+                </p>
+                <p class="loud">
+                    {% blocktrans %}
+                        Dispondremos de tres salas para acomodar hasta tres sesiones paralelas:
+                    {% endblocktrans %}
+                </p>
+                <ol class="loud">
+                    <li>Paraninfo, sala plenaria.</li>
+                    <li>Sala de Conferencias de CC. de la Salud.</li>
+                    <li>Salón de Grados del Paraninfo.</li>
+                </ol>
+                <p class="loud">
+                    {% blocktrans %}
+                        Os hemos preparado un mapa Google Maps compilando toda la información que creemos podéis necesitar: <a href="http://bit.ly/PyConES16" target="_blank">http://bit.ly/PyConES16</a>
+                    {% endblocktrans %}
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h2>{% trans "Sobre Almeria" %}</h2>
+            </div>
+            <div class="col-md-8 col-md-offset-2">
+                <p class="loud">
+                    {% blocktrans %}
+                        A algunos nos gusta decir que Almería es lo más parecido que tiene España a una isla sin salir de la Península. La relativa inaccesibilidad ha servido para proteger del turismo desaforado una diversidad de paisajes que suelen enamorar al viajero. Almería es un gran plató a cielo abierto donde se han rodado toda clase de filmes, anuncios o vídeos musicales. Nuestro clima es cálido pero templado todo el año. Nuestro cielo, tan claro, es el que enamoró al director David Lean. Si queréis explorar las posibilidades turísticas de Almería podéis consultar las siguientes fuentes:
+                    {% endblocktrans %}
+                </p>
+                <ul class="loud">
+                    <li><a href="http://www.turismoalmeria.com/" target="_blank">{% trans "Costa de Almería" %}</a></li>
+                    <li><a href="http://www.andalucia.org/es/contacta-con-nosotros/almeria/almeria-3/" target="_blank">{% trans "Patronato provincial de turismo de Almería" %}</a></li>
+                    <li><a href="http://www.turismodealmeria.org/" target="_blank">{% trans "Turismo de Almería (ciudad)" %}</a></li>
+                </ul>
+                <p class="loud">
+                    {% blocktrans %}
+                        Económicamente Almería es además una pequeña potencia en el sector agroalimentario. Nuestra industria y servicios exportan fruta y hortalizas a toda Europa y es una de las referencias mundiales del sector. Y si creías que la única construcción humana que podía verse desde el espacio era la Muralla China tenemos que confirmarte que no es cierto, pero que sí se ve el reflejo del inmenso mar de plástico del Campo de Dalías bajo el que se cultivan alimentos que probablemente consumes con regularidad.
+                    {% endblocktrans %}
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h2>{% trans "Como desplazarse hasta el campus" %}</h2>
+            </div>
+            <div class="col-md-8 col-md-offset-2">
+                <p class="loud">
+                    {% blocktrans %}
+                        El campus tiene varios espacios de aparcamiento para los que optéis por el transporte privado. El desplazamiento puede hacerse tanto por la autovía, tomando la salida a La Cañada, como por la carretera de la costa.
+                    {% endblocktrans %}
+                </p>
+                <p class="loud">
+                    {% blocktrans %}
+                        Quienes optéis por el transporte público tendréis disponible especialmente la línea 18 de la empresa local de transportes, Surbus. Dicha línea regular contará con refuerzos puntuales para los desplazamientos al congreso. La parada de la Universidad es la número 144 (http://m.surbus.com/tiempo-espera/parada/144). Surbús dispone de una aplicación web para consultar los tiempos de espera de cada parada (http://m.surbus.com/tiempo-espera/paradas). En el mapa del evento tenéis anotadas todas las paradas de la línea 18 (<a href="http://bit.ly/PyConES16" target="_blank">http://bit.ly/PyConES16</a> )
+                    {% endblocktrans %}
+                </p>
+                <p class="loud">
+                    {% blocktrans %}
+                        También disponemos de dos servicios de taxi:
+                    {% endblocktrans %}
+                </p>
+                <p class="loud">
+                    {% blocktrans %}
+                        <strong>Radio taxi</strong> <br/>
+                        950 22 22 22 - 950 22 61 61<br/>
+                        <a href="http://www.radiotaxialmeria.es/" target="_blank">http://www.radiotaxialmeria.es/</a>
+                    {% endblocktrans %}
+                </p>
+                <p class="loud">
+                    {% blocktrans %}
+                        <strong>Tele Taxi</strong> <br/>
+                        950 251 111<br/>
+                        <a href="http://teletaxialmeria.com/" target="_blank">http://teletaxialmeria.com/</a>
+                    {% endblocktrans %}
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h2>{% trans "Como llegar a Almeria" %}</h2>
+            </div>
+            <div class="col-md-8 col-md-offset-2">
+                <p class="loud">
+                    {% blocktrans %}
+                        <strong>Avión</strong>: El <a href="http://www.aena.es/es/aeropuerto-almeria/index.html" target="_blank">aeropuerto de Almería</a> tiene enlaces nacionales directos con al menos Sevilla, Melilla, Madrid y Barcelona y según la temporada también enlaces regulares con otras ciudades europeas, especialmente con aerolíneas de bajo coste. Puedes desplazarte desde el aeropuerto al centro de la ciudad en taxi o en autobús (<a href="http://www.aena.es/es/aeropuerto-almeria/transporte-publico.html" target="_blank">línea 22</a>)
+                    {% endblocktrans %}
+                </p>
+                <p class="loud">
+                    {% blocktrans %}
+                        <strong>Tren</strong>: La magnífica estación de ferrocarril de Almería, en proceso de restauración, está en el mismísimo centro de la ciudad. Forma parte de una moderna <a href="http://www.adif.es/es_ES/infraestructuras/estaciones/56312/informacion_000069.shtml"> estación intermodal</a>. Las conexiones por tren principales son con Madrid y Granada-Sevilla. Y no, no sólo no tenemos AVE sino que se están tapiando los túneles ya construidos «para que no les roben el cobre» 😃
+                    {% endblocktrans %}
+                </p>
+                <p class="loud">
+                    {% blocktrans %}
+                        <strong>Puerto</strong>: También en el mismísimo centro de la ciudad disponemos de un puerto modernizado y activo. Si viajas a Almería desde el norte de África disponemos de <a href="http://www.apalmeria.com/index.php?option=com_content&view=article&id=95&Itemid=92&lang=es"> conexiones regulares con Melilla, Nador, Ghazaouet y Orán</a>.
+                    {% endblocktrans %}
+                </p>
+                <p class="loud">
+                    {% blocktrans %}
+                        <strong>Autobús</strong>: Llegando a la misma estación intermodal ya mencionada. Hay conexiones diarias a ciudades de Andalucía, a Madrid y por levante hasta Barcelona.
+                    {% endblocktrans %}
+                </p>
+                <p class="loud">
+                    {% blocktrans %}
+                        <strong>Vehículo propio</strong>:
+                    {% endblocktrans %}
+                </p>
+                <ul class="loud">
+                    <li>{% trans "por la costa, a través de la Autovía del Mediterráneo A-7, E-15" %}</li>
+                    <li>{% trans "desde el interior, a través de la A-92" %}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h2>{% trans "Alojamiento" %}</h2>
+            </div>
+            <div class="col-md-8 col-md-offset-2">
+                <p class="loud">
+                    {% blocktrans %}
+                        Estamos trabajando para ofreceros un hotel recomendado, hasta entonces os sugerimos las siguientes indicaciones:
+                    {% endblocktrans %}
+                </p>
+                <ul class="loud">
+                    <li>
+                        {% blocktrans %}
+                        <a href="https://www.google.com/maps/d/viewer?mid=1Qm5_h5uTqriVSYBHS_SP3NVgjHc">en el mapa que hemos preparado</a> tenéis apuntados los alojamientos más próximos a la línea 18 de autobús
+                        {% endblocktrans %}
+                    </li>
+                    <li>{% trans "en el mismo mapa opcionalmente tenéis indicada la situación de otros dos grupos de hoteles, uno en la capital y otro en el complejo hotelero de El Toyo, en la zona de Retamar, que puede ser de vuestro interés si viajáis en familia y con vehículo propio" %}</li>
+                </ul>
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h2>{% trans "Codigo de conducta" %}</h2>
