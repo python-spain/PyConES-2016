@@ -16,8 +16,13 @@ Dispondremos de tres salas para acomodar hasta tres sesiones paralelas:
     
 Os hemos preparado un mapa Google Maps compilando toda la información que creemos podéis necesitar: http://bit.ly/PyConES16
 
+El horario principal del congreso previsto es:
 
+    - viernes 07/10/16 de 15:00 a 20:30.
+    - sábado 08/10/16 de 9:00 a 20:30.
+    - domingo 09/10/16 de 9:00 a 18:30.
 
+Obviamente llegado el momento os ofreceremos un calendario detallado.
 
 Sobre Almería:
 
