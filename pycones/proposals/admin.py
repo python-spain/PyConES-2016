@@ -22,6 +22,7 @@ admin.site.register(
     ],
     list_filter=[
         "kind__name",
+        "notified",
         # "result__accepted",
     ],
     actions=[
