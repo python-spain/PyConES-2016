@@ -3,21 +3,21 @@
 
 
 {% block content %}
+    {% block form_title %}
     <h1>{% trans "Envia tu propuesta para dar una charla o taller en la PyConES 2016" %}</h1>
+    {% endblock form_title %}
+    {% block description %}
     <p>
         {% blocktrans %}
             ¡Está abierta la llamada a propuestas para la PyConES 2016! El plazo termina el <ins>15</ins> de julio a
             las 00:00.
         {% endblocktrans %}
     </p>
-{#    <ul>#}
-{#        <li>{% trans "<strong>Charla</strong>: 30 minutos + 5 de preguntas + 5 de pausa. Sábado 21 y domingo 22." %}</li>#}
-{#        <li>{% trans "<strong>Taller/Tutorial</strong>: 2-3 horas. Viernes 20." %}</li>#}
-{#    </ul>#}
+    {% endblock description %}
     {% if more_info_link %}
     <p><a href="{{ more_info_link }}">{% trans "Más información en el blog" %}</a></p>
     {% endif %}
-    <form method="post" action="{% url "proposals:submit" %}" class="form-horizontal" style="margin-top: 25px">
+    <form method="post" action="" class="form-horizontal" style="margin-top: 25px">
         {% csrf_token %}
 
         <div class="form-group{% if form.speaker_name.errors %} has-error{% endif %}">
@@ -104,7 +104,9 @@
 
         <div class="form-group">
             <div class="col-sm-offset-3 col-sm-9">
+                {% block buttons %}
                 <button class="btn btn-primary" type="submit">{% trans "Enviar propuesta" %}</button>
+                {% endblock buttons %}
             </div>
         </div>
 

@@ -30,50 +30,49 @@
         </div>
     </div>
 
-    {#    <div class="row">#}
-    {#        <div class="col-xs-12">#}
-    {#            <h2><i class="icon-arrow"></i> {% trans "Llamada a propuestas" %}</h2>#}
-    {#            <p class="text-center" style="margin: 35px 0 35px 0">#}
-    {#                <a href="{% url "proposals:submit" %}" class="btn btn-primary btn-lg" >{% trans "¡Envía tu propuesta!" %}</a>#}
-    {#            </p>#}
-    {#            <p class="loud">#}
-    {#                {% blocktrans %}#}
-    {#                    ¡Está abierta la llamada a propuestas para la PyConES 2015! El plazo termina el <del>1</del> <ins>9</ins> de septiembre a#}
-    {#                    las 00:00. Estos son los tipos aceptados:#}
-    {#                {% endblocktrans %}#}
-    {#            </p>#}
-    {#            <ul class="loud">#}
-    {#                <li>{% trans "<strong>Charla</strong>: 30 minutos + 5 de preguntas + 5 de pausa. Sábado 21 y domingo 22." %}</li>#}
-    {#                <li>{% trans "<strong>Taller/Tutorial</strong>: 2-3 horas. Viernes 20." %}</li>#}
-    {#            </ul>#}
-    {#        </div>#}
-    {#    </div>#}
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>{% trans "Llamada a propuestas" %}</h2>
+                <p class="text-center" style="margin: 35px 0 35px 0">
+                    <a href="{% url "proposals:submit" %}" class="btn btn-primary btn-lg" >{% trans "¡Envía tu propuesta!" %}</a>
+                </p>
+                <p class="loud">
+                    {% blocktrans %}
+                        ¡Está abierta la llamada a propuestas para la PyConES 2016! El plazo termina el <ins>15</ins> de julio a
+                        las 00:00.
+                    {% endblocktrans %}
+                </p>
+{#                <ul class="loud">#}
+{#                    <li>{% trans "<strong>Charla</strong>: 30 minutos + 5 de preguntas + 5 de pausa. Sábado 21 y domingo 22." %}</li>#}
+{#                    <li>{% trans "<strong>Taller/Tutorial</strong>: 2-3 horas. Viernes 20." %}</li>#}
+{#                </ul>#}
+            </div>
+        </div>
 
-    {#    <div class="row">#}
-    {#        <div class="col-xs-12">#}
-    {#            <div class="row">#}
-    {##}
-    {#                <h2><i class="icon-arrow"></i> {% trans "Oradores Plenarios" %}</h2>#}
-    {##}
-    {#                <div class="col-xs-6 text-center">#}
-    {#                    <h3>{% trans "Yamila Moreno" %}</h3>#}
-    {#                    <img src="{% static "img/yami-web-square.png" %}" class="img-responsive img-circle img-thumbnail">#}
-    {#                    <h4>{% trans "Python y Plutarco: el poder de una historia" %}</h4>#}
-    {#                </div>#}
-    {#                <div class="col-xs-6 text-center">#}
-    {#                    <h3>{% trans "Víctor Terrón" %}</h3>#}
-    {#                    <img src="{% static "img/vterron-2.jpg" %}" class="img-responsive img-circle img-thumbnail">#}
-    {#                    <h4>{% trans "Dijkstra es mi pastor, nada me falta" %}</h4>#}
-    {#                </div>#}
-    {#                <div class="col-xs-12">#}
-    {#                    <p class="text-center" style="margin: 35px 0 35px 0">#}
-    {#                        <a href="{% url "keynoters" %}" class="btn btn-primary btn-lg" >{% trans "¡Conoce más de nuestros keynoters!" %}</a>#}
-    {#                    </p>#}
-    {#                </div>#}
-    {##}
-    {#            </div>#}
-    {#        </div>#}
-    {#    </div>#}
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="row">
+
+                    <h2>{% trans "Oradores Plenarios" %}</h2>
+
+                    <div class="col-xs-6 text-center">
+                        <h3>{% trans "Manuel Kaufmann" %}</h3>
+                        <img src="{% static "img/manuel.jpg" %}" class="img-responsive img-circle img-thumbnail">
+                        <h4>{% trans "Argentina en Python: comunidad, sueños, viajes y aprendizaje" %}</h4>
+                    </div>
+                    <div class="col-xs-6 text-center">
+                        <h3>&nbsp;</h3>
+                        <img src="{% static "img/woman.jpg" %}" class="img-responsive img-circle img-thumbnail">
+                        <h4>&nbsp;</h4>
+                    </div>
+                    <div class="col-xs-12">
+                        <p class="text-center" style="margin: 35px 0 35px 0">
+                            <a href="{% url "keynoters" %}" class="btn btn-primary btn-lg" >{% trans "¡Conoce más de nuestros keynoters!" %}</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     {% if is_activated_tickets_sale_button %}
         <div class="row">

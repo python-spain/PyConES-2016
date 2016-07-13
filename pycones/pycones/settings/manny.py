@@ -16,3 +16,7 @@ DATABASES = {
     }
 }
 # END DATABASE CONFIGURATION
+
+NOTEBOOK_ARGUMENTS = [
+    '--port=8000',
+]

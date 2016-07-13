@@ -36,3 +36,11 @@ def export_as_csv_action(description="Export selected objects as CSV file",
         return response
     export_as_csv.short_description = description
     return export_as_csv
+
+
+def send_confirmation_action(description="Send confirmation email"):
+    def send_confirmation(modeladmin, request, queryset):
+        for item in queryset:
+            item.notify()
+    send_confirmation.short_description = description
+    return send_confirmation
