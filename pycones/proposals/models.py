@@ -6,6 +6,7 @@ import uuid
 
 import reversion
 from django.contrib.auth.models import User
+from django.contrib.sites.models import Site
 from django.core.urlresolvers import reverse
 from django.db import models
 from django.db.models import Q
@@ -14,6 +15,9 @@ from django.utils.timezone import now
 from django.utils.translation import ugettext_lazy as _
 from markupfield.fields import MarkupField
 from model_utils.managers import InheritanceManager
+
+from core.emails import send_email
+from core.helpers.generators import random_string
 
 
 @python_2_unicode_compatible
@@ -116,12 +120,11 @@ class ProposalBase(models.Model):
     additional_speakers = models.ManyToManyField("speakers.Speaker", through="AdditionalSpeaker",
                                                  blank=True)
     cancelled = models.BooleanField(default=False)
+    notified = models.BooleanField(default=False)
+    code = models.CharField(max_length=64, null=True, blank=True)
 
     def __str__(self):
         return "%s - %s" % (self.pk, self.title)
-
-    def can_edit(self):
-        return True
 
     @property
     def section(self):
@@ -135,6 +138,10 @@ class ProposalBase(models.Model):
     def number(self):
         return str(self.pk).zfill(3)
 
+    @staticmethod
+    def can_edit():
+        return True
+
     def speakers(self):
         yield self.speaker
         speakers = self.additional_speakers.exclude(
@@ -143,11 +150,31 @@ class ProposalBase(models.Model):
             yield speaker
 
     def notification_email_context(self):
+        site = Site.objects.get_current()
         return {
             "title": self.title,
             "speaker": self.speaker.name,
             "kind": self.kind.name,
+            "code": self.code,
+            "site": site,
         }
+
+    def notify(self):
+        """Sends an email to the creator of the proposal with a confirmation email. The emails has a
+        link to edit the proposal.
+        """
+        if not self.code:
+            self.code = random_string(64)
+        context = self.notification_email_context()
+        send_email(
+            context=context,
+            template="emails/proposals/confirmation.html",
+            subject=_("[PyConES 2016] Confirmación de propuesta de charla"),
+            to=self.speaker.email,
+            from_email="contacto2016@es.pycon.org"
+        )
+        self.notified = True
+        self.save()
 
 
 reversion.register(ProposalBase)

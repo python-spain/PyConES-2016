@@ -46,6 +46,7 @@ class ProposalFrom(TranslationModelForm):
             "abstract_ca_markup_type",
             "abstract_eu_markup_type",
             "abstract_gl_markup_type",
+            "code"
         ]
         widgets = {
             "kind": forms.Select(attrs={"class": "form-control"}),
@@ -105,4 +106,23 @@ class ProposalFrom(TranslationModelForm):
         proposal.additional_notes_eu_markup_type = 'markdown'
         proposal.additional_notes_gl_markup_type = 'markdown'
         proposal.save()
+        if not proposal.notified:
+            proposal.notify()
         return proposal
+
+
+class EditProposalFrom(ProposalFrom):
+
+    def get_speaker(self):
+        speaker = self.instance.speaker
+        name = self.cleaned_data.get("speaker_name", "")
+        email = self.cleaned_data.get("speaker_email")
+        speaker.name = name
+        speaker.user.email = email
+        speaker.user.save()
+        speaker.save()
+        return speaker
+
+    def save(self, commit=True):
+        self.get_speaker()
+        return super(ProposalFrom, self).save(commit=commit)
