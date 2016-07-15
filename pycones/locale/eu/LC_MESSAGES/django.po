@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Web PyConES 2015\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-21 12:53+0200\n"
+"POT-Creation-Date: 2016-07-15 11:19+0200\n"
 "PO-Revision-Date: 2015-07-09 10:31+0000\n"
 "Last-Translator: Aitzol Naberan <anaberan@codesyntax.com>\n"
 "Language-Team: Basque (http://www.transifex.com/python-espana/web-"
@@ -127,7 +127,7 @@ msgstr "Jarraitu irakurtzen..."
 msgid "Web de la PyConES 2015"
 msgstr "PyConES 2015 webgunea"
 
-#: conference/models.py:12 sponsorship/models.py:27 sponsorship/models.py:159
+#: conference/models.py:12 sponsorship/models.py:28 sponsorship/models.py:160
 msgid "name"
 msgstr "izena"
 
@@ -179,30 +179,34 @@ msgstr ""
 msgid "Email del ponente"
 msgstr ""
 
-#: proposals/forms.py:52
+#: proposals/forms.py:64
+msgid "Este campo no puede estar vacío."
+msgstr ""
+
+#: proposals/forms.py:67
 msgid ""
 "¡El resumen es demasiado corto! Tiene que tener al menos 80 palabras. Ayuda "
 "al equipo organizador a seleccionar tu charla indicando un breve esquema, si "
 "habrá demos en directo o qué conocimientos previos debería tener la audiencia"
 msgstr ""
 
-#: proposals/models.py:69
+#: proposals/models.py:73
 msgid "Name"
 msgstr "Izena"
 
-#: proposals/models.py:81
+#: proposals/models.py:85
 msgid "Tipo de propuesta"
 msgstr ""
 
-#: proposals/models.py:83
+#: proposals/models.py:87
 msgid "Título"
 msgstr ""
 
-#: proposals/models.py:85
+#: proposals/models.py:89
 msgid "Breve descripción"
 msgstr "Azalpen laburra"
 
-#: proposals/models.py:87
+#: proposals/models.py:91
 msgid ""
 "If your proposal is accepted this will be made public and printed in the "
 "program. Should be one paragraph, maximum 500 characters."
@@ -210,11 +214,11 @@ msgstr ""
 "Zure proposamena onartzen badugu, publikatu egingo dugu eta programan "
 "argitaratuko dugu. Paragrafo bakarra, eta gehienez 500 karaktere."
 
-#: proposals/models.py:91
+#: proposals/models.py:95
 msgid "Resumen detallado"
 msgstr ""
 
-#: proposals/models.py:94
+#: proposals/models.py:99
 msgid ""
 "Detailed outline. Will be made public if your proposal is accepted. Edit "
 "using <a href='http://daringfireball.net/projects/markdown/basics' "
@@ -224,11 +228,11 @@ msgstr ""
 "Editatu <a href='http://daringfireball.net/projects/markdown/basics' "
 "target='_blank'>Markdown</a> erabiliz."
 
-#: proposals/models.py:99
+#: proposals/models.py:104
 msgid "Notas adicionales"
 msgstr ""
 
-#: proposals/models.py:103
+#: proposals/models.py:108
 msgid ""
 "Anything else you'd like the program committee to know when making their "
 "selection: your past experience, etc. If it's a workshop, specify the "
@@ -240,55 +244,59 @@ msgstr ""
 "daringfireball.net/projects/markdown/basics' target='_blank'>Markdown</a> "
 "erabiliz."
 
-#: proposals/models.py:159
-msgid "Básico"
-msgstr ""
-
-#: proposals/models.py:160
-msgid "Intermedio"
-msgstr ""
-
-#: proposals/models.py:161
-msgid "Avanzado"
-msgstr ""
-
-#: proposals/models.py:164 pycones/settings/base.py:72
-msgid "Español"
-msgstr "Español"
-
-#: proposals/models.py:165
-msgid "Inglés"
-msgstr ""
-
-#: proposals/models.py:168
-msgid "15 minutos"
-msgstr ""
-
-#: proposals/models.py:169
-msgid "30 minutos"
-msgstr ""
-
 #: proposals/models.py:172
-msgid "Nivel de la audiencia"
-msgstr ""
-
-#: proposals/models.py:175
-msgid "Idioma"
-msgstr ""
-
-#: proposals/models.py:177
-msgid "Duración"
+msgid "[PyConES 2016] Confirmación de propuesta de charla"
 msgstr ""
 
 #: proposals/models.py:187
+msgid "Básico"
+msgstr ""
+
+#: proposals/models.py:188
+msgid "Intermedio"
+msgstr ""
+
+#: proposals/models.py:189
+msgid "Avanzado"
+msgstr ""
+
+#: proposals/models.py:192 pycones/settings/base.py:72
+msgid "Español"
+msgstr "Español"
+
+#: proposals/models.py:193
+msgid "Inglés"
+msgstr ""
+
+#: proposals/models.py:196
+msgid "15 minutos"
+msgstr ""
+
+#: proposals/models.py:197
+msgid "30 minutos"
+msgstr ""
+
+#: proposals/models.py:200
+msgid "Nivel de la audiencia"
+msgstr ""
+
+#: proposals/models.py:203
+msgid "Idioma"
+msgstr ""
+
+#: proposals/models.py:206
+msgid "Duración"
+msgstr ""
+
+#: proposals/models.py:217
 msgid "Pending"
 msgstr "Zain"
 
-#: proposals/models.py:188
+#: proposals/models.py:218
 msgid "Accepted"
 msgstr "Onartuta"
 
-#: proposals/models.py:189
+#: proposals/models.py:219
 msgid "Declined"
 msgstr "Ez da onartu"
 
@@ -338,95 +346,95 @@ msgstr "Web Logoa"
 msgid "Simple"
 msgstr ""
 
-#: sponsorship/models.py:28
+#: sponsorship/models.py:29
 msgid "order"
 msgstr ""
 
-#: sponsorship/models.py:29
+#: sponsorship/models.py:30
 msgid "cost"
 msgstr "prezioa"
 
-#: sponsorship/models.py:30 sponsorship/models.py:160
+#: sponsorship/models.py:31 sponsorship/models.py:161
 msgid "description"
 msgstr "azalpena"
 
-#: sponsorship/models.py:30
+#: sponsorship/models.py:31
 msgid "This is private."
 msgstr "Pribatua da."
 
-#: sponsorship/models.py:34
+#: sponsorship/models.py:35
 msgid "sponsor level"
 msgstr "laguntzaile mota"
 
-#: sponsorship/models.py:35
+#: sponsorship/models.py:36
 msgid "sponsor levels"
 msgstr "laguntzaile motak"
 
-#: sponsorship/models.py:48
+#: sponsorship/models.py:49
 msgid "applicant"
 msgstr "eskatzailea"
 
-#: sponsorship/models.py:51
+#: sponsorship/models.py:52
 msgid "Sponsor Name"
 msgstr "Laguntzailearen Izena"
 
-#: sponsorship/models.py:52
+#: sponsorship/models.py:53
 msgid "external URL"
 msgstr "kanpo URLa"
 
-#: sponsorship/models.py:53
+#: sponsorship/models.py:54
 msgid "annotation"
 msgstr ""
 
-#: sponsorship/models.py:54
+#: sponsorship/models.py:55
 msgid "Contact Name"
 msgstr "Izena"
 
-#: sponsorship/models.py:55
+#: sponsorship/models.py:56
 msgid "Contact Email"
 msgstr "Helbide elektronikoa"
 
-#: sponsorship/models.py:56 sponsorship/models.py:171
+#: sponsorship/models.py:57 sponsorship/models.py:172
 msgid "level"
 msgstr "maila"
 
-#: sponsorship/models.py:57
+#: sponsorship/models.py:58
 msgid "added"
 msgstr "gehituta"
 
-#: sponsorship/models.py:58
+#: sponsorship/models.py:59
 msgid "active"
 msgstr "aktibo"
 
-#: sponsorship/models.py:69 sponsorship/models.py:187
+#: sponsorship/models.py:70 sponsorship/models.py:188
 msgid "sponsor"
 msgstr "laguntzailea"
 
-#: sponsorship/models.py:70
+#: sponsorship/models.py:71
 msgid "sponsors"
 msgstr "laguntzaileak"
 
-#: sponsorship/models.py:161
+#: sponsorship/models.py:162
 msgid "type"
 msgstr "mota"
 
-#: sponsorship/models.py:170 sponsorship/models.py:188
+#: sponsorship/models.py:171 sponsorship/models.py:189
 msgid "benefit"
 msgstr "onura"
 
-#: sponsorship/models.py:174 sponsorship/models.py:192
+#: sponsorship/models.py:175 sponsorship/models.py:193
 msgid "max words"
 msgstr "hitz kopuru maximoa"
 
-#: sponsorship/models.py:175 sponsorship/models.py:193
+#: sponsorship/models.py:176 sponsorship/models.py:194
 msgid "other limits"
 msgstr "beste muga batzuk"
 
-#: sponsorship/models.py:197
+#: sponsorship/models.py:198
 msgid "text"
 msgstr "testua"
 
-#: sponsorship/models.py:198
+#: sponsorship/models.py:199
 msgid "file"
 msgstr "fitxategia"
 
@@ -522,27 +530,54 @@ msgstr "PyConES 2015"
 msgid "Información del evento"
 msgstr "Ekitaldiaren informazioa"
 
-#: templates/base.html:56
+#: templates/base.html:55 templates/pages/home.html:56
+msgid "Oradores Plenarios"
+msgstr ""
+
+#: templates/base.html:57
 #, fuzzy
 #| msgid "Compra tus entradas"
 msgid "Compra tu entradas"
 msgstr "Erosi zure sarrerak"
 
-#: templates/base.html:59
+#: templates/base.html:60
 msgid "Envía tu propuesta"
 msgstr ""
 
-#: templates/base.html:61
+#: templates/base.html:62
 msgid "Blog"
 msgstr "Bloga"
 
-#: templates/base.html:111
+#: templates/base.html:112
 msgid "Código de conducta"
 msgstr "Jarrera kodea"
 
-#: templates/base.html:112
+#: templates/base.html:113
 msgid "Contacta con nosotros"
 msgstr "Jarri harremanetan gurekin"
+
+#: templates/emails/proposals/confirmation.html:5
+#, python-format
+msgid ""
+"\n"
+"    <p>¡Hola %(speaker)s!</p>\n"
+"    <p>Muchas gracias por enviar tu propuesta \"%(title)s\", en breve nos "
+"pondremos en contacto contigo\n"
+"    para decirte si has sido seleccionado o no.</p>\n"
+"    <p>Además, te mandamos un enlace desde el que puedes editar la propuesta "
+"que has enviado. ¡El enlace\n"
+"    es privado y no deberías de compartirlo con nadie!</p>\n"
+"    "
+msgstr ""
+
+#: templates/emails/proposals/confirmation.html:12
+#: templates/proposals/edit.html:10
+msgid "Editar propuesta"
+msgstr ""
+
+#: templates/emails/proposals/confirmation.html:13
+msgid "¡Un saludo!"
+msgstr ""
 
 #: templates/landing.html:42
 msgid "PyConES"
@@ -558,7 +593,7 @@ msgid ""
 "novedades."
 msgstr "Hurrengo PyConES ari gara antolatzen. Laster izango duzu gure berri."
 
-#: templates/pages/code_of_conduct.html:8 templates/pages/info.html:114
+#: templates/pages/code_of_conduct.html:8 templates/pages/info.html:169
 #, fuzzy
 #| msgid "Código de conducta"
 msgid "Codigo de conducta"
@@ -748,7 +783,7 @@ msgid ""
 "                    La PyConES celebrará su cuarta edición los días "
 "<strong>7 a 9 de octubre de 2016</strong> en <strong>Almería</strong>, "
 "después de\n"
-"                    dos exitosas ediciones en Madrid, Zaragoza y Valencia "
+"                    tres exitosas ediciones en Madrid, Zaragoza y Valencia "
 "respectivamente y siguiendo el formato del evento mundial\n"
 "                    <a href=\"http://pycon.org\" target=\"_blank\">PyCon</"
 "a>.\n"
@@ -769,15 +804,44 @@ msgstr ""
 msgid "Ediciones anteriores"
 msgstr "Aurreko edizioak"
 
-#: templates/pages/home.html:81
+#: templates/pages/home.html:35
+msgid "Llamada a propuestas"
+msgstr ""
+
+#: templates/pages/home.html:37
+msgid "¡Envía tu propuesta!"
+msgstr ""
+
+#: templates/pages/home.html:40
+msgid ""
+"\n"
+"                        ¡Está abierta la llamada a propuestas para la "
+"PyConES 2016! El plazo termina el <del>15</del> <ins>27</ins> de julio a\n"
+"                        las 00:00.\n"
+"                    "
+msgstr ""
+
+#: templates/pages/home.html:59 templates/pages/keynoters.html:11
+msgid "Manuel Kaufmann"
+msgstr ""
+
+#: templates/pages/home.html:61 templates/pages/keynoters.html:13
+msgid "Argentina en Python: comunidad, sueños, viajes y aprendizaje"
+msgstr ""
+
+#: templates/pages/home.html:70
+msgid "¡Conoce más de nuestros keynoters!"
+msgstr ""
+
+#: templates/pages/home.html:80
 msgid "Compra de entradas"
 msgstr "Sarrerak erostea"
 
-#: templates/pages/home.html:88 templates/pages/tickets.html:18
+#: templates/pages/home.html:87 templates/pages/tickets.html:18
 msgid "¡Entradas agotadas!"
 msgstr ""
 
-#: templates/pages/home.html:92
+#: templates/pages/home.html:91
 #, fuzzy
 #| msgid ""
 #| "Con tu entrada podrás acceder los dos días de la conferencia completos. "
@@ -795,11 +859,11 @@ msgstr ""
 "                    WelcomePack-arekin batera.\n"
 "                "
 
-#: templates/pages/home.html:100
+#: templates/pages/home.html:99
 msgid "Patrocinadores"
 msgstr "Babesleak"
 
-#: templates/pages/home.html:124
+#: templates/pages/home.html:129
 #, fuzzy, python-format
 #| msgid ""
 #| "\n"
@@ -820,17 +884,321 @@ msgstr ""
 "harremanetan gurekin!</a>\n"
 "                        "
 
-#: templates/pages/home.html:133
+#: templates/pages/home.html:138
 #, fuzzy
 #| msgid "Folleto (EN)"
 msgid "Folleto (ES)"
 msgstr "Eskuorria (EN)"
 
-#: templates/pages/home.html:136
+#: templates/pages/home.html:141
 msgid "Folleto (EN)"
 msgstr "Eskuorria (EN)"
 
-#: templates/pages/info.html:116
+#: templates/pages/info.html:10
+msgid "Localizacion"
+msgstr ""
+
+#: templates/pages/info.html:14
+msgid ""
+"\n"
+"                        La sede de PyConES 2016 está en el campus de la "
+"Universidad de Almería, concretamente en los edificios Paraninfo y de la "
+"Facultad de Ciencias Sociales.\n"
+"                    "
+msgstr ""
+
+#: templates/pages/info.html:19
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                            Gracias por ayudarnos a hacer este evento "
+#| "amistoso y abierto para todos.\n"
+#| "                            "
+msgid ""
+"\n"
+"                        Dispondremos de tres salas para acomodar hasta tres "
+"sesiones paralelas:\n"
+"                    "
+msgstr ""
+"\n"
+"                            Eskerrik asko jardunaldi ireki eta adiskidetsua "
+"sortzen laguntzearren.\n"
+"                            "
+
+#: templates/pages/info.html:29
+msgid ""
+"\n"
+"                        Os hemos preparado un mapa Google Maps compilando "
+"toda la información que creemos podéis necesitar: <a href=\"http://bit.ly/"
+"PyConES16\" target=\"_blank\">http://bit.ly/PyConES16</a>\n"
+"                    "
+msgstr ""
+
+#: templates/pages/info.html:34
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                            Gracias por ayudarnos a hacer este evento "
+#| "amistoso y abierto para todos.\n"
+#| "                            "
+msgid ""
+"\n"
+"                    El horario principal del congreso previsto es:\n"
+"                    "
+msgstr ""
+"\n"
+"                            Eskerrik asko jardunaldi ireki eta adiskidetsua "
+"sortzen laguntzearren.\n"
+"                            "
+
+#: templates/pages/info.html:39
+msgid "viernes 07/10/16 de 15:00 a 20:30."
+msgstr ""
+
+#: templates/pages/info.html:40
+msgid "sábado 08/10/16 de 9:00 a 20:30."
+msgstr ""
+
+#: templates/pages/info.html:41
+msgid "domingo 09/10/16 de 9:00 a 18:30."
+msgstr ""
+
+#: templates/pages/info.html:44
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                            Gracias por ayudarnos a hacer este evento "
+#| "amistoso y abierto para todos.\n"
+#| "                            "
+msgid ""
+"\n"
+"                        Obviamente llegado el momento os ofreceremos un "
+"calendario detallado.\n"
+"                    "
+msgstr ""
+"\n"
+"                            Eskerrik asko jardunaldi ireki eta adiskidetsua "
+"sortzen laguntzearren.\n"
+"                            "
+
+#: templates/pages/info.html:53
+msgid "Sobre Almeria"
+msgstr ""
+
+#: templates/pages/info.html:57
+msgid ""
+"\n"
+"                        A algunos nos gusta decir que Almería es lo más "
+"parecido que tiene España a una isla sin salir de la Península. La relativa "
+"inaccesibilidad ha servido para proteger del turismo desaforado una "
+"diversidad de paisajes que suelen enamorar al viajero. Almería es un gran "
+"plató a cielo abierto donde se han rodado toda clase de filmes, anuncios o "
+"vídeos musicales. Nuestro clima es cálido pero templado todo el año. Nuestro "
+"cielo, tan claro, es el que enamoró al director David Lean. Si queréis "
+"explorar las posibilidades turísticas de Almería podéis consultar las "
+"siguientes fuentes:\n"
+"                    "
+msgstr ""
+
+#: templates/pages/info.html:62
+msgid "Costa de Almería"
+msgstr ""
+
+#: templates/pages/info.html:63
+msgid "Patronato provincial de turismo de Almería"
+msgstr ""
+
+#: templates/pages/info.html:64
+msgid "Turismo de Almería (ciudad)"
+msgstr ""
+
+#: templates/pages/info.html:67
+msgid ""
+"\n"
+"                        Económicamente Almería es además una pequeña "
+"potencia en el sector agroalimentario. Nuestra industria y servicios "
+"exportan fruta y hortalizas a toda Europa y es una de las referencias "
+"mundiales del sector. Y si creías que la única construcción humana que podía "
+"verse desde el espacio era la Muralla China tenemos que confirmarte que no "
+"es cierto, pero que sí se ve el reflejo del inmenso mar de plástico del "
+"Campo de Dalías bajo el que se cultivan alimentos que probablemente consumes "
+"con regularidad.\n"
+"                    "
+msgstr ""
+
+#: templates/pages/info.html:76
+msgid "Como desplazarse hasta el campus"
+msgstr ""
+
+#: templates/pages/info.html:80
+msgid ""
+"\n"
+"                        El campus tiene varios espacios de aparcamiento para "
+"los que optéis por el transporte privado. El desplazamiento puede hacerse "
+"tanto por la autovía, tomando la salida a La Cañada, como por la carretera "
+"de la costa.\n"
+"                    "
+msgstr ""
+
+#: templates/pages/info.html:85
+msgid ""
+"\n"
+"                        Quienes optéis por el transporte público tendréis "
+"disponible especialmente la línea 18 de la empresa local de transportes, "
+"Surbus. Dicha línea regular contará con refuerzos puntuales para los "
+"desplazamientos al congreso. La parada de la Universidad es la número 144 "
+"(http://m.surbus.com/tiempo-espera/parada/144). Surbús dispone de una "
+"aplicación web para consultar los tiempos de espera de cada parada (http://m."
+"surbus.com/tiempo-espera/paradas). En el mapa del evento tenéis anotadas "
+"todas las paradas de la línea 18 (<a href=\"http://bit.ly/PyConES16\" target="
+"\"_blank\">http://bit.ly/PyConES16</a> )\n"
+"                    "
+msgstr ""
+
+#: templates/pages/info.html:90
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                            Gracias por ayudarnos a hacer este evento "
+#| "amistoso y abierto para todos.\n"
+#| "                            "
+msgid ""
+"\n"
+"                        También disponemos de dos servicios de taxi:\n"
+"                    "
+msgstr ""
+"\n"
+"                            Eskerrik asko jardunaldi ireki eta adiskidetsua "
+"sortzen laguntzearren.\n"
+"                            "
+
+#: templates/pages/info.html:95
+msgid ""
+"\n"
+"                        <strong>Radio taxi</strong> <br/>\n"
+"                        950 22 22 22 - 950 22 61 61<br/>\n"
+"                        <a href=\"http://www.radiotaxialmeria.es/\" target="
+"\"_blank\">http://www.radiotaxialmeria.es/</a>\n"
+"                    "
+msgstr ""
+
+#: templates/pages/info.html:102
+msgid ""
+"\n"
+"                        <strong>Tele Taxi</strong> <br/>\n"
+"                        950 251 111<br/>\n"
+"                        <a href=\"http://teletaxialmeria.com/\" target="
+"\"_blank\">http://teletaxialmeria.com/</a>\n"
+"                    "
+msgstr ""
+
+#: templates/pages/info.html:113
+msgid "Como llegar a Almeria"
+msgstr ""
+
+#: templates/pages/info.html:117
+msgid ""
+"\n"
+"                        <strong>Avión</strong>: El <a href=\"http://www.aena."
+"es/es/aeropuerto-almeria/index.html\" target=\"_blank\">aeropuerto de "
+"Almería</a> tiene enlaces nacionales directos con al menos Sevilla, Melilla, "
+"Madrid y Barcelona y según la temporada también enlaces regulares con otras "
+"ciudades europeas, especialmente con aerolíneas de bajo coste. Puedes "
+"desplazarte desde el aeropuerto al centro de la ciudad en taxi o en autobús "
+"(<a href=\"http://www.aena.es/es/aeropuerto-almeria/transporte-publico.html"
+"\" target=\"_blank\">línea 22</a>)\n"
+"                    "
+msgstr ""
+
+#: templates/pages/info.html:122
+msgid ""
+"\n"
+"                        <strong>Tren</strong>: La magnífica estación de "
+"ferrocarril de Almería, en proceso de restauración, está en el mismísimo "
+"centro de la ciudad. Forma parte de una moderna <a href=\"http://www.adif.es/"
+"es_ES/infraestructuras/estaciones/56312/informacion_000069.shtml\"> estación "
+"intermodal</a>. Las conexiones por tren principales son con Madrid y Granada-"
+"Sevilla. Y no, no sólo no tenemos AVE sino que se están tapiando los túneles "
+"ya construidos «para que no les roben el cobre» 😃\n"
+"                    "
+msgstr ""
+
+#: templates/pages/info.html:127
+msgid ""
+"\n"
+"                        <strong>Puerto</strong>: También en el mismísimo "
+"centro de la ciudad disponemos de un puerto modernizado y activo. Si viajas "
+"a Almería desde el norte de África disponemos de <a href=\"http://www."
+"apalmeria.com/index.php?"
+"option=com_content&view=article&id=95&Itemid=92&lang=es\"> conexiones "
+"regulares con Melilla, Nador, Ghazaouet y Orán</a>.\n"
+"                    "
+msgstr ""
+
+#: templates/pages/info.html:132
+msgid ""
+"\n"
+"                        <strong>Autobús</strong>: Llegando a la misma "
+"estación intermodal ya mencionada. Hay conexiones diarias a ciudades de "
+"Andalucía, a Madrid y por levante hasta Barcelona.\n"
+"                    "
+msgstr ""
+
+#: templates/pages/info.html:137
+msgid ""
+"\n"
+"                        <strong>Vehículo propio</strong>:\n"
+"                    "
+msgstr ""
+
+#: templates/pages/info.html:142
+msgid "por la costa, a través de la Autovía del Mediterráneo A-7, E-15"
+msgstr ""
+
+#: templates/pages/info.html:143
+msgid "desde el interior, a través de la A-92"
+msgstr ""
+
+#: templates/pages/info.html:149
+msgid "Alojamiento"
+msgstr ""
+
+#: templates/pages/info.html:153
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                            Gracias por ayudarnos a hacer este evento "
+#| "amistoso y abierto para todos.\n"
+#| "                            "
+msgid ""
+"\n"
+"                        Estamos trabajando para ofreceros un hotel "
+"recomendado, hasta entonces os sugerimos las siguientes indicaciones:\n"
+"                    "
+msgstr ""
+"\n"
+"                            Eskerrik asko jardunaldi ireki eta adiskidetsua "
+"sortzen laguntzearren.\n"
+"                            "
+
+#: templates/pages/info.html:159
+msgid ""
+"\n"
+"                        <a href=\"https://www.google.com/maps/d/viewer?"
+"mid=1Qm5_h5uTqriVSYBHS_SP3NVgjHc\">en el mapa que hemos preparado</a> tenéis "
+"apuntados los alojamientos más próximos a la línea 18 de autobús\n"
+"                        "
+msgstr ""
+
+#: templates/pages/info.html:163
+msgid ""
+"en el mismo mapa opcionalmente tenéis indicada la situación de otros dos "
+"grupos de hoteles, uno en la capital y otro en el complejo hotelero de El "
+"Toyo, en la zona de Retamar, que puede ser de vuestro interés si viajáis en "
+"familia y con vehículo propio"
+msgstr ""
+
+#: templates/pages/info.html:171
 #, fuzzy
 #| msgid ""
 #| "\n"
@@ -853,7 +1221,7 @@ msgstr ""
 "fisikoa,...).\n"
 "                            "
 
-#: templates/pages/info.html:121
+#: templates/pages/info.html:176
 #, fuzzy
 #| msgid ""
 #| "\n"
@@ -877,7 +1245,7 @@ msgstr ""
 "hitzaldietan.\n"
 "                            "
 
-#: templates/pages/info.html:126
+#: templates/pages/info.html:181
 #, fuzzy
 #| msgid ""
 #| "\n"
@@ -900,7 +1268,7 @@ msgstr ""
 "baztertzailerik.\n"
 "                            "
 
-#: templates/pages/info.html:131
+#: templates/pages/info.html:186
 #, fuzzy
 #| msgid ""
 #| "\n"
@@ -921,7 +1289,7 @@ msgstr ""
 "kostua itzultzeko eskubiderik gabe.\n"
 "                            "
 
-#: templates/pages/info.html:136
+#: templates/pages/info.html:191
 #, fuzzy
 #| msgid ""
 #| "\n"
@@ -939,78 +1307,41 @@ msgstr ""
 "sortzen laguntzearren.\n"
 "                            "
 
-#: templates/pages/info.html:140
+#: templates/pages/info.html:195
 msgid "Codigo de Conducta Completo"
 msgstr "Jarrera kodea (osorik)"
 
-#: templates/pages/keynoters.html:11
-msgid "Yamila Moreno"
-msgstr ""
-
-#: templates/pages/keynoters.html:13
-msgid "Python y Plutarco: el poder de una historia"
-msgstr ""
-
 #: templates/pages/keynoters.html:15
 msgid ""
-"¿Qué tienen que ver las 'Vidas paralelas' de Plutarco y Python? ¿Qué podemos "
-"aprender de un tipo griego de hace 20 siglos? En esta keynote hablaré de "
-"historia de la literatura, de diversidad, de la Constitución, de un nuevo "
-"PEP y de por qué Python, y por extensión su comunidad, pueden ser un motor "
-"de cambio social muy potente."
+"¿Alguna vez soñaste con viajar y trabajar? ¿en dejarlo todo y perseguir tu "
+"sueño? ¿o llevar la programación a los lugares más recónditos? En esta "
+"keynote hablaré sobre la experiencia de llevar Python a más de 100 ciudades "
+"en 8 países de Latinoamérica durante los últimos 3 años. Pequeñas historias, "
+"problemas cotidianos, éxitos y fracasos, eventos realizados y la gran "
+"comunidad Python a nivel internacional serán los tópicos de esta charla."
 msgstr ""
 
-#: templates/pages/keynoters.html:17 templates/pages/keynoters.html:31
+#: templates/pages/keynoters.html:17
 msgid "Acerca de"
 msgstr ""
 
 #: templates/pages/keynoters.html:19
 msgid ""
-"Yamila Moreno se licenció en Teoría de la Literatura y Literatura Comparada. "
-"Un día, cayó en sus manos un Knoppix y poco después estaba programando. Fue "
-"cuestión de tiempo que se empezara a involucrar con Python y con el Open "
-"Source, como afición y como profesión."
+"Manuel Kaufmann conoció Python, mientras realizaba sus estudios "
+"universitarios, en el evento PyDay Santa Fe (Argentina) realizado en 2006 y "
+"desde ese día su vida cambió para siempre, literalmente. Se enamoró de su "
+"sintaxis y olvidó los punteros y las listas doblemente enlazadas de C hasta "
+"estos días. Desde ese momento se ha convertido en miembro activo de Python "
+"Argentina."
 msgstr ""
 
 #: templates/pages/keynoters.html:22
 msgid ""
-"En los últimos 5 años, ha co-fundado Kaleidos y ha sido un miembro muy "
-"activo de la comunidad Open Source: ha co-fundado la Asociación Python "
-"España, fundó PyLadies España, y ha organizado conferencias internacional "
-"así como talleres locales dirigidos a grupos infrarrepresentados. En su "
-"tiempo libre entrena a su drone para, algún día, dominar el mundo."
-msgstr ""
-
-#: templates/pages/keynoters.html:25
-msgid "Víctor Terrón"
-msgstr ""
-
-#: templates/pages/keynoters.html:27
-msgid "Dijkstra es mi pastor, nada me falta"
-msgstr ""
-
-#: templates/pages/keynoters.html:29
-msgid ""
-"¡Python es genial! Lo escuchamos una y otra vez en cada PyCon, pero ¿por qué "
-"es tan increíble Python? A menudo se oyen argumentos como que \"hay "
-"librerías para todo\" o \"las listas por comprensión\", pero nada de esto es "
-"específico de Python y podría aplicarse a muchos otros lenguajes de "
-"programación. En esta charla planteo que, en el fondo y como propugnaba "
-"Edsger W.Dijkstra, todo se reduce a una cuestión de elegancia y sencillez. "
-"Y, como demostración, vamos a ver una implementación del algoritmo de "
-"Dijkstra: comenzando con el críptico código que suele encontrarse por "
-"Internet y mejorándolo poco a poco, haciéndolo más Pythónico a cada paso "
-"hasta reducir el algoritmo a su más pura esencia. ¡Eso de encontrar el "
-"camino más corto en un grafo suena difícil, pero desde 1956 no lo es!"
-msgstr ""
-
-#: templates/pages/keynoters.html:36
-msgid ""
-"Trabajo como ingeniero de software en Google. Llevo años embarcado en una "
-"inmisericorde cruzada contra el código poco legible, los algoritmos "
-"gratuitamente complejos y los ponentes aburridos — no necesariamente en ese "
-"orden. Hay quien asegura haberme escuchado afirmar \"entre un código "
-"elegante que no funcione y uno feo que funcione, ¡prefiero el elegante!\"."
+"En estos años, ha participado en la traducción del libro oficial de Django y "
+"Tutorial de Django Girls, entre otras. Además, ha trabajado en proyectos "
+"como One Laptop Per Child y en febrero de 2016 fue nombrado \"Embajador de "
+"Python\" por la Python Software Foundation por su trabajo con Argentina en "
+"Python."
 msgstr ""
 
 #: templates/pages/tickets.html:11
@@ -1019,7 +1350,7 @@ msgstr ""
 msgid "Compra aquí tus tickets"
 msgstr "Erosi zure sarrerak"
 
-#: templates/proposals/base.html:13 templates/proposals/create.html:115
+#: templates/proposals/base.html:13 templates/proposals/create.html:108
 msgid "Enviar propuesta"
 msgstr ""
 
@@ -1027,15 +1358,15 @@ msgstr ""
 msgid "¡La llamada a propuestas ha terminado!"
 msgstr ""
 
-#: templates/proposals/create.html:6
+#: templates/proposals/create.html:7
 msgid "Envia tu propuesta para dar una charla o taller en la PyConES 2016"
 msgstr ""
 
-#: templates/proposals/create.html:8
+#: templates/proposals/create.html:11
 msgid ""
 "\n"
 "            ¡Está abierta la llamada a propuestas para la PyConES 2016! El "
-"plazo termina el <ins>15</ins> de julio a\n"
+"plazo termina el <del>15</del> <ins>27</ins> de julio a\n"
 "            las 00:00.\n"
 "        "
 msgstr ""
@@ -1045,6 +1376,10 @@ msgstr ""
 #| msgid "Información del evento"
 msgid "Más información en el blog"
 msgstr "Ekitaldiaren informazioa"
+
+#: templates/proposals/edit.html:5
+msgid "Edita tu propuesta"
+msgstr ""
 
 #: templates/proposals/success.html:7
 msgid "¡Gracias por tu propuesta!"
