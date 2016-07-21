@@ -56,7 +56,7 @@ class RestorePasswordForm(forms.Form):
     def clean_tracker(self):
         tracker = self.cleaned_data.get("tracker")
         if not Attendee.objects.filter(tracker=tracker).exists():
-            raise forms.ValidationError(_("El localzador de entrada no existe"))
+            raise forms.ValidationError(_("El localizador de entrada no existe"))
         return tracker
 
     def clean_repeat_password(self):
@@ -87,7 +87,7 @@ class RequestRestoreCodeForm(forms.Form):
     def clean_tracker(self):
         tracker = self.cleaned_data.get("tracker")
         if not Attendee.objects.filter(tracker=tracker).exists():
-            raise forms.ValidationError(_("El localzador de entrada no existe"))
+            raise forms.ValidationError(_("El localizador de entrada no existe"))
         return tracker
 
 
@@ -107,7 +107,7 @@ class AttendeeSigInForm(forms.Form):
     def clean_tracker(self):
         tracker = self.cleaned_data.get("tracker")
         if not Attendee.objects.filter(tracker=tracker).exists():
-            raise forms.ValidationError(_("El localzador de entrada no existe"))
+            raise forms.ValidationError(_("El localizador de entrada no existe"))
         return tracker
 
     def clean_password(self):

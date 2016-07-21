@@ -68,7 +68,7 @@ class Attendee(TimeStampedModel):
         })
         send_template_email(
             _("Establece tu contraseña"),
-            "PyConES 2015 <contacto2015@es.pycon.org>",
+            "PyConES 2016 <contacto2016@es.pycon.org>",
             self.email,
             "attendees/restore_email.html",
             context
