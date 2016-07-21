@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to PyConES 2015 Web page's documentation!
+Welcome to PyConES 2016 Web page's documentation!
 =================================================
 
 Contents:

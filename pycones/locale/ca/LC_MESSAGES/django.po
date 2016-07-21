@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Web PyConES 2015\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-15 11:19+0200\n"
+"POT-Creation-Date: 2016-07-21 15:25+0200\n"
 "PO-Revision-Date: 2015-07-13 11:47+0000\n"
 "Last-Translator: Mai Giménez <mai@immutable.es>\n"
 "Language-Team: Catalan (http://www.transifex.com/python-espana/web-"
@@ -40,8 +40,8 @@ msgid "Repita la contraseña"
 msgstr ""
 
 #: attendees/forms.py:59 attendees/forms.py:90 attendees/forms.py:110
-msgid "El localzador de entrada no existe"
-msgstr ""
+msgid "El localizador de entrada no existe"
+msgstr "Compra d'entrades"
 
 #: attendees/forms.py:66
 msgid "Las contraseñas no son iguales"
@@ -52,8 +52,6 @@ msgid "Código de restauración no válido"
 msgstr ""
 
 #: attendees/forms.py:84 attendees/forms.py:98
-#, fuzzy
-#| msgid "Compra de entradas"
 msgid "Localizador de entrada"
 msgstr "Compra d'entrades"
 
@@ -127,7 +125,7 @@ msgid "Seguir leyendo..."
 msgstr "Continua llegint"
 
 #: blog/views.py:48
-msgid "Web de la PyConES 2015"
+msgid "Web de la PyConES 2016"
 msgstr "Web de la PyConES 2015"
 
 #: conference/models.py:12 sponsorship/models.py:28 sponsorship/models.py:160
@@ -324,8 +322,6 @@ msgid "video URL"
 msgstr ""
 
 #: schedule/models.py:82 schedule/models.py:202
-#, fuzzy
-#| msgid "external URL"
 msgid "keynote URL"
 msgstr "URL externa"
 
@@ -524,8 +520,6 @@ msgid "Toggle navigation"
 msgstr "Canviar navegació"
 
 #: templates/base.html:53
-#, fuzzy
-#| msgid "PyConES 2015"
 msgid "PyConES 2016"
 msgstr "PyConES 2015"
 
@@ -538,8 +532,6 @@ msgid "Oradores Plenarios"
 msgstr ""
 
 #: templates/base.html:57
-#, fuzzy
-#| msgid "Compra tus entradas"
 msgid "Compra tu entradas"
 msgstr "Compra les teves entrades"
 
@@ -599,8 +591,6 @@ msgstr ""
 "novetats."
 
 #: templates/pages/code_of_conduct.html:8 templates/pages/info.html:169
-#, fuzzy
-#| msgid "Código de conducta"
 msgid "Codigo de conducta"
 msgstr "Codi de conducta"
 
@@ -772,25 +762,10 @@ msgstr ""
 " està disponible sota llicència Creative Commons Reconeixement 3.0 Espanya."
 
 #: templates/pages/home.html:9
-#, fuzzy
-#| msgid "¿Qué es PyConES 2015?"
 msgid "¿Que es PyConES 2016?"
 msgstr "Què és PyConES 2015?"
 
 #: templates/pages/home.html:11
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                    <strong>PyConES</strong> es la conferencia nacional "
-#| "sobre Python más importante de España.\n"
-#| "                    La PyConES celebrará su tercera edición los días "
-#| "<strong>20 a 22 noviembre de 2015</strong> en <strong>Valencia</strong>, "
-#| "después de\n"
-#| "                    dos exitosas ediciones en Madrid y Zaragoza "
-#| "respectivamente y siguiendo el formato del evento mundial\n"
-#| "                    <a href=\"http://pycon.org\" target=\"_blank\">PyCon</"
-#| "a>.\n"
-#| "                "
 msgid ""
 "\n"
 "                    <strong>PyConES</strong> es la conferencia nacional "
@@ -855,11 +830,6 @@ msgid "¡Entradas agotadas!"
 msgstr ""
 
 #: templates/pages/home.html:91
-#, fuzzy
-#| msgid ""
-#| "Con tu entrada podrás acceder los dos días de la conferencia completos. "
-#| "En la entrada del edificio te cambiaremos tu entrada de ticketea (no "
-#| "olvides traerla) por tu acreditación y te entregaremos el WelcomePack."
 msgid ""
 "Con tu entrada podrás acceder los tres días de la conferencia completos. En "
 "la entrada del edificio te cambiaremos tu entrada de ticketea (no olvides "
@@ -875,13 +845,6 @@ msgid "Patrocinadores"
 msgstr "Patrocinadors"
 
 #: templates/pages/home.html:129
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "                        ¿Quieres ser el primer patrocinador "
-#| "%(level_name)s? <a href=\"mailto:patrocinadores2015@es.pycon.org\" target="
-#| "\"_blank\">¡Contacta con nosotros!</a>\n"
-#| "                        "
 msgid ""
 "\n"
 "                            ¿Quieres ser el primer patrocinador "
@@ -895,8 +858,6 @@ msgstr ""
 "</a>"
 
 #: templates/pages/home.html:138
-#, fuzzy
-#| msgid "Folleto (EN)"
 msgid "Folleto (ES)"
 msgstr "Fullet (EN)"
 
@@ -918,12 +879,6 @@ msgid ""
 msgstr ""
 
 #: templates/pages/info.html:19
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                            Gracias por ayudarnos a hacer este evento "
-#| "amistoso y abierto para todos.\n"
-#| "                            "
 msgid ""
 "\n"
 "                        Dispondremos de tres salas para acomodar hasta tres "
@@ -943,12 +898,6 @@ msgid ""
 msgstr ""
 
 #: templates/pages/info.html:34
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                            Gracias por ayudarnos a hacer este evento "
-#| "amistoso y abierto para todos.\n"
-#| "                            "
 msgid ""
 "\n"
 "                    El horario principal del congreso previsto es:\n"
@@ -970,12 +919,6 @@ msgid "domingo 09/10/16 de 9:00 a 18:30."
 msgstr ""
 
 #: templates/pages/info.html:44
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                            Gracias por ayudarnos a hacer este evento "
-#| "amistoso y abierto para todos.\n"
-#| "                            "
 msgid ""
 "\n"
 "                        Obviamente llegado el momento os ofreceremos un "
@@ -1060,12 +1003,6 @@ msgid ""
 msgstr ""
 
 #: templates/pages/info.html:90
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                            Gracias por ayudarnos a hacer este evento "
-#| "amistoso y abierto para todos.\n"
-#| "                            "
 msgid ""
 "\n"
 "                        También disponemos de dos servicios de taxi:\n"
@@ -1166,12 +1103,6 @@ msgid "Alojamiento"
 msgstr ""
 
 #: templates/pages/info.html:153
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                            Gracias por ayudarnos a hacer este evento "
-#| "amistoso y abierto para todos.\n"
-#| "                            "
 msgid ""
 "\n"
 "                        Estamos trabajando para ofreceros un hotel "
@@ -1199,14 +1130,6 @@ msgid ""
 msgstr ""
 
 #: templates/pages/info.html:171
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                            PyConES aspira a crear un ambiente libre de "
-#| "acosos o discriminaciones por razón de género, orientación sexual, "
-#| "discapacidad, aspecto físico, etnia o religión. No se tolerará "
-#| "discriminación alguna bajo ninguna circunstancia.\n"
-#| "                            "
 msgid ""
 "\n"
 "                        PyConES aspira a crear un ambiente libre de acosos o "
@@ -1221,14 +1144,6 @@ msgstr ""
 "religió. No es tolerarà cap discriminació sota cap circumstància. "
 
 #: templates/pages/info.html:176
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                            Todo el contenido de la conferencia deberá "
-#| "ajustarse a una audiencia profesional integrada por personas procedentes "
-#| "de sectores diferentes. Tanto el lenguaje como las imágenes sexualmente "
-#| "explícitos son inapropiados en la conferencia y en las charlas.\n"
-#| "                            "
 msgid ""
 "\n"
 "                        Todo el contenido de la conferencia deberá ajustarse "
@@ -1244,14 +1159,6 @@ msgstr ""
 "conferència i a les xerrades."
 
 #: templates/pages/info.html:181
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                            Sé amable con los demás. No insultes o "
-#| "humilles a otros asistentes. Compórtate de manera profesional. Recuerda "
-#| "que las bromas sexistas, racistas o discriminatorias están prohibidas en "
-#| "la PyConES.\n"
-#| "                            "
 msgid ""
 "\n"
 "                        Sé amable con los demás. No insultes o humilles a "
@@ -1265,13 +1172,6 @@ msgstr ""
 "o discriminatòries estan prohibides a la PyConES."
 
 #: templates/pages/info.html:186
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                            Los asistentes que incumplan estas reglas "
-#| "podrán -a discreción de los organizadores- ser sancionados o expulsados "
-#| "de la conferencia sin derecho a reembolso.\n"
-#| "                            "
 msgid ""
 "\n"
 "                        Los asistentes que incumplan estas reglas podrán -a "
@@ -1286,12 +1186,6 @@ msgstr ""
 "reembors."
 
 #: templates/pages/info.html:191
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                            Gracias por ayudarnos a hacer este evento "
-#| "amistoso y abierto para todos.\n"
-#| "                            "
 msgid ""
 "\n"
 "                        Gracias por ayudarnos a hacer este evento amistoso y "
@@ -1339,8 +1233,6 @@ msgid ""
 msgstr ""
 
 #: templates/pages/tickets.html:11
-#, fuzzy
-#| msgid "Compra tus entradas"
 msgid "Compra aquí tus tickets"
 msgstr "Compra les teves entrades"
 
@@ -1366,8 +1258,6 @@ msgid ""
 msgstr ""
 
 #: templates/proposals/create.html:18
-#, fuzzy
-#| msgid "Información del evento"
 msgid "Más información en el blog"
 msgstr "Informació del esdeveniment"
 
@@ -1418,45 +1308,3 @@ msgstr ""
 #: templates/schedule/show.html:65
 msgid "Descargar en Pentabarf XML"
 msgstr ""
-
-#, fuzzy
-#~| msgid "Folleto (ES)"
-#~ msgid "Folleto"
-#~ msgstr "Fullet (ES)"
-
-#~ msgid "Escuela Técnica Superior de Ingeniería Informática"
-#~ msgstr "Escola Tècnica Superior d'Enginyeria Informàtica"
-
-#~ msgid "Universidad Politécnica de Valencia"
-#~ msgstr "Universitat Politècnica de València"
-
-#~ msgid "Valencia 2015"
-#~ msgstr "València 2015"
-
-#~ msgid ""
-#~ "\n"
-#~ "                    Concretamente, la conferencia tendrá lugar en la "
-#~ "<strong>Universidad Politécnica de Valencia (UPV)</strong> y\n"
-#~ "                    será organizada conjuntamente por la comunidad local "
-#~ "y la asociación Python España.\n"
-#~ "                "
-#~ msgstr ""
-#~ "\n"
-#~ "Concretament, la conferència tindrà lloc a l' <strong>Universitat "
-#~ "Politècnica de València (UPV)</strong> i\n"
-#~ "serà organitzada conjuntament per la comunitat local i l'associació "
-#~ "Python Espanya."
-
-#~ msgid "¿Cuándo?"
-#~ msgstr "Quan?"
-
-#, fuzzy
-#~| msgid "Valencia, 21-22 de noviembre de 2015"
-#~ msgid "Valencia, del 20 al 22 de noviembre de 2015"
-#~ msgstr "València, 21-22 de novembre de 2015"
-
-#~ msgid "¿Dónde?"
-#~ msgstr "On?"
-
-#~ msgid "Detailed Abstract"
-#~ msgstr "Resúm detallat"

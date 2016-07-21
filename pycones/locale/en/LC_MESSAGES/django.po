@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-15 11:19+0200\n"
+"POT-Creation-Date: 2016-07-21 15:25+0200\n"
 "PO-Revision-Date: 2015-07-14 10:24+0100\n"
 "Last-Translator: b'  <organizacion2015@lists.es.python.org>'\n"
 "Language-Team: \n"
@@ -38,7 +38,7 @@ msgid "Repita la contraseña"
 msgstr "Repeat password"
 
 #: attendees/forms.py:59 attendees/forms.py:90 attendees/forms.py:110
-msgid "El localzador de entrada no existe"
+msgid "El localizador de entrada no existe"
 msgstr "The locator doesn't exists"
 
 #: attendees/forms.py:66
@@ -127,7 +127,7 @@ msgid "Seguir leyendo..."
 msgstr "Go on reading..."
 
 #: blog/views.py:48
-msgid "Web de la PyConES 2015"
+msgid "Web de la PyConES 2016"
 msgstr "PyConES 2015 web"
 
 #: conference/models.py:12 sponsorship/models.py:28 sponsorship/models.py:160
@@ -889,12 +889,6 @@ msgid ""
 msgstr ""
 
 #: templates/pages/info.html:19
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                        Gracias por ayudarnos a hacer este evento "
-#| "amistoso y abierto para todos.\n"
-#| "                    "
 msgid ""
 "\n"
 "                        Dispondremos de tres salas para acomodar hasta tres "
@@ -914,12 +908,6 @@ msgid ""
 msgstr ""
 
 #: templates/pages/info.html:34
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                        Gracias por ayudarnos a hacer este evento "
-#| "amistoso y abierto para todos.\n"
-#| "                    "
 msgid ""
 "\n"
 "                    El horario principal del congreso previsto es:\n"
@@ -941,12 +929,6 @@ msgid "domingo 09/10/16 de 9:00 a 18:30."
 msgstr ""
 
 #: templates/pages/info.html:44
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                        Gracias por ayudarnos a hacer este evento "
-#| "amistoso y abierto para todos.\n"
-#| "                    "
 msgid ""
 "\n"
 "                        Obviamente llegado el momento os ofreceremos un "
@@ -1031,12 +1013,6 @@ msgid ""
 msgstr ""
 
 #: templates/pages/info.html:90
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                        Gracias por ayudarnos a hacer este evento "
-#| "amistoso y abierto para todos.\n"
-#| "                    "
 msgid ""
 "\n"
 "                        También disponemos de dos servicios de taxi:\n"
@@ -1137,12 +1113,6 @@ msgid "Alojamiento"
 msgstr ""
 
 #: templates/pages/info.html:153
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                        Gracias por ayudarnos a hacer este evento "
-#| "amistoso y abierto para todos.\n"
-#| "                    "
 msgid ""
 "\n"
 "                        Estamos trabajando para ofreceros un hotel "

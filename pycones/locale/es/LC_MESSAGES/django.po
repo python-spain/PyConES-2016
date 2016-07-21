@@ -3,12 +3,11 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-15 11:19+0200\n"
+"POT-Creation-Date: 2016-07-21 15:25+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,7 +36,7 @@ msgid "Repita la contraseña"
 msgstr ""
 
 #: attendees/forms.py:59 attendees/forms.py:90 attendees/forms.py:110
-msgid "El localzador de entrada no existe"
+msgid "El localizador de entrada no existe"
 msgstr ""
 
 #: attendees/forms.py:66
@@ -122,7 +121,7 @@ msgid "Seguir leyendo..."
 msgstr ""
 
 #: blog/views.py:48
-msgid "Web de la PyConES 2015"
+msgid "Web de la PyConES 2016"
 msgstr ""
 
 #: conference/models.py:12 sponsorship/models.py:28 sponsorship/models.py:160
