@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Web PyConES 2015\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-21 15:25+0200\n"
-"PO-Revision-Date: 2016-07-21 16:21+0200\n"
+"PO-Revision-Date: 2016-07-21 16:45+0200\n"
 "Last-Translator: Aitzol Naberan <anaberan@codesyntax.com>\n"
 "Language-Team: Basque (http://www.transifex.com/python-espana/web-"
 "pycones-2015/language/eu/)\n"
@@ -234,7 +234,7 @@ msgstr ""
 
 #: proposals/models.py:104
 msgid "Notas adicionales"
-msgstr ""
+msgstr "Ohar gehigarriak"
 
 #: proposals/models.py:108
 msgid ""
@@ -386,7 +386,7 @@ msgstr "kanpo URLa"
 
 #: sponsorship/models.py:54
 msgid "annotation"
-msgstr ""
+msgstr "Oharra"
 
 #: sponsorship/models.py:55
 msgid "Contact Name"
@@ -443,24 +443,24 @@ msgstr "fitxategia"
 #: templates/admin/attendees/attendee/change_list.html:6
 #, python-format
 msgid "Add %(name)s"
-msgstr ""
+msgstr "%(name)s gehitu"
 
 #: templates/admin/attendees/attendee/change_list.html:10
 #, python-format
 msgid "Import %(name)ss"
-msgstr ""
+msgstr "%(name)s importatu"
 
 #: templates/admin/attendees/attendee/import.html:8
 msgid "Import CSV file with attendees"
-msgstr ""
+msgstr "CSV fitxategia importatu"
 
 #: templates/admin/attendees/attendee/import.html:14
 msgid "Import"
-msgstr ""
+msgstr "Importatu"
 
 #: templates/attendees/profile.html:7
 msgid "Datos del asistente"
-msgstr ""
+msgstr "Partehartzailearen datuak"
 
 #: templates/attendees/profile.html:18
 msgid ""
@@ -469,10 +469,13 @@ msgid ""
 "de acceso a la red se darán junto al welcome pack a aquellos que hayan "
 "completado sus datos."
 msgstr ""
+"Partehartzailearen WIFI pasahitza pertsonala izango da, beraz, zure NAN "
+"zenbakia behar dugu. Erabiltzailea eta pasahitza ongietorri packa-rekin "
+"emango dizkizugu."
 
 #: templates/attendees/request_code.html:7 templates/attendees/restore.html:7
 msgid "Establece o restaura tu contraseña"
-msgstr ""
+msgstr "Ezarri edo berrezarri zure pasahitza."
 
 #: templates/attendees/request_code.html:33
 msgid "Enviar"
@@ -486,6 +489,10 @@ msgid ""
 "                tu DNI para poder darte los credenciales de acceso.\n"
 "                "
 msgstr ""
+"\n"
+"                Aurten WIFI pasahitza pertsonala izango da, beraz, zure NAN-"
+"a behar dugu sarean sartzeko\n"
+"                "
 
 #: templates/attendees/restore.html:50
 msgid "Guardar"
@@ -497,7 +504,7 @@ msgstr "Esteka onetan sartu zure pasahitza aldatzeko"
 
 #: templates/attendees/sign_in.html:7
 msgid "Accede a la zona de asistentes"
-msgstr ""
+msgstr "Partehartzaile orrira sartu"
 
 #: templates/attendees/sign_in.html:10
 #, python-format
@@ -509,6 +516,11 @@ msgid ""
 "\"%(request_restore_password)s\">aquí</a>).\n"
 "                "
 msgstr ""
+"\n"
+"                Ticketeako sarrera zenbakia eta pasahitza erabili "
+"partehartzaile orrira sartzeko. ( Pasahiza ez baduzu <a href="
+"\"%(request_restore_password)s\">hemen</a> lortu ahalko duzu.).\n"
+"                "
 
 #: templates/attendees/sign_in.html:36
 msgid "Entrar"
@@ -567,6 +579,14 @@ msgid ""
 "    es privado y no deberías de compartirlo con nadie!</p>\n"
 "    "
 msgstr ""
+"\n"
+"    <p>¡Kaixo %(speaker)s!</p>\n"
+"    <p>Eskerrikasko zure \"%(title)s\", proposamena bidaltzearren, laister "
+"jarriko gara zurekin kontaktuan\n"
+"    aukerratu zaitugun edo ez jakiteko.</p>\n"
+"    <p>Gainera, zure proposamena editatzeko lotura bidali dizugu. Lotura \n"
+"    pribatua da, ez bidali inori!</p>\n"
+"    "
 
 #: templates/emails/proposals/confirmation.html:12
 #: templates/proposals/edit.html:10
@@ -826,7 +846,7 @@ msgstr "Sarrerak erostea"
 
 #: templates/pages/home.html:87 templates/pages/tickets.html:18
 msgid "¡Entradas agotadas!"
-msgstr ""
+msgstr "Sarrerak agortuta !"
 
 #: templates/pages/home.html:91
 msgid ""
@@ -867,7 +887,7 @@ msgstr "Eskuorria (EN)"
 
 #: templates/pages/info.html:10
 msgid "Localizacion"
-msgstr ""
+msgstr "Kokalekua"
 
 #: templates/pages/info.html:14
 msgid ""
@@ -877,6 +897,10 @@ msgid ""
 "Facultad de Ciencias Sociales.\n"
 "                    "
 msgstr ""
+"\n"
+"                        PyConES 2016 Almeriako unibertsitateko kanpusean "
+"izango da, zehazki Paraninfoan eta Gizarte Zientzien Fakultatean\n"
+"                    "
 
 #: templates/pages/info.html:19
 msgid ""
@@ -898,6 +922,11 @@ msgid ""
 "PyConES16\" target=\"_blank\">http://bit.ly/PyConES16</a>\n"
 "                    "
 msgstr ""
+"\n"
+"                        Google Maps bat bidali dizuegu informazio "
+"guztiarekin: <a href=\"http://bit.ly/PyConES16\" target=\"_blank\">http://"
+"bit.ly/PyConES16</a>\n"
+"                    "
 
 #: templates/pages/info.html:34
 msgid ""
@@ -911,15 +940,15 @@ msgstr ""
 
 #: templates/pages/info.html:39
 msgid "viernes 07/10/16 de 15:00 a 20:30."
-msgstr ""
+msgstr "Ostirala 16/10/07 15:00-tik 20:30-ra."
 
 #: templates/pages/info.html:40
 msgid "sábado 08/10/16 de 9:00 a 20:30."
-msgstr ""
+msgstr "Larunbata 16/10/08 9:00-tik 20:30-ra"
 
 #: templates/pages/info.html:41
 msgid "domingo 09/10/16 de 9:00 a 18:30."
-msgstr ""
+msgstr "Igandea 16/10/09 9:00-tik 18:30-ra"
 
 #: templates/pages/info.html:44
 msgid ""
