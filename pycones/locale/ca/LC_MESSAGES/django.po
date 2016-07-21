@@ -1,89 +1,88 @@
-# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Franc Rodriguez <franc@tecob.com>, 2015
-# kiko correoso <kikocorreoso@gmail.com>, 2015
-# Mai Giménez <mai@immutable.es>, 2015
+# Franc Rodriguez <franc@tecob.com>, 2015.
+# kiko correoso <kikocorreoso@gmail.com>, 2015.
+# Mai Giménez <mai@immutable.es>, 2015, 2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: Web PyConES 2015\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-15 11:19+0200\n"
-"PO-Revision-Date: 2015-07-13 11:47+0000\n"
-"Last-Translator: Mai Giménez <mai@immutable.es>\n"
-"Language-Team: Catalan (http://www.transifex.com/python-espana/web-"
+"PO-Revision-Date: 2016-07-21 16:05+0200\n"
+"Last-Translator: edu\n"
+"Language-Team: Spanish <kde-i18n-doc@kde.org>\n"
 "pycones-2015/language/ca/)\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.5\n"
 
 #: attendees/admin.py:59
 msgid "Attendees imported!"
-msgstr ""
+msgstr "Assitents importats!"
 
 #: attendees/forms.py:41 attendees/forms.py:82 attendees/forms.py:96
 #: templates/attendees/restore.html:28
 msgid "Localizador"
-msgstr ""
+msgstr "Localitzador"
 
 #: attendees/forms.py:43 attendees/forms.py:46 attendees/forms.py:100
 #: attendees/forms.py:103
 msgid "Contraseña"
-msgstr ""
+msgstr "Contrasenya"
 
 #: attendees/forms.py:49 attendees/forms.py:52
 msgid "Repita la contraseña"
-msgstr ""
+msgstr "Repeteix la contrasenya"
 
 #: attendees/forms.py:59 attendees/forms.py:90 attendees/forms.py:110
 msgid "El localzador de entrada no existe"
-msgstr ""
+msgstr "El localitzador de l'entrada no existeix"
 
 #: attendees/forms.py:66
 msgid "Las contraseñas no son iguales"
-msgstr ""
+msgstr "Les contrasenyes no son iguals"
 
 #: attendees/forms.py:73 attendees/forms.py:76
 msgid "Código de restauración no válido"
-msgstr ""
+msgstr "Codi de restauració no vàlid"
 
 #: attendees/forms.py:84 attendees/forms.py:98
-#, fuzzy
 #| msgid "Compra de entradas"
 msgid "Localizador de entrada"
-msgstr "Compra d'entrades"
+msgstr "Localitzador d'entrada"
 
 #: attendees/forms.py:117 attendees/forms.py:120 attendees/forms.py:122
 msgid "La contraseña no es correcta"
-msgstr ""
+msgstr "La contrasenya no és correcte"
 
 #: attendees/models.py:21
 msgid "Nombre completo y apellidos"
-msgstr ""
+msgstr "Nom i llinatges complets"
 
 #: attendees/models.py:22
 msgid "Email"
-msgstr ""
+msgstr "Correu electrònic "
 
 #: attendees/models.py:23
 msgid "DNI"
-msgstr ""
+msgstr "DNI"
 
 #: attendees/models.py:26
 msgid "localizador ticketea"
-msgstr ""
+msgstr "localitzador ticketea"
 
 #: attendees/models.py:29
 msgid "Notas"
-msgstr ""
+msgstr "Notes"
 
 #: attendees/models.py:31
 msgid "Consideraciones para el catering"
-msgstr ""
+msgstr "Consideracions pel catèring"
 
 #: attendees/models.py:32
 msgid ""
@@ -91,28 +90,33 @@ msgid ""
 "cuenta para el catering. Se hará lo posible por ajustarse a las necesidades "
 "particulares."
 msgstr ""
+"Alèrgies, dieta especial o qualsevol cosa que vulguis que tinguem en compte "
+"pel càtering. Es farà el possible per ajustar-se a les necessitats de "
+"cadascun."
 
 #: attendees/models.py:36
 msgid "¿Vas a asistir a los talleres del viernes?"
-msgstr ""
+msgstr "Vols assistir als tallers del divendres?"
 
 #: attendees/models.py:70
 msgid "Establece tu contraseña"
-msgstr ""
+msgstr "Estableix la teva contrasenya"
 
 #: attendees/views.py:80
 msgid "Se ha establecido la nueva contraseña"
-msgstr ""
+msgstr "S'ha establert la teva nova contrasenya"
 
 #: attendees/views.py:108
 msgid ""
 "Se ha enviado un correo a la cuenta con la que compraste la entrada con un "
 "enlace para establecer tu contraseña."
 msgstr ""
+"S'ha enviat un correu al compte amb la que vares comprar la teva entrada amb "
+"un enllaç per restablir la teva contrasenya."
 
 #: blog/models.py:21
 msgid "Draft"
-msgstr "Borrador"
+msgstr "Esborrany"
 
 #: blog/models.py:22
 msgid "Scheduled"
@@ -128,7 +132,7 @@ msgstr "Continua llegint"
 
 #: blog/views.py:48
 msgid "Web de la PyConES 2015"
-msgstr "Web de la PyConES 2015"
+msgstr "Web de la PyConES 2016"
 
 #: conference/models.py:12 sponsorship/models.py:28 sponsorship/models.py:160
 msgid "name"
@@ -152,39 +156,39 @@ msgstr "Seccions"
 
 #: configurations/models.py:16
 msgid "Float"
-msgstr ""
+msgstr "Flotant"
 
 #: configurations/models.py:17
 msgid "Integer"
-msgstr ""
+msgstr "Enter"
 
 #: configurations/models.py:18
 msgid "String"
-msgstr ""
+msgstr "Cadena"
 
 #: configurations/models.py:21
 msgid "Parameter"
-msgstr ""
+msgstr "Paràmetre"
 
 #: configurations/models.py:27
 msgid "Public name of the parameter"
-msgstr ""
+msgstr "Nom públic del paràmetre"
 
 #: configurations/models.py:41
 msgid "Value"
-msgstr ""
+msgstr "Valor"
 
 #: proposals/forms.py:19
 msgid "Nombre del ponente"
-msgstr ""
+msgstr "Nom del ponent"
 
 #: proposals/forms.py:25
 msgid "Email del ponente"
-msgstr ""
+msgstr "Correu del ponent"
 
 #: proposals/forms.py:64
 msgid "Este campo no puede estar vacío."
-msgstr ""
+msgstr "Aquest camp no pot estar buit"
 
 #: proposals/forms.py:67
 msgid ""
@@ -192,6 +196,9 @@ msgid ""
 "al equipo organizador a seleccionar tu charla indicando un breve esquema, si "
 "habrá demos en directo o qué conocimientos previos debería tener la audiencia"
 msgstr ""
+"El resum és molt curt! Ha de tenir almenys 80 paraules. Ajuda a l'equip "
+"organitzador a seleccionar la teva xerrada amb un breu resum, si haurà "
+"demostracions en directe o quins coneixements o hauria de tenir l'audència."
 
 #: proposals/models.py:73
 msgid "Name"
@@ -199,11 +206,11 @@ msgstr "Nom"
 
 #: proposals/models.py:85
 msgid "Tipo de propuesta"
-msgstr ""
+msgstr "Tipus de proposta"
 
 #: proposals/models.py:87
 msgid "Título"
-msgstr ""
+msgstr "Títol"
 
 #: proposals/models.py:89
 msgid "Breve descripción"
@@ -214,12 +221,12 @@ msgid ""
 "If your proposal is accepted this will be made public and printed in the "
 "program. Should be one paragraph, maximum 500 characters."
 msgstr ""
-"Si la teva proposta es acceptada es farà públic i es mostrarà al programa. "
-"Serà un únic paragraph amb un màxim de 500 paraules"
+"Si la teva proposta es acceptada es farà pública i es mostrarà al programa. "
+"Serà un únic paràgraf d'un màxim de 500 caràcters."
 
 #: proposals/models.py:95
 msgid "Resumen detallado"
-msgstr ""
+msgstr "Resum detallat"
 
 #: proposals/models.py:99
 msgid ""
@@ -227,13 +234,13 @@ msgid ""
 "using <a href='http://daringfireball.net/projects/markdown/basics' "
 "target='_blank'>Markdown</a>."
 msgstr ""
-"Descripció detallada. Es farà públic si la teva proposta és acceptada. "
-"Editar amb <a href='http://daringfireball.net/projects/markdown/basics' "
+"Descripció detallada. Es farà pública si la seva proposta és acceptada. "
+"Escriure amb <a href='http://daringfireball.net/projects/markdown/basics' "
 "target='_blank'>Markdown</a>."
 
 #: proposals/models.py:104
 msgid "Notas adicionales"
-msgstr ""
+msgstr "Notes adicionals"
 
 #: proposals/models.py:108
 msgid ""
@@ -243,25 +250,25 @@ msgid ""
 "net/projects/markdown/basics' target='_blank'>Markdown</a>."
 msgstr ""
 "Qualsevol cosa més que t'agradaria fer saber al comitè de selecció per "
-"ajudar en la seva decisió: Experiència anterior, etc. Això no es farà "
-"públic. Editar amb <a href='http://daringfireball.net/projects/markdown/"
+"ajudar en la seva decisió: experiència anterior, etc. Això no es farà "
+"públic. Escriure amb <a href='http://daringfireball.net/projects/markdown/"
 "basics' target='_blank'>Markdown</a>."
 
 #: proposals/models.py:172
 msgid "[PyConES 2016] Confirmación de propuesta de charla"
-msgstr ""
+msgstr "[PyConEs 2016] Confirmació de proposta de la xerrada"
 
 #: proposals/models.py:187
 msgid "Básico"
-msgstr ""
+msgstr "Bàsic"
 
 #: proposals/models.py:188
 msgid "Intermedio"
-msgstr ""
+msgstr "Intermig"
 
 #: proposals/models.py:189
 msgid "Avanzado"
-msgstr ""
+msgstr "Avançat"
 
 #: proposals/models.py:192 pycones/settings/base.py:72
 msgid "Español"
@@ -269,27 +276,27 @@ msgstr "Espanyol"
 
 #: proposals/models.py:193
 msgid "Inglés"
-msgstr ""
+msgstr "Anglès"
 
 #: proposals/models.py:196
 msgid "15 minutos"
-msgstr ""
+msgstr "15 minuts"
 
 #: proposals/models.py:197
 msgid "30 minutos"
-msgstr ""
+msgstr "30 minuts"
 
 #: proposals/models.py:200
 msgid "Nivel de la audiencia"
-msgstr ""
+msgstr "Nivell de l'audència"
 
 #: proposals/models.py:203
 msgid "Idioma"
-msgstr ""
+msgstr "Idioma"
 
 #: proposals/models.py:206
 msgid "Duración"
-msgstr ""
+msgstr "Durada"
 
 #: proposals/models.py:217
 msgid "Pending"
@@ -301,41 +308,40 @@ msgstr "Acceptat"
 
 #: proposals/models.py:219
 msgid "Declined"
-msgstr "Declinat"
+msgstr "Rebutjat"
 
 #: pycones/settings/base.py:73
 msgid "Catalán"
-msgstr ""
+msgstr "Català"
 
 #: pycones/settings/base.py:74
 msgid "Gallego"
-msgstr ""
+msgstr "Galleg"
 
 #: pycones/settings/base.py:75
 msgid "Euskera"
-msgstr ""
+msgstr "Euskera"
 
 #: pycones/settings/base.py:76
 msgid "English"
-msgstr "Anglés"
+msgstr "Anglès"
 
 #: schedule/models.py:80 schedule/models.py:200
 msgid "video URL"
-msgstr ""
+msgstr "URL del vídeo"
 
 #: schedule/models.py:82 schedule/models.py:202
-#, fuzzy
 #| msgid "external URL"
 msgid "keynote URL"
-msgstr "URL externa"
+msgstr "URL de presentació"
 
 #: schedule/models.py:83 schedule/models.py:203
 msgid "keynote file"
-msgstr ""
+msgstr "fitxer de presentació"
 
 #: sponsorship/models.py:18
 msgid "Text"
-msgstr "Text"
+msgstr "Texte"
 
 #: sponsorship/models.py:19
 msgid "File"
@@ -347,7 +353,7 @@ msgstr "Logo web"
 
 #: sponsorship/models.py:21
 msgid "Simple"
-msgstr "Simple"
+msgstr "Senzill"
 
 #: sponsorship/models.py:29
 msgid "order"
@@ -371,7 +377,7 @@ msgstr "Nivell de patrocinador"
 
 #: sponsorship/models.py:36
 msgid "sponsor levels"
-msgstr "Nivells de patrocinador"
+msgstr "Nivells de patrocinadors"
 
 #: sponsorship/models.py:49
 msgid "applicant"
@@ -387,7 +393,7 @@ msgstr "URL externa"
 
 #: sponsorship/models.py:54
 msgid "annotation"
-msgstr "sol·licitant"
+msgstr "anotació"
 
 #: sponsorship/models.py:55
 msgid "Contact Name"
@@ -395,7 +401,7 @@ msgstr "Nom de contacte"
 
 #: sponsorship/models.py:56
 msgid "Contact Email"
-msgstr "Email de contacte"
+msgstr "Correu de contacte"
 
 #: sponsorship/models.py:57 sponsorship/models.py:172
 msgid "level"
@@ -444,24 +450,24 @@ msgstr "fitxer"
 #: templates/admin/attendees/attendee/change_list.html:6
 #, python-format
 msgid "Add %(name)s"
-msgstr ""
+msgstr "Afegir %(name)s"
 
 #: templates/admin/attendees/attendee/change_list.html:10
 #, python-format
 msgid "Import %(name)ss"
-msgstr ""
+msgstr "Importar %(name)ss"
 
 #: templates/admin/attendees/attendee/import.html:8
 msgid "Import CSV file with attendees"
-msgstr ""
+msgstr "Importar CSV d'assistents"
 
 #: templates/admin/attendees/attendee/import.html:14
 msgid "Import"
-msgstr ""
+msgstr "Importar"
 
 #: templates/attendees/profile.html:7
 msgid "Datos del asistente"
-msgstr ""
+msgstr "Dades de l'assistent"
 
 #: templates/attendees/profile.html:18
 msgid ""
@@ -470,14 +476,18 @@ msgid ""
 "de acceso a la red se darán junto al welcome pack a aquellos que hayan "
 "completado sus datos."
 msgstr ""
+"Aquest any l'accès al Wifi durant l'event és personal per cada un dels "
+"assistents, per això necessitam que ens indiquis el teu DNI. Les credencials "
+"d'accès a la xarxa es donaran junt al paquet de benvinguda a aquells que "
+"hagin completat les dades."
 
 #: templates/attendees/request_code.html:7 templates/attendees/restore.html:7
 msgid "Establece o restaura tu contraseña"
-msgstr ""
+msgstr "Estableix la teva contrasenya"
 
 #: templates/attendees/request_code.html:33
 msgid "Enviar"
-msgstr ""
+msgstr "Enviar"
 
 #: templates/attendees/restore.html:19 templates/attendees/sign_in.html:16
 msgid ""
@@ -487,18 +497,22 @@ msgid ""
 "                tu DNI para poder darte los credenciales de acceso.\n"
 "                "
 msgstr ""
+"\n"
+"                Aquest any l'accés a la xarxa Wifi durant l'event es "
+"personalitzat, per lo que necessitam que ens indiquis\n"
+"                el teu DNI per poder donar les credencials d'accès.\n"
 
 #: templates/attendees/restore.html:50
 msgid "Guardar"
-msgstr ""
+msgstr "Desar"
 
 #: templates/attendees/restore_email.html:3
 msgid "Entra en este enlace para establecer tu contraseña:"
-msgstr ""
+msgstr "Entra a aquest enllaç per restablir la teva contrasenya:"
 
 #: templates/attendees/sign_in.html:7
 msgid "Accede a la zona de asistentes"
-msgstr ""
+msgstr "Entra a la zona de assistents"
 
 #: templates/attendees/sign_in.html:10
 #, python-format
@@ -510,24 +524,28 @@ msgid ""
 "\"%(request_restore_password)s\">aquí</a>).\n"
 "                "
 msgstr ""
+"\n"
+"                Accedeix a la zona d'assistents empleant el teu localitzador "
+"d'entrada de Ticketea i la teva contrasenya (si no\n"
+"                tens contrasenya pots generar-la entrant <a href="
+"\"%(request_restore_password)s\">aquí</a>).\n"
 
 #: templates/attendees/sign_in.html:36
 msgid "Entrar"
-msgstr ""
+msgstr "Entrar"
 
 #: templates/attendees/sign_in.html:39
 msgid "¿No tienes contraseña o la has olvidado?"
-msgstr ""
+msgstr "No tens contrasenya o l'has oblidada?"
 
 #: templates/base.html:45
 msgid "Toggle navigation"
 msgstr "Canviar navegació"
 
 #: templates/base.html:53
-#, fuzzy
 #| msgid "PyConES 2015"
 msgid "PyConES 2016"
-msgstr "PyConES 2015"
+msgstr "PyConES 2016"
 
 #: templates/base.html:54
 msgid "Información del evento"
@@ -535,17 +553,16 @@ msgstr "Informació del esdeveniment"
 
 #: templates/base.html:55 templates/pages/home.html:56
 msgid "Oradores Plenarios"
-msgstr ""
+msgstr "Principals oradors"
 
 #: templates/base.html:57
-#, fuzzy
 #| msgid "Compra tus entradas"
 msgid "Compra tu entradas"
 msgstr "Compra les teves entrades"
 
 #: templates/base.html:60
 msgid "Envía tu propuesta"
-msgstr ""
+msgstr "Envia la teva proposta"
 
 #: templates/base.html:62
 msgid "Blog"
@@ -572,15 +589,24 @@ msgid ""
 "    es privado y no deberías de compartirlo con nadie!</p>\n"
 "    "
 msgstr ""
+"\n"
+"    <p>¡Hola %(speaker)s!</p>\n"
+"    <p>Moltes gràcies per enviar la teva proposta \"%(title)s\", en breu ens "
+"posarem en contacte amb tu\n"
+"    per dir-te si has estat seleccionat o no.</p>\n"
+"    <p>A més, t'enviam un enllaç des de on podràs editar la teva proposta. "
+"L'enllaç\n"
+"    és privat i no hauries de compartir-lo amb ningú!</p>\n"
+"    "
 
 #: templates/emails/proposals/confirmation.html:12
 #: templates/proposals/edit.html:10
 msgid "Editar propuesta"
-msgstr ""
+msgstr "Editar la proposta "
 
 #: templates/emails/proposals/confirmation.html:13
 msgid "¡Un saludo!"
-msgstr ""
+msgstr "Salutacions!"
 
 #: templates/landing.html:42
 msgid "PyConES"
@@ -588,7 +614,7 @@ msgstr "PyConES"
 
 #: templates/landing.html:42
 msgid "Almería 2016"
-msgstr ""
+msgstr "Almería 2016"
 
 #: templates/landing.html:45
 msgid ""
