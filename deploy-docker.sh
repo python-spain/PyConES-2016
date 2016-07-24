@@ -1,9 +1,7 @@
 #!/bin/bash
 echo "...Updating pycones-2016: Fetch code from github"
-pushd source
 git fetch origin
 git reset --hard origin/master
-popd
 echo "...Updating pycones-2016: Building the docker image"
 docker build -t pycones2016:1.0 -f Dockerfile .
 echo "...Updating pycones-2016: Restart service"
