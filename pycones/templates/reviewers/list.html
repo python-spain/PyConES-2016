@@ -12,6 +12,9 @@
                 <thead>
                     <tr>
                         <th>{% trans "Título" %}</th>
+                        {% if request.user.is_superuser %}
+                        <th>{% trans "Revisor" %}</th>
+                        {% endif %}
                         <th>{% trans "Relevancia" %}</th>
                         <th>{% trans "Interés General" %}</th>
                         <th>{% trans "Novedad" %}</th>
@@ -24,6 +27,9 @@
                 {% for review in reviews %}
                     <tr>
                         <th>{{ review.proposal.title }}</th>
+                        {% if request.user.is_superuser %}
+                        <td>{{ review.user.get_full_name }}</td>
+                        {% endif %}
                         <td>{{ review.relevance|default:"-" }}</td>
                         <td>{{ review.interest|default:"-" }}</td>
                         <td>{{ review.newness|default:"-" }}</td>
