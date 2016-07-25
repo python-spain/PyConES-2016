@@ -70,10 +70,9 @@
                     {#                    <li><a href="{% static "photos/index.html" %}">{% trans "Fotos" %}</a></li>#}
                     {#                    {% if not request.user.is_authenticated %}#}
                     {#                        <li><a href="{% url "attendees:sign_in" %}">{% trans "Zona de Asistentes" %}</a></li>#}
-                    {#                    {% else %}#}
-                    {#                        <li><a href="{% url "attendees:profile" %}">{% trans "Editar Datos" %}</a></li>#}
-                    {#                        <li><a href="{% url "attendees:log_out" %}">{% trans "Salir" %}</a></li>#}
-                    {#                    {% endif %}#}
+                    {% if request.user.is_authenticated %}
+                        <li><a href="{% url "log-out" %}">{% trans "Salir" %}</a></li>
+                    {% endif %}
                 </ul>
             </div>
 
@@ -81,6 +80,7 @@
     </nav>
 {% endblock header %}
 
+{% block claim %}
 <div class="wrapper-claim">
     <div class="container">
         <div class="row">
@@ -91,6 +91,7 @@
         </div>
     </div>
 </div>
+{% endblock claim %}
 
 {% block container %}
     <div class="container">

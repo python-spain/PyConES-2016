@@ -138,11 +138,3 @@ class AttendeeSignInView(View):
         return render(request, "attendees/sign_in.html", {
             'form': form,
         })
-
-
-class LogoutView(LoginRequiredMixin, View):
-
-    @staticmethod
-    def get(request):
-        logout(request)
-        return redirect("attendees:sign_in")
