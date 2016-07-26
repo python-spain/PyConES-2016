@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+
+from braces.views import LoginRequiredMixin
+from django.contrib.auth import logout
 from django.http import Http404
-from django.shortcuts import render
-from django.template.base import TemplateDoesNotExist
+from django.shortcuts import render, redirect
+from django.template import TemplateDoesNotExist
 from django.views.generic import View
 
 
@@ -26,3 +29,11 @@ class PartialsTemplateView(View):
             return render(request, template)
         except TemplateDoesNotExist:
             raise Http404
+
+
+class LogoutView(LoginRequiredMixin, View):
+
+    @staticmethod
+    def get(request):
+        logout(request)
+        return redirect("home")

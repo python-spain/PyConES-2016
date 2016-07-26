@@ -1,0 +1,53 @@
+{% extends "reviewers/base.html" %}
+{% load i18n %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>{% trans "Puntuar propuesta" %} - {{ proposal.title }}</h2>
+            <hr />
+        </div>
+        <div class="col-xs-12 col-sm-3">
+            <form method="post" action="">
+                {% csrf_token %}
+                {% for field in form %}
+                    <div class="form-group {% if field.errors %} has-error{% endif %}">
+                        {% if field.name == "conflict" or field.name == "finished" %}
+                            <div class="checkbox">
+                                <label>
+                                    {{ field }} {{ field.label }}
+                                </label>
+                            </div>
+                        {% else %}
+                            <label for="{{ field.auto_id }}">{{ field.label }}</label>
+                            {{ field }}
+                        {% endif %}
+                        <span class="help-block">{{ field.help_text }}</span>
+                        <span class="help-block">{{ field.errors }}</span>
+                    </div>
+                {% endfor %}
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success">{% trans "Guardar" %}</button>
+                    <a href="{% url "reviewers:list" %}" class="btn btn-danger">{% trans "Volver" %}</a>
+                </div>
+            </form>
+        </div>
+        <div class="col-xs-12 col-sm-9">
+            <p><strong>{% trans "Tipo de propuesta" %}:</strong> {{ proposal.kind }}</p>
+            <p><strong>{% trans "Nivel de la audiencia" %}:</strong> {{ proposal.get_audience_level_display }}</p>
+            <p><strong>{% trans "Idioma" %}:</strong> {{ proposal.get_language_display }}</p>
+            <p>
+                <strong>{% trans "Breve descripción" %}</strong><br />
+                {{ proposal.description }}
+            </p>
+            <p>
+                <strong>{% trans "Resumen detallado" %}</strong><br />
+                {{ proposal.abstract }}
+            </p>
+            <p>
+                <strong>{% trans "Notas adicionales" %}</strong><br />
+                {{ proposal.additional_notes }}
+            </p>
+        </div>
+    </div>
+{% endblock content %}

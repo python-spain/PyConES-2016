@@ -52,6 +52,7 @@ class SubmitProposalView(View):
 
 
 class EditProposalView(View):
+    """View to edit proposals."""
     form = EditProposalFrom
 
     def get(self, request, code):

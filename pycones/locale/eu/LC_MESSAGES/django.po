@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Web PyConES 2015\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-15 11:19+0200\n"
-"PO-Revision-Date: 2015-07-09 10:31+0000\n"
+"POT-Creation-Date: 2016-07-26 15:49+0200\n"
+"PO-Revision-Date: 2016-07-21 16:45+0200\n"
 "Last-Translator: Aitzol Naberan <anaberan@codesyntax.com>\n"
 "Language-Team: Basque (http://www.transifex.com/python-espana/web-"
 "pycones-2015/language/eu/)\n"
@@ -17,70 +17,70 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: attendees/admin.py:59
 msgid "Attendees imported!"
-msgstr ""
+msgstr "Attendees imported!"
 
 #: attendees/forms.py:41 attendees/forms.py:82 attendees/forms.py:96
 #: templates/attendees/restore.html:28
 msgid "Localizador"
-msgstr ""
+msgstr "Bilatzailea"
 
 #: attendees/forms.py:43 attendees/forms.py:46 attendees/forms.py:100
-#: attendees/forms.py:103
+#: attendees/forms.py:103 reviewers/forms.py:27
 msgid "Contraseña"
-msgstr ""
+msgstr "Pasahitza"
 
 #: attendees/forms.py:49 attendees/forms.py:52
 msgid "Repita la contraseña"
-msgstr ""
+msgstr "Errepikatu pasahitza"
 
 #: attendees/forms.py:59 attendees/forms.py:90 attendees/forms.py:110
-msgid "El localzador de entrada no existe"
-msgstr ""
+msgid "El localizador de entrada no existe"
+msgstr "Sarrerak erostea"
 
 #: attendees/forms.py:66
 msgid "Las contraseñas no son iguales"
-msgstr ""
+msgstr "Pasahitzak desberdinak dira"
 
 #: attendees/forms.py:73 attendees/forms.py:76
 msgid "Código de restauración no válido"
-msgstr ""
+msgstr "Kode aldaketa ez da egokia"
 
 #: attendees/forms.py:84 attendees/forms.py:98
-#, fuzzy
-#| msgid "Compra de entradas"
 msgid "Localizador de entrada"
-msgstr "Sarrerak erostea"
+msgstr "Sarrera bilatzailea"
 
 #: attendees/forms.py:117 attendees/forms.py:120 attendees/forms.py:122
+#: reviewers/forms.py:44
 msgid "La contraseña no es correcta"
-msgstr ""
+msgstr "Pasahitza ez da egokia"
 
 #: attendees/models.py:21
 msgid "Nombre completo y apellidos"
-msgstr ""
+msgstr "Izen Abizenak"
 
 #: attendees/models.py:22
 msgid "Email"
-msgstr ""
+msgstr "Helbide elektronikoa"
 
 #: attendees/models.py:23
 msgid "DNI"
-msgstr ""
+msgstr "NAN"
 
 #: attendees/models.py:26
 msgid "localizador ticketea"
-msgstr ""
+msgstr "ticketea bilatzailea"
 
 #: attendees/models.py:29
 msgid "Notas"
-msgstr ""
+msgstr "Notak"
 
 #: attendees/models.py:31
 msgid "Consideraciones para el catering"
-msgstr ""
+msgstr "Catering-ean kontutan edukitzeko gauzak"
 
 #: attendees/models.py:32
 msgid ""
@@ -88,24 +88,26 @@ msgid ""
 "cuenta para el catering. Se hará lo posible por ajustarse a las necesidades "
 "particulares."
 msgstr ""
+"Catering-ean alergia edo kontutan edukitzeko elikagai arazoren bat baduzu. "
+"Ahal duguna egingo dugu zure beharrei egokitzeko."
 
 #: attendees/models.py:36
 msgid "¿Vas a asistir a los talleres del viernes?"
-msgstr ""
+msgstr "Ostiralean "
 
 #: attendees/models.py:70
 msgid "Establece tu contraseña"
-msgstr ""
+msgstr "Pasahitza aldatu"
 
 #: attendees/views.py:80
 msgid "Se ha establecido la nueva contraseña"
-msgstr ""
+msgstr "Pasahitza aldatu da"
 
 #: attendees/views.py:108
 msgid ""
 "Se ha enviado un correo a la cuenta con la que compraste la entrada con un "
 "enlace para establecer tu contraseña."
-msgstr ""
+msgstr "Pasahitza aldatzeko esteka bat bidali da sarrera erosi zenuen kontura"
 
 #: blog/models.py:21
 msgid "Draft"
@@ -124,7 +126,7 @@ msgid "Seguir leyendo..."
 msgstr "Jarraitu irakurtzen..."
 
 #: blog/views.py:48
-msgid "Web de la PyConES 2015"
+msgid "Web de la PyConES 2016"
 msgstr "PyConES 2015 webgunea"
 
 #: conference/models.py:12 sponsorship/models.py:28 sponsorship/models.py:160
@@ -149,39 +151,48 @@ msgstr "sekzioak"
 
 #: configurations/models.py:16
 msgid "Float"
-msgstr ""
+msgstr "Float"
 
 #: configurations/models.py:17
 msgid "Integer"
-msgstr ""
+msgstr "Integer"
 
 #: configurations/models.py:18
 msgid "String"
-msgstr ""
+msgstr "String"
 
 #: configurations/models.py:21
 msgid "Parameter"
-msgstr ""
+msgstr "Parameter"
 
 #: configurations/models.py:27
 msgid "Public name of the parameter"
-msgstr ""
+msgstr "Public name of the parameter"
 
 #: configurations/models.py:41
 msgid "Value"
+msgstr "Value"
+
+#: proposals/admin.py:44 reviewers/admin.py:35
+#: templates/reviewers/list.html:21
+msgid "Media"
+msgstr ""
+
+#: proposals/admin.py:48
+msgid "Revisiones"
 msgstr ""
 
 #: proposals/forms.py:19
 msgid "Nombre del ponente"
-msgstr ""
+msgstr "Aurkezlearen izena"
 
 #: proposals/forms.py:25
 msgid "Email del ponente"
-msgstr ""
+msgstr "Aurkezlearen Helbide elektronikoa"
 
 #: proposals/forms.py:64
 msgid "Este campo no puede estar vacío."
-msgstr ""
+msgstr "Hutsune hau bete behar da"
 
 #: proposals/forms.py:67
 msgid ""
@@ -189,20 +200,23 @@ msgid ""
 "al equipo organizador a seleccionar tu charla indicando un breve esquema, si "
 "habrá demos en directo o qué conocimientos previos debería tener la audiencia"
 msgstr ""
+"Laburpena motzegia da ! 80 hitz eduki behar ditu gutxienez. Antolatzaileei "
+"zure hitzaldia aukeratzen lagundu eskema bat bidaliz, demoak edo hitzaldira "
+"joateko baldintza minimoak azalduz"
 
 #: proposals/models.py:73
 msgid "Name"
 msgstr "Izena"
 
-#: proposals/models.py:85
+#: proposals/models.py:85 templates/reviewers/details.html:36
 msgid "Tipo de propuesta"
-msgstr ""
+msgstr "Erantzun mota"
 
-#: proposals/models.py:87
+#: proposals/models.py:87 templates/reviewers/list.html:14
 msgid "Título"
-msgstr ""
+msgstr "Izenburua"
 
-#: proposals/models.py:89
+#: proposals/models.py:89 templates/reviewers/details.html:40
 msgid "Breve descripción"
 msgstr "Azalpen laburra"
 
@@ -214,9 +228,9 @@ msgstr ""
 "Zure proposamena onartzen badugu, publikatu egingo dugu eta programan "
 "argitaratuko dugu. Paragrafo bakarra, eta gehienez 500 karaktere."
 
-#: proposals/models.py:95
+#: proposals/models.py:95 templates/reviewers/details.html:44
 msgid "Resumen detallado"
-msgstr ""
+msgstr "Lapurpen "
 
 #: proposals/models.py:99
 msgid ""
@@ -228,9 +242,9 @@ msgstr ""
 "Editatu <a href='http://daringfireball.net/projects/markdown/basics' "
 "target='_blank'>Markdown</a> erabiliz."
 
-#: proposals/models.py:104
+#: proposals/models.py:104 templates/reviewers/details.html:48
 msgid "Notas adicionales"
-msgstr ""
+msgstr "Ohar gehigarriak"
 
 #: proposals/models.py:108
 msgid ""
@@ -246,89 +260,139 @@ msgstr ""
 
 #: proposals/models.py:172
 msgid "[PyConES 2016] Confirmación de propuesta de charla"
-msgstr ""
+msgstr "[PyConES 2016] Hitzaldi proposamena berretsi"
+
+#: proposals/models.py:186
+msgid "Básico"
+msgstr "Básico"
 
 #: proposals/models.py:187
-msgid "Básico"
-msgstr ""
+msgid "Intermedio"
+msgstr "Intermedio"
 
 #: proposals/models.py:188
-msgid "Intermedio"
-msgstr ""
-
-#: proposals/models.py:189
 msgid "Avanzado"
-msgstr ""
+msgstr "Avanzado"
 
-#: proposals/models.py:192 pycones/settings/base.py:72
+#: proposals/models.py:191 pycones/settings/base.py:72
 msgid "Español"
 msgstr "Español"
 
-#: proposals/models.py:193
+#: proposals/models.py:192
 msgid "Inglés"
-msgstr ""
+msgstr "Ingelesa"
+
+#: proposals/models.py:195
+msgid "15 minutos"
+msgstr "15 minutu"
 
 #: proposals/models.py:196
-msgid "15 minutos"
-msgstr ""
-
-#: proposals/models.py:197
 msgid "30 minutos"
-msgstr ""
+msgstr "30 minutu"
 
-#: proposals/models.py:200
+#: proposals/models.py:199 templates/reviewers/details.html:37
 msgid "Nivel de la audiencia"
-msgstr ""
+msgstr "Entzule "
 
-#: proposals/models.py:203
+#: proposals/models.py:202 templates/reviewers/details.html:38
 msgid "Idioma"
-msgstr ""
+msgstr "Hizkuntza"
 
-#: proposals/models.py:206
+#: proposals/models.py:205
 msgid "Duración"
-msgstr ""
+msgstr "Iraupena"
 
-#: proposals/models.py:217
+#: proposals/models.py:230
 msgid "Pending"
 msgstr "Zain"
 
-#: proposals/models.py:218
+#: proposals/models.py:231
 msgid "Accepted"
 msgstr "Onartuta"
 
-#: proposals/models.py:219
+#: proposals/models.py:232
 msgid "Declined"
 msgstr "Ez da onartu"
 
 #: pycones/settings/base.py:73
 msgid "Catalán"
-msgstr ""
+msgstr "Catalán"
 
 #: pycones/settings/base.py:74
 msgid "Gallego"
-msgstr ""
+msgstr "Gallego"
 
 #: pycones/settings/base.py:75
 msgid "Euskera"
-msgstr ""
+msgstr "Euskara"
 
 #: pycones/settings/base.py:76
 msgid "English"
 msgstr "English"
 
-#: schedule/models.py:80 schedule/models.py:200
-msgid "video URL"
+#: reviewers/forms.py:17
+msgid "Nombre de usuario"
 msgstr ""
 
+#: reviewers/forms.py:22
+msgid "El nombre de usuario es obligatorio"
+msgstr ""
+
+#: reviewers/forms.py:29
+msgid "La contraseña es obligatoria"
+msgstr ""
+
+#: reviewers/forms.py:35
+msgid "Nombre de usuario no encontrado"
+msgstr ""
+
+#: reviewers/forms.py:67
+msgid "Debes puntuar entre 1 y 10"
+msgstr ""
+
+#: reviewers/models.py:22 templates/reviewers/list.html:18
+msgid "Relevancia"
+msgstr ""
+
+#: reviewers/models.py:22 reviewers/models.py:25 reviewers/models.py:28
+msgid "Puntuación del 1 al 10"
+msgstr ""
+
+#: reviewers/models.py:25 templates/reviewers/list.html:19
+msgid "Interés General"
+msgstr ""
+
+#: reviewers/models.py:28 templates/reviewers/list.html:20
+msgid "Novedad"
+msgstr ""
+
+#: reviewers/models.py:31
+msgid "Notas del revisor"
+msgstr ""
+
+#: reviewers/models.py:33
+msgid "¿Existe un conflico de intereses?"
+msgstr ""
+
+#: reviewers/models.py:34
+msgid "¿Revisión finalizada?"
+msgstr ""
+
+#: reviewers/models.py:58
+msgid "[PyConES 2016] Tienes una nueva propuesta para revisar"
+msgstr ""
+
+#: schedule/models.py:80 schedule/models.py:200
+msgid "video URL"
+msgstr "Bideo URLa"
+
 #: schedule/models.py:82 schedule/models.py:202
-#, fuzzy
-#| msgid "external URL"
 msgid "keynote URL"
-msgstr "kanpo URLa"
+msgstr "hitzaldi nagusiaren URLa"
 
 #: schedule/models.py:83 schedule/models.py:203
 msgid "keynote file"
-msgstr ""
+msgstr "Hitzaldi nagusiaren fitxategia"
 
 #: sponsorship/models.py:18
 msgid "Text"
@@ -344,11 +408,11 @@ msgstr "Web Logoa"
 
 #: sponsorship/models.py:21
 msgid "Simple"
-msgstr ""
+msgstr "Simplea"
 
 #: sponsorship/models.py:29
 msgid "order"
-msgstr ""
+msgstr "Eskatu"
 
 #: sponsorship/models.py:30
 msgid "cost"
@@ -384,7 +448,7 @@ msgstr "kanpo URLa"
 
 #: sponsorship/models.py:54
 msgid "annotation"
-msgstr ""
+msgstr "Oharra"
 
 #: sponsorship/models.py:55
 msgid "Contact Name"
@@ -441,24 +505,24 @@ msgstr "fitxategia"
 #: templates/admin/attendees/attendee/change_list.html:6
 #, python-format
 msgid "Add %(name)s"
-msgstr ""
+msgstr "%(name)s gehitu"
 
 #: templates/admin/attendees/attendee/change_list.html:10
 #, python-format
 msgid "Import %(name)ss"
-msgstr ""
+msgstr "%(name)s importatu"
 
 #: templates/admin/attendees/attendee/import.html:8
 msgid "Import CSV file with attendees"
-msgstr ""
+msgstr "CSV fitxategia importatu"
 
 #: templates/admin/attendees/attendee/import.html:14
 msgid "Import"
-msgstr ""
+msgstr "Importatu"
 
 #: templates/attendees/profile.html:7
 msgid "Datos del asistente"
-msgstr ""
+msgstr "Partehartzailearen datuak"
 
 #: templates/attendees/profile.html:18
 msgid ""
@@ -467,14 +531,17 @@ msgid ""
 "de acceso a la red se darán junto al welcome pack a aquellos que hayan "
 "completado sus datos."
 msgstr ""
+"Partehartzailearen WIFI pasahitza pertsonala izango da, beraz, zure NAN "
+"zenbakia behar dugu. Erabiltzailea eta pasahitza ongietorri packa-rekin "
+"emango dizkizugu."
 
 #: templates/attendees/request_code.html:7 templates/attendees/restore.html:7
 msgid "Establece o restaura tu contraseña"
-msgstr ""
+msgstr "Ezarri edo berrezarri zure pasahitza."
 
 #: templates/attendees/request_code.html:33
 msgid "Enviar"
-msgstr ""
+msgstr "Bidali"
 
 #: templates/attendees/restore.html:19 templates/attendees/sign_in.html:16
 msgid ""
@@ -484,18 +551,22 @@ msgid ""
 "                tu DNI para poder darte los credenciales de acceso.\n"
 "                "
 msgstr ""
+"\n"
+"                Aurten WIFI pasahitza pertsonala izango da, beraz, zure NAN-"
+"a behar dugu sarean sartzeko\n"
+"                "
 
-#: templates/attendees/restore.html:50
+#: templates/attendees/restore.html:50 templates/reviewers/details.html:30
 msgid "Guardar"
-msgstr ""
+msgstr "Jaso"
 
 #: templates/attendees/restore_email.html:3
 msgid "Entra en este enlace para establecer tu contraseña:"
-msgstr ""
+msgstr "Esteka onetan sartu zure pasahitza aldatzeko"
 
 #: templates/attendees/sign_in.html:7
 msgid "Accede a la zona de asistentes"
-msgstr ""
+msgstr "Partehartzaile orrira sartu"
 
 #: templates/attendees/sign_in.html:10
 #, python-format
@@ -507,24 +578,27 @@ msgid ""
 "\"%(request_restore_password)s\">aquí</a>).\n"
 "                "
 msgstr ""
+"\n"
+"                Ticketeako sarrera zenbakia eta pasahitza erabili "
+"partehartzaile orrira sartzeko. ( Pasahiza ez baduzu <a href="
+"\"%(request_restore_password)s\">hemen</a> lortu ahalko duzu.).\n"
+"                "
 
-#: templates/attendees/sign_in.html:36
+#: templates/attendees/sign_in.html:36 templates/reviewers/sign_in.html:22
 msgid "Entrar"
-msgstr ""
+msgstr "Sartu"
 
 #: templates/attendees/sign_in.html:39
 msgid "¿No tienes contraseña o la has olvidado?"
-msgstr ""
+msgstr "Pasahitza ahaztu duzu ?"
 
 #: templates/base.html:45
 msgid "Toggle navigation"
-msgstr "Toggle nabigazioa"
+msgstr "Nabigazioa erakutsi"
 
 #: templates/base.html:53
-#, fuzzy
-#| msgid "PyConES 2015"
 msgid "PyConES 2016"
-msgstr "PyConES 2015"
+msgstr "PyConES 2016"
 
 #: templates/base.html:54
 msgid "Información del evento"
@@ -532,27 +606,29 @@ msgstr "Ekitaldiaren informazioa"
 
 #: templates/base.html:55 templates/pages/home.html:56
 msgid "Oradores Plenarios"
-msgstr ""
+msgstr "Hizlari nagusiak"
 
 #: templates/base.html:57
-#, fuzzy
-#| msgid "Compra tus entradas"
 msgid "Compra tu entradas"
 msgstr "Erosi zure sarrerak"
 
 #: templates/base.html:60
 msgid "Envía tu propuesta"
-msgstr ""
+msgstr "Zure proposamena bidali"
 
 #: templates/base.html:62
 msgid "Blog"
 msgstr "Bloga"
 
-#: templates/base.html:112
+#: templates/base.html:74
+msgid "Salir"
+msgstr ""
+
+#: templates/base.html:113 templates/pages/info.html:180
 msgid "Código de conducta"
 msgstr "Jarrera kodea"
 
-#: templates/base.html:113
+#: templates/base.html:114
 msgid "Contacta con nosotros"
 msgstr "Jarri harremanetan gurekin"
 
@@ -569,14 +645,40 @@ msgid ""
 "    es privado y no deberías de compartirlo con nadie!</p>\n"
 "    "
 msgstr ""
+"\n"
+"    <p>¡Kaixo %(speaker)s!</p>\n"
+"    <p>Eskerrikasko zure \"%(title)s\", proposamena bidaltzearren, laister "
+"jarriko gara zurekin kontaktuan\n"
+"    aukerratu zaitugun edo ez jakiteko.</p>\n"
+"    <p>Gainera, zure proposamena editatzeko lotura bidali dizugu. Lotura \n"
+"    pribatua da, ez bidali inori!</p>\n"
+"    "
 
 #: templates/emails/proposals/confirmation.html:12
 #: templates/proposals/edit.html:10
 msgid "Editar propuesta"
-msgstr ""
+msgstr "Zure proposamena aldatu"
 
 #: templates/emails/proposals/confirmation.html:13
+#: templates/emails/reviewers/new.html:14
 msgid "¡Un saludo!"
+msgstr "Agur bat !"
+
+#: templates/emails/reviewers/new.html:5
+#, python-format
+msgid ""
+"\n"
+"    <p>¡Hola %(first_name)s!</p>\n"
+"    <p>Se te ha asignado una propuesta para revisar, titulada: \"%(title)s"
+"\"</p>\n"
+"    <p>Para realizar tu revisión a esta y a otras que tengas asignadas "
+"puedes acceder directamente pinchando en el\n"
+"    siguiente enlace:</p>\n"
+"    "
+msgstr ""
+
+#: templates/emails/reviewers/new.html:12
+msgid "Revisar propuestas"
 msgstr ""
 
 #: templates/landing.html:42
@@ -585,7 +687,7 @@ msgstr "PyConES"
 
 #: templates/landing.html:42
 msgid "Almería 2016"
-msgstr ""
+msgstr "Almería 2016"
 
 #: templates/landing.html:45
 msgid ""
@@ -593,9 +695,7 @@ msgid ""
 "novedades."
 msgstr "Hurrengo PyConES ari gara antolatzen. Laster izango duzu gure berri."
 
-#: templates/pages/code_of_conduct.html:8 templates/pages/info.html:169
-#, fuzzy
-#| msgid "Código de conducta"
+#: templates/pages/code_of_conduct.html:8
 msgid "Codigo de conducta"
 msgstr "Jarrera kodea"
 
@@ -627,7 +727,7 @@ msgid ""
 "presente código de conducta. Los organizadores cuidarán del cumplimiento de "
 "este código durante el evento."
 msgstr ""
-"PyConEs konferentziak parte hartzen duten delegatu, hizlari, expositore eta "
+"PyConEs konferentziak parte hartzen duten ordezkari, hizlari, expositore eta "
 "bolondres guztiek bete beharko dute jarrera-kodea. Antolatzaileen esku "
 "izango da ekitaldian zehar kode hori betetzen dela ziurtatzea."
 
@@ -639,7 +739,13 @@ msgid ""
 "persecución; todo acoso mediante fotografías o grabaciones; toda "
 "interrupción constante de charlas u otras actividades; todo contacto físico "
 "inapropiado y toda propuesta sexual no deseada."
-msgstr " "
+msgstr ""
+"Jazarpen gisa ulertzen da sexuaren inguruko edozein komentario mingarri, "
+"sexu preferentzien ingurukoak, desgaitasunen ingurukoak, itxura fisikoari "
+"buruzkoak, etniak edo erlijiari buruzkoak; espazio publikoetako pornografia; "
+"nahita egindako intimidazioak, jarraipena edo jazarpena; argazki edo "
+"grabazioekin egindako jazarpena; hitzaldiak edo ekintzak behin eta berriz "
+"etetea; onartu gabeko kontaktu fisikoa edo onartu gabeko proposamen sexualak."
 
 #: templates/pages/code_of_conduct.html:20
 msgid ""
@@ -757,25 +863,10 @@ msgstr ""
 "                    "
 
 #: templates/pages/home.html:9
-#, fuzzy
-#| msgid "¿Qué es PyConES 2015?"
 msgid "¿Que es PyConES 2016?"
-msgstr "Zer da PyConES 2015?"
+msgstr "Zer da PyConES 2016?"
 
 #: templates/pages/home.html:11
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                    <strong>PyConES</strong> es la conferencia nacional "
-#| "sobre Python más importante de España.\n"
-#| "                    La PyConES celebrará su tercera edición los días "
-#| "<strong>20 a 22 noviembre de 2015</strong> en <strong>Valencia</strong>, "
-#| "después de\n"
-#| "                    dos exitosas ediciones en Madrid y Zaragoza "
-#| "respectivamente y siguiendo el formato del evento mundial\n"
-#| "                    <a href=\"http://pycon.org\" target=\"_blank\">PyCon</"
-#| "a>.\n"
-#| "                "
 msgid ""
 "\n"
 "                    <strong>PyConES</strong> es la conferencia nacional "
@@ -792,10 +883,10 @@ msgstr ""
 "\n"
 "                    <strong>PyConES</strong> da Espainian egiten den Python "
 "konferentzia garrantzitsuena.\n"
-"                    Aurtengoa izango da bere hirugarren edizioa, "
-"<strong>2015eko azaroaren 21ean eta 22an Valentzian</strong>,\n"
-"                    aurreko 2 urteetan Madrilen eta Zaragozan izandako "
-"ekitaldi arrakastatsuen jarraipena, eta mundu mailan egiten diren\n"
+"                    Aurtengoa izango da bere laugarren edizioa, "
+"<strong>2016ko urriaren 7 eta 9an Almerian</strong>,\n"
+"                    aurreko 3 urteetan Madrilen, Zaragozan eta Valencian "
+"izandako ekitaldi arrakastatsuen jarraipena, eta mundu mailan egiten diren\n"
 "                    <a href=\"http://pycon.org\" target=\"_blank\">PyCon</a> "
 "konferentzien formatu berarekin.\n"
 "                "
@@ -806,11 +897,11 @@ msgstr "Aurreko edizioak"
 
 #: templates/pages/home.html:35
 msgid "Llamada a propuestas"
-msgstr ""
+msgstr "Proposamen"
 
 #: templates/pages/home.html:37
 msgid "¡Envía tu propuesta!"
-msgstr ""
+msgstr "Zure proposamena bidali !"
 
 #: templates/pages/home.html:40
 msgid ""
@@ -823,15 +914,15 @@ msgstr ""
 
 #: templates/pages/home.html:59 templates/pages/keynoters.html:11
 msgid "Manuel Kaufmann"
-msgstr ""
+msgstr "Manuel Kaufmann"
 
 #: templates/pages/home.html:61 templates/pages/keynoters.html:13
 msgid "Argentina en Python: comunidad, sueños, viajes y aprendizaje"
-msgstr ""
+msgstr "Argetina Python-en: komunitatea, ametsak, bidaiak eta "
 
 #: templates/pages/home.html:70
 msgid "¡Conoce más de nuestros keynoters!"
-msgstr ""
+msgstr "Gure hizlari nagusiei buruz gehiago ezagutu !"
 
 #: templates/pages/home.html:80
 msgid "Compra de entradas"
@@ -839,24 +930,17 @@ msgstr "Sarrerak erostea"
 
 #: templates/pages/home.html:87 templates/pages/tickets.html:18
 msgid "¡Entradas agotadas!"
-msgstr ""
+msgstr "Sarrerak agortuta !"
 
 #: templates/pages/home.html:91
-#, fuzzy
-#| msgid ""
-#| "Con tu entrada podrás acceder los dos días de la conferencia completos. "
-#| "En la entrada del edificio te cambiaremos tu entrada de ticketea (no "
-#| "olvides traerla) por tu acreditación y te entregaremos el WelcomePack."
 msgid ""
 "Con tu entrada podrás acceder los tres días de la conferencia completos. En "
 "la entrada del edificio te cambiaremos tu entrada de ticketea (no olvides "
 "traerla) por tu acreditación y te entregaremos el WelcomePack."
 msgstr ""
-"                    Zure sarrerarekin 2 egunetako ekitaldi guztietara sartu "
-"ahal izango zara. Egoitzaren sarreran\n"
-"                    ticketea sarrera aurkeztu beharko duzu (ez ahaztu "
-"ekartzea) eta akreditazioa emango dizugu, \n"
-"                    WelcomePack-arekin batera.\n"
+"Zure sarrerarekin 2 egunetako ekitaldi guztietara sartu ahal izango zara. "
+"Egoitzaren sarreran ticketea sarrera aurkeztu beharko duzu (ez ahaztu "
+"ekartzea) eta akreditazioa emango dizugu, Ongietorri pack-arekin batera.\n"
 "                "
 
 #: templates/pages/home.html:99
@@ -864,13 +948,7 @@ msgid "Patrocinadores"
 msgstr "Babesleak"
 
 #: templates/pages/home.html:129
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "                        ¿Quieres ser el primer patrocinador "
-#| "%(level_name)s? <a href=\"mailto:patrocinadores2015@es.pycon.org\" target="
-#| "\"_blank\">¡Contacta con nosotros!</a>\n"
-#| "                        "
+#, python-format
 msgid ""
 "\n"
 "                            ¿Quieres ser el primer patrocinador "
@@ -880,25 +958,23 @@ msgid ""
 msgstr ""
 "\n"
 "                        %(level_name)s mailako lehenengo babeslea izan nahi? "
-"<a href=\"mailto:patrocinadores2015@es.pycon.org\" target=\"_blank\">Jarri "
+"<a href=\"mailto:patrocinadores2016@es.pycon.org\" target=\"_blank\">Jarri "
 "harremanetan gurekin!</a>\n"
 "                        "
 
 #: templates/pages/home.html:138
-#, fuzzy
-#| msgid "Folleto (EN)"
 msgid "Folleto (ES)"
-msgstr "Eskuorria (EN)"
+msgstr "Eskuorria (ES)"
 
 #: templates/pages/home.html:141
 msgid "Folleto (EN)"
 msgstr "Eskuorria (EN)"
 
 #: templates/pages/info.html:10
-msgid "Localizacion"
-msgstr ""
+msgid "Localización"
+msgstr "Kokalekua"
 
-#: templates/pages/info.html:14
+#: templates/pages/info.html:19
 msgid ""
 "\n"
 "                        La sede de PyConES 2016 está en el campus de la "
@@ -906,14 +982,12 @@ msgid ""
 "Facultad de Ciencias Sociales.\n"
 "                    "
 msgstr ""
+"\n"
+"                        PyConES 2016 Almeriako unibertsitateko kanpusean "
+"izango da, zehazki Paraninfoan eta Gizarte Zientzien Fakultatean\n"
+"                    "
 
-#: templates/pages/info.html:19
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                            Gracias por ayudarnos a hacer este evento "
-#| "amistoso y abierto para todos.\n"
-#| "                            "
+#: templates/pages/info.html:24
 msgid ""
 "\n"
 "                        Dispondremos de tres salas para acomodar hasta tres "
@@ -921,55 +995,57 @@ msgid ""
 "                    "
 msgstr ""
 "\n"
-"                            Eskerrik asko jardunaldi ireki eta adiskidetsua "
-"sortzen laguntzearren.\n"
+"                            Hiru hitzaldi paralelo izateko hiru gela izango "
+"ditugu:\n"
 "                            "
 
-#: templates/pages/info.html:29
+#: templates/pages/info.html:34
+#, python-format
 msgid ""
-"\n"
-"                        Os hemos preparado un mapa Google Maps compilando "
-"toda la información que creemos podéis necesitar: <a href=\"http://bit.ly/"
-"PyConES16\" target=\"_blank\">http://bit.ly/PyConES16</a>\n"
+"                \n"
+"                La universidad nos ha confirmado que los tres espacios "
+"principales son 100%% accesibles para público y conferenciantes.\n"
 "                    "
 msgstr ""
 
-#: templates/pages/info.html:34
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                            Gracias por ayudarnos a hacer este evento "
-#| "amistoso y abierto para todos.\n"
-#| "                            "
+#: templates/pages/info.html:40
+msgid ""
+"\n"
+"                        Os hemos preparado <a href=\"http://bit.ly/"
+"PyConES16\">un mapa Google Maps</a> compilando toda la información que "
+"creemos podéis necesitar: <a href=\"http://bit.ly/PyConES16\" target=\"_blank"
+"\">http://bit.ly/PyConES16</a>\n"
+"                    "
+msgstr ""
+"\n"
+"                        Google Maps bat bidali dizuegu informazio "
+"guztiarekin: <a href=\"http://bit.ly/PyConES16\" target=\"_blank\">http://"
+"bit.ly/PyConES16</a>\n"
+"                    "
+
+#: templates/pages/info.html:45
 msgid ""
 "\n"
 "                    El horario principal del congreso previsto es:\n"
 "                    "
 msgstr ""
 "\n"
-"                            Eskerrik asko jardunaldi ireki eta adiskidetsua "
-"sortzen laguntzearren.\n"
+"                            Kongresuaren aurreikusitako ordutegia hauxe da:\n"
 "                            "
 
-#: templates/pages/info.html:39
+#: templates/pages/info.html:50
 msgid "viernes 07/10/16 de 15:00 a 20:30."
-msgstr ""
+msgstr "Ostirala 16/10/07 15:00-tik 20:30-ra."
 
-#: templates/pages/info.html:40
+#: templates/pages/info.html:51
 msgid "sábado 08/10/16 de 9:00 a 20:30."
-msgstr ""
+msgstr "Larunbata 16/10/08 9:00-tik 20:30-ra"
 
-#: templates/pages/info.html:41
+#: templates/pages/info.html:52
 msgid "domingo 09/10/16 de 9:00 a 18:30."
-msgstr ""
+msgstr "Igandea 16/10/09 9:00-tik 18:30-ra"
 
-#: templates/pages/info.html:44
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                            Gracias por ayudarnos a hacer este evento "
-#| "amistoso y abierto para todos.\n"
-#| "                            "
+#: templates/pages/info.html:55
 msgid ""
 "\n"
 "                        Obviamente llegado el momento os ofreceremos un "
@@ -977,42 +1053,51 @@ msgid ""
 "                    "
 msgstr ""
 "\n"
-"                            Eskerrik asko jardunaldi ireki eta adiskidetsua "
-"sortzen laguntzearren.\n"
+"                            Momentua heltzen denean egutegi zehatza "
+"eskainiko dizuegu.\n"
 "                            "
 
-#: templates/pages/info.html:53
-msgid "Sobre Almeria"
-msgstr ""
+#: templates/pages/info.html:64
+msgid "Sobre Almería"
+msgstr "Almeriari buruz"
 
-#: templates/pages/info.html:57
+#: templates/pages/info.html:68
 msgid ""
 "\n"
 "                        A algunos nos gusta decir que Almería es lo más "
 "parecido que tiene España a una isla sin salir de la Península. La relativa "
 "inaccesibilidad ha servido para proteger del turismo desaforado una "
-"diversidad de paisajes que suelen enamorar al viajero. Almería es un gran "
-"plató a cielo abierto donde se han rodado toda clase de filmes, anuncios o "
-"vídeos musicales. Nuestro clima es cálido pero templado todo el año. Nuestro "
-"cielo, tan claro, es el que enamoró al director David Lean. Si queréis "
-"explorar las posibilidades turísticas de Almería podéis consultar las "
-"siguientes fuentes:\n"
+"diversidad de paisajes que suelen enamorar al viajero. <a href=\"http://www."
+"rtve.es/alacarta/videos/el-documental/documental-spanish-western/3628601/"
+"\">Almería es un gran plató a cielo abierto</a> donde se han rodado toda "
+"clase de filmes, anuncios o vídeos musicales. Nuestro clima es cálido pero "
+"templado todo el año. Nuestro cielo, tan claro, es el que enamoró al "
+"director David Lean. Si queréis explorar las posibilidades turísticas de "
+"Almería podéis consultar las siguientes fuentes:\n"
 "                    "
 msgstr ""
+"\n"
+"                        Batzuei, Almeria Espainiako irla antzeko bat dela "
+"esatea gustatzen zaigu. Eskuraezintasuna beren turismoa eta paisaiak "
+"gordetzeko balio izan du. Almeria, leku eder bat da, filma, publizitate "
+"edota bideo asko grabatu direlarik. Gure klima beroa baina egokia da urte "
+"guztian zehar. Gure zerua, gardena, David Lean zuzendaria maitemindu zuen. "
+"Gure aukera turistiko guztiak ikusi nahi badituzu, hemen ikus ditzazkezu:\n"
+"                    "
 
-#: templates/pages/info.html:62
+#: templates/pages/info.html:73
 msgid "Costa de Almería"
-msgstr ""
+msgstr "Almeriako kostaldea"
 
-#: templates/pages/info.html:63
+#: templates/pages/info.html:74
 msgid "Patronato provincial de turismo de Almería"
-msgstr ""
+msgstr "Almeriako turismoaren lurralde patronatua"
 
-#: templates/pages/info.html:64
+#: templates/pages/info.html:75
 msgid "Turismo de Almería (ciudad)"
-msgstr ""
+msgstr "Almeriako Turismoa (hiria)"
 
-#: templates/pages/info.html:67
+#: templates/pages/info.html:78
 msgid ""
 "\n"
 "                        Económicamente Almería es además una pequeña "
@@ -1020,17 +1105,26 @@ msgid ""
 "exportan fruta y hortalizas a toda Europa y es una de las referencias "
 "mundiales del sector. Y si creías que la única construcción humana que podía "
 "verse desde el espacio era la Muralla China tenemos que confirmarte que no "
-"es cierto, pero que sí se ve el reflejo del inmenso mar de plástico del "
-"Campo de Dalías bajo el que se cultivan alimentos que probablemente consumes "
-"con regularidad.\n"
+"es cierto, pero que sí se ve el reflejo del <a href=\"http://"
+"earthobservatory.nasa.gov/IOTD/view.php?id=4508\">inmenso mar de plástico "
+"del Campo de Dalías</a> bajo el que se cultivan alimentos que probablemente "
+"consumes con regularidad.\n"
 "                    "
 msgstr ""
+"\n"
+"                        Ekonomikoki Almeria elikagai sektorearen potentzia "
+"bat da. Gure industria eta zerbitzuak fruitu eta barazkiak esportatzen "
+"dituzte europara. Txinako harresia espaziotik ikusi daitekeen eraikuntza "
+"bakarra dela uste bazenuen, ideia hau zuzena ez dela esan behar dizugu, "
+"Campo de Dalías ere ikusi dezakezu eta gainera, egunerokoan jaten ditugun "
+"elikagaiak ekoizten diren lekua da.\n"
+"                    "
 
-#: templates/pages/info.html:76
+#: templates/pages/info.html:87
 msgid "Como desplazarse hasta el campus"
-msgstr ""
+msgstr "Nola etorri kanpusera"
 
-#: templates/pages/info.html:80
+#: templates/pages/info.html:91
 msgid ""
 "\n"
 "                        El campus tiene varios espacios de aparcamiento para "
@@ -1039,40 +1133,46 @@ msgid ""
 "de la costa.\n"
 "                    "
 msgstr ""
+"\n"
+"Garraio pribatua erabili nahi duzuenok aparkalekua duzue kanpusean. "
+"Autobidez etorri zaitezketeko, La Cañadako irteera erabiliz, edo kostaldeko "
+"errepidea erabiliz."
 
-#: templates/pages/info.html:85
+#: templates/pages/info.html:96
 msgid ""
 "\n"
 "                        Quienes optéis por el transporte público tendréis "
 "disponible especialmente la línea 18 de la empresa local de transportes, "
 "Surbus. Dicha línea regular contará con refuerzos puntuales para los "
-"desplazamientos al congreso. La parada de la Universidad es la número 144 "
-"(http://m.surbus.com/tiempo-espera/parada/144). Surbús dispone de una "
-"aplicación web para consultar los tiempos de espera de cada parada (http://m."
-"surbus.com/tiempo-espera/paradas). En el mapa del evento tenéis anotadas "
-"todas las paradas de la línea 18 (<a href=\"http://bit.ly/PyConES16\" target="
-"\"_blank\">http://bit.ly/PyConES16</a> )\n"
+"desplazamientos al congreso. La parada de la Universidad es la <a href="
+"\"http://m.surbus.com/tiempo-espera/parada/144\">número 144</a> Surbús "
+"dispone de una aplicación web para <a href=\"http://m.surbus.com/tiempo-"
+"espera/paradas\">consultar los tiempos de espera de cada parada</a>. En <a "
+"href=\"http://bit.ly/PyConES16\" target=\"_blank\">el mapa del evento</a> "
+"tenéis anotadas todas las paradas de la línea 18.\n"
 "                    "
 msgstr ""
+"\n"
+"                        Garraio publikoa erabili nahi duzuenok garraio "
+"enpresaren 18 linea erabili dezakezue, Surbus. Linea horrek kongresurako "
+"desplazamentuetarako errefortzua izango du. Unibertsitateko geralekua 144 "
+"zenbakiduna da (http://m.surbus.com/tiempo-espera/parada/144). Surbusek "
+"geltokietako itxaron denborentzako aplikazio bat du (http://m.surbus.com/"
+"tiempo-espera/paradas). Mapan dituzue 18 linearen geraleku guztiak (<a href="
+"\"http://bit.ly/PyConES16\" target=\"_blank\">http://bit.ly/PyConES16</a> )\n"
+"                    "
 
-#: templates/pages/info.html:90
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                            Gracias por ayudarnos a hacer este evento "
-#| "amistoso y abierto para todos.\n"
-#| "                            "
+#: templates/pages/info.html:101
 msgid ""
 "\n"
 "                        También disponemos de dos servicios de taxi:\n"
 "                    "
 msgstr ""
 "\n"
-"                            Eskerrik asko jardunaldi ireki eta adiskidetsua "
-"sortzen laguntzearren.\n"
+"                            Bi taxi zerbitzu ere baditugu:\n"
 "                            "
 
-#: templates/pages/info.html:95
+#: templates/pages/info.html:106
 msgid ""
 "\n"
 "                        <strong>Radio taxi</strong> <br/>\n"
@@ -1081,8 +1181,14 @@ msgid ""
 "\"_blank\">http://www.radiotaxialmeria.es/</a>\n"
 "                    "
 msgstr ""
+"\n"
+"                        <strong>Radio taxi</strong> <br/>\n"
+"                        950 22 22 22 - 950 22 61 61<br/>\n"
+"                        <a href=\"http://www.radiotaxialmeria.es/\" target="
+"\"_blank\">http://www.radiotaxialmeria.es/</a>\n"
+"                    "
 
-#: templates/pages/info.html:102
+#: templates/pages/info.html:113
 msgid ""
 "\n"
 "                        <strong>Tele Taxi</strong> <br/>\n"
@@ -1091,12 +1197,18 @@ msgid ""
 "\"_blank\">http://teletaxialmeria.com/</a>\n"
 "                    "
 msgstr ""
+"\n"
+"                        <strong>Tele Taxi</strong> <br/>\n"
+"                        950 251 111<br/>\n"
+"                        <a href=\"http://teletaxialmeria.com/\" target="
+"\"_blank\">http://teletaxialmeria.com/</a>\n"
+"                    "
 
-#: templates/pages/info.html:113
-msgid "Como llegar a Almeria"
-msgstr ""
+#: templates/pages/info.html:124
+msgid "Cómo llegar a Almería"
+msgstr "Nola heldu Almeriari"
 
-#: templates/pages/info.html:117
+#: templates/pages/info.html:128
 msgid ""
 "\n"
 "                        <strong>Avión</strong>: El <a href=\"http://www.aena."
@@ -1109,21 +1221,42 @@ msgid ""
 "\" target=\"_blank\">línea 22</a>)\n"
 "                    "
 msgstr ""
+"\n"
+"                        <strong>Hegazkinez</strong>: <a href=\"http://www."
+"aena.es/es/aeropuerto-almeria/index.html\" target=\"_blank\">Almeriako "
+"aireportuak</a> Sevilla, Melilla, Madrid eta Bartzelonatik ditu konexio "
+"zuzenak, eta urtaroaren arabera europako hainbat herrialderekin ere bai, "
+"batez ere kostu baxuko konpainiekin. Aireportutik taxia edo autobusa "
+"erabiliz heldu zaitezke hiri erdira (<a href=\"http://www.aena.es/es/"
+"aeropuerto-almeria/transporte-publico.html\" target=\"_blank\">22 linea</"
+"a>)\n"
+"                    "
 
-#: templates/pages/info.html:122
+#: templates/pages/info.html:133
+#, python-format
 msgid ""
 "\n"
-"                        <strong>Tren</strong>: La magnífica estación de "
-"ferrocarril de Almería, en proceso de restauración, está en el mismísimo "
-"centro de la ciudad. Forma parte de una moderna <a href=\"http://www.adif.es/"
-"es_ES/infraestructuras/estaciones/56312/informacion_000069.shtml\"> estación "
-"intermodal</a>. Las conexiones por tren principales son con Madrid y Granada-"
-"Sevilla. Y no, no sólo no tenemos AVE sino que se están tapiando los túneles "
-"ya construidos «para que no les roben el cobre» 😃\n"
+"                        <strong>Tren</strong>: La magnífica <a href="
+"\"https://es.wikipedia.org/wiki/Estaci%%C3%%B3n_de_Almer%%C3%%ADa#/media/"
+"File:Estaciontrenesalmeria.jpg\">estación de ferrocarril de Almería</a>, en "
+"proceso de restauración, está en el mismísimo centro de la ciudad. Forma "
+"parte de una moderna <a href=\"http://www.adif.es/es_ES/infraestructuras/"
+"estaciones/56312/informacion_000069.shtml\"> estación intermodal</a>. Las "
+"conexiones por tren principales son con Madrid y Granada-Sevilla. Y no, no "
+"sólo no tenemos AVE sino que se están tapiando los túneles ya construidos "
+"«para que no les roben el cobre» 😃\n"
 "                    "
 msgstr ""
+"\n"
+"                        <strong>Trena</strong>: Almeriako tren geltokia "
+"hiriaren erdian dago.  <a href=\"http://www.adif.es/es_ES/infraestructuras/"
+"estaciones/56312/informacion_000069.shtml\"> Geltoki intermodal </a> baten "
+"parte da. Konexioak Madril, Granada eta Sevillatik daude. Ez dugu AHTik, eta "
+"gainera eginda dauden tunelak tapatzen ari dira \"kobrerik lapur ez "
+"diezaguten\" 😃\n"
+"                    "
 
-#: templates/pages/info.html:127
+#: templates/pages/info.html:138
 msgid ""
 "\n"
 "                        <strong>Puerto</strong>: También en el mismísimo "
@@ -1134,8 +1267,15 @@ msgid ""
 "regulares con Melilla, Nador, Ghazaouet y Orán</a>.\n"
 "                    "
 msgstr ""
+"\n"
+"                        <strong>Portua</strong>: Hiri erdian portu moderno "
+"eta aktiboa dugu. Almeriaran Afrika iparraldetik bazatoz <a href=\"http://"
+"www.apalmeria.com/index.php?"
+"option=com_content&view=article&id=95&Itemid=92&lang=es\"> Melilla, Nador, "
+"Ghazaouet eta Orandik</a> datozen konexioak ditugu.\n"
+"                    "
 
-#: templates/pages/info.html:132
+#: templates/pages/info.html:143
 msgid ""
 "\n"
 "                        <strong>Autobús</strong>: Llegando a la misma "
@@ -1143,33 +1283,41 @@ msgid ""
 "Andalucía, a Madrid y por levante hasta Barcelona.\n"
 "                    "
 msgstr ""
+"\n"
+"                        <strong>Autobusez</strong>: Aurrez esandako "
+"geltokira iritsiz. Andaluzia, Madril eta Bartzelonarako konexioak daude "
+"egunero.\n"
+"                    "
 
-#: templates/pages/info.html:137
+#: templates/pages/info.html:148
 msgid ""
 "\n"
 "                        <strong>Vehículo propio</strong>:\n"
 "                    "
 msgstr ""
-
-#: templates/pages/info.html:142
-msgid "por la costa, a través de la Autovía del Mediterráneo A-7, E-15"
-msgstr ""
-
-#: templates/pages/info.html:143
-msgid "desde el interior, a través de la A-92"
-msgstr ""
-
-#: templates/pages/info.html:149
-msgid "Alojamiento"
-msgstr ""
+"\n"
+"                        <strong>Norberaren kotxea</strong>:\n"
+"                    "
 
 #: templates/pages/info.html:153
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                            Gracias por ayudarnos a hacer este evento "
-#| "amistoso y abierto para todos.\n"
-#| "                            "
+#, python-format
+msgid ""
+"por la costa, a través de la <a href='https://es.wikipedia.org/wiki/Autov"
+"%%C3%%ADa_del_Mediterr%%C3%%A1neo'>Autovía del Mediterráneo A-7, E-15</a>"
+msgstr ""
+
+#: templates/pages/info.html:154
+#, python-format
+msgid ""
+"desde el interior, a través de la <a href='https://es.wikipedia.org/wiki/"
+"Autov%%C3%%ADa_A-92'>A-92</a>"
+msgstr ""
+
+#: templates/pages/info.html:160
+msgid "Alojamiento"
+msgstr "Alojamendua"
+
+#: templates/pages/info.html:164
 msgid ""
 "\n"
 "                        Estamos trabajando para ofreceros un hotel "
@@ -1177,11 +1325,11 @@ msgid ""
 "                    "
 msgstr ""
 "\n"
-"                            Eskerrik asko jardunaldi ireki eta adiskidetsua "
-"sortzen laguntzearren.\n"
+"                            Gomendatutako hotel bat eskaintzeko lanean ari "
+"gara, ordura arte honako informazioa erabili dezakezue:.\n"
 "                            "
 
-#: templates/pages/info.html:159
+#: templates/pages/info.html:170
 msgid ""
 "\n"
 "                        <a href=\"https://www.google.com/maps/d/viewer?"
@@ -1189,24 +1337,23 @@ msgid ""
 "apuntados los alojamientos más próximos a la línea 18 de autobús\n"
 "                        "
 msgstr ""
+"\n"
+"                        <a href=\"https://www.google.com/maps/d/viewer?"
+"mid=1Qm5_h5uTqriVSYBHS_SP3NVgjHc\">prestatu dugun mapan</a> dituzuea 18 "
+"autobus linearen inguruko alojamenduak\n"
+"                        "
 
-#: templates/pages/info.html:163
+#: templates/pages/info.html:174
+#, python-format
 msgid ""
 "en el mismo mapa opcionalmente tenéis indicada la situación de otros dos "
-"grupos de hoteles, uno en la capital y otro en el complejo hotelero de El "
-"Toyo, en la zona de Retamar, que puede ser de vuestro interés si viajáis en "
-"familia y con vehículo propio"
+"grupos de hoteles, uno en la capital y otro en el complejo hotelero de <a "
+"href=\"https://es.wikipedia.org/wiki/Retamar_(Almer%%C3%%ADa)#El_Toyo\">El "
+"Toyo</a>, en la zona de Retamar, que puede ser de vuestro interés si viajáis "
+"en familia y con vehículo propio"
 msgstr ""
 
-#: templates/pages/info.html:171
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                            PyConES aspira a crear un ambiente libre de "
-#| "acosos o discriminaciones por razón de género, orientación sexual, "
-#| "discapacidad, aspecto físico, etnia o religión. No se tolerará "
-#| "discriminación alguna bajo ninguna circunstancia.\n"
-#| "                            "
+#: templates/pages/info.html:182
 msgid ""
 "\n"
 "                        PyConES aspira a crear un ambiente libre de acosos o "
@@ -1218,18 +1365,10 @@ msgstr ""
 "\n"
 "                            PyConESen ez dugu bazterketarik edo jazarpenik "
 "onartuko, inolakoa dela ere (generoa, erlijioa, jatorria, itxura "
-"fisikoa,...).\n"
+"fisikoa,...). Ez da inolako diskriminaziorik inola ere onartuko.\n"
 "                            "
 
-#: templates/pages/info.html:176
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                            Todo el contenido de la conferencia deberá "
-#| "ajustarse a una audiencia profesional integrada por personas procedentes "
-#| "de sectores diferentes. Tanto el lenguaje como las imágenes sexualmente "
-#| "explícitos son inapropiados en la conferencia y en las charlas.\n"
-#| "                            "
+#: templates/pages/info.html:187
 msgid ""
 "\n"
 "                        Todo el contenido de la conferencia deberá ajustarse "
@@ -1245,15 +1384,7 @@ msgstr ""
 "hitzaldietan.\n"
 "                            "
 
-#: templates/pages/info.html:181
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                            Sé amable con los demás. No insultes o "
-#| "humilles a otros asistentes. Compórtate de manera profesional. Recuerda "
-#| "que las bromas sexistas, racistas o discriminatorias están prohibidas en "
-#| "la PyConES.\n"
-#| "                            "
+#: templates/pages/info.html:192
 msgid ""
 "\n"
 "                        Sé amable con los demás. No insultes o humilles a "
@@ -1268,14 +1399,7 @@ msgstr ""
 "baztertzailerik.\n"
 "                            "
 
-#: templates/pages/info.html:186
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                            Los asistentes que incumplan estas reglas "
-#| "podrán -a discreción de los organizadores- ser sancionados o expulsados "
-#| "de la conferencia sin derecho a reembolso.\n"
-#| "                            "
+#: templates/pages/info.html:197
 msgid ""
 "\n"
 "                        Los asistentes que incumplan estas reglas podrán -a "
@@ -1289,13 +1413,7 @@ msgstr ""
 "kostua itzultzeko eskubiderik gabe.\n"
 "                            "
 
-#: templates/pages/info.html:191
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                            Gracias por ayudarnos a hacer este evento "
-#| "amistoso y abierto para todos.\n"
-#| "                            "
+#: templates/pages/info.html:202
 msgid ""
 "\n"
 "                        Gracias por ayudarnos a hacer este evento amistoso y "
@@ -1307,8 +1425,8 @@ msgstr ""
 "sortzen laguntzearren.\n"
 "                            "
 
-#: templates/pages/info.html:195
-msgid "Codigo de Conducta Completo"
+#: templates/pages/info.html:206
+msgid "Código de Conducta Completo"
 msgstr "Jarrera kodea (osorik)"
 
 #: templates/pages/keynoters.html:15
@@ -1320,10 +1438,16 @@ msgid ""
 "problemas cotidianos, éxitos y fracasos, eventos realizados y la gran "
 "comunidad Python a nivel internacional serán los tópicos de esta charla."
 msgstr ""
+"Egin duzu inoiz amets bidaiatu eta lan egitearekin? Guztia utzi eta zure "
+"ametsak jarraitu? Edo programazioa urruneko lekuetara eramatearekin? "
+"Hitzaldi honetan, azken 3 urteotan Python Latinoamerikako 100 hiri eta 8 "
+"herrialdetara eramatearen esperientziari buruz hitz egingo dut. Istorio "
+"txikiak, eguneroko arazoak, garaipeank, egindako ebentuak eta nazioarteko "
+"Python komunitatea handia izango dira hitzaldi honetako topikoak."
 
 #: templates/pages/keynoters.html:17
 msgid "Acerca de"
-msgstr ""
+msgstr "Honi buruz"
 
 #: templates/pages/keynoters.html:19
 msgid ""
@@ -1334,6 +1458,11 @@ msgid ""
 "estos días. Desde ese momento se ha convertido en miembro activo de Python "
 "Argentina."
 msgstr ""
+"Manuel Kaufmannek unibertsitatea ikasketak egiten zituen artean ezagutu zuen "
+"Python, 2006an egindako PyDay Santa Fe (Argentina) ebentuan, eta egun "
+"horretan bere bizitza betiko aldatu zen. Sintaxia gustatu zitzaion, "
+"erakusleak eta lotura bikoitzeko C zerrendak ahaztu zituen, gaurdaino. "
+"Orduandik Python Argentinako kide aktibo izan da."
 
 #: templates/pages/keynoters.html:22
 msgid ""
@@ -1343,24 +1472,27 @@ msgid ""
 "Python\" por la Python Software Foundation por su trabajo con Argentina en "
 "Python."
 msgstr ""
+"Urte hauetan, Djangoren liburu ofiziala eta Django Girlsen tutoriala "
+"itzultzen egin du lan, beste batzuen artean. Gainera One Laptop Per Child "
+"bezalako proiektuetan egin du lan eta 2016ko otsailean \"Python enbaxadore\" "
+"titulua eman zion Python Software Fundazioak Pythonekin Argentinan egindako "
+"lanagatik."
 
 #: templates/pages/tickets.html:11
-#, fuzzy
-#| msgid "Compra tus entradas"
 msgid "Compra aquí tus tickets"
-msgstr "Erosi zure sarrerak"
+msgstr "Erosi hemen zure sarrerak"
 
 #: templates/proposals/base.html:13 templates/proposals/create.html:108
 msgid "Enviar propuesta"
-msgstr ""
+msgstr "Proposamena bidali"
 
 #: templates/proposals/close.html:7
 msgid "¡La llamada a propuestas ha terminado!"
-msgstr ""
+msgstr "Proposamenak aurkezteko epea bukatu da!"
 
 #: templates/proposals/create.html:7
 msgid "Envia tu propuesta para dar una charla o taller en la PyConES 2016"
-msgstr ""
+msgstr "Bidali PyConES 2016n hitzaldia edo tailerra emateko proposamena"
 
 #: templates/proposals/create.html:11
 msgid ""
@@ -1370,99 +1502,102 @@ msgid ""
 "            las 00:00.\n"
 "        "
 msgstr ""
+"\n"
+"Irekita dago PyConES 2016rako proposamenak bidaltzeko epea! Azken eguna "
+"uztailaren <del>15a</del> <ins>27a</ins> izango da 00:00tan."
 
 #: templates/proposals/create.html:18
-#, fuzzy
-#| msgid "Información del evento"
 msgid "Más información en el blog"
-msgstr "Ekitaldiaren informazioa"
+msgstr "Informazio gehiago blogean"
 
 #: templates/proposals/edit.html:5
 msgid "Edita tu propuesta"
-msgstr ""
+msgstr "Zure proposamena aldatu"
 
 #: templates/proposals/success.html:7
 msgid "¡Gracias por tu propuesta!"
+msgstr "Eskerrik asko proposamenagatik!"
+
+#: templates/reviewers/base.html:9
+msgid "Revision de propuestas"
+msgstr ""
+
+#: templates/reviewers/details.html:7
+msgid "Puntuar propuesta"
+msgstr ""
+
+#: templates/reviewers/details.html:31
+msgid "Volver"
+msgstr ""
+
+#: templates/reviewers/list.html:9
+msgid "Listado de revisiones asignadas"
+msgstr ""
+
+#: templates/reviewers/list.html:16
+msgid "Revisor"
+msgstr ""
+
+#: templates/reviewers/list.html:22
+msgid "¿Conflicto de intereses?"
+msgstr ""
+
+#: templates/reviewers/list.html:23
+msgid "¿Finalizada?"
+msgstr ""
+
+#: templates/reviewers/list.html:24
+msgid "Acciones"
+msgstr ""
+
+#: templates/reviewers/list.html:40
+msgid "Acceder"
+msgstr ""
+
+#: templates/reviewers/list.html:45
+msgid "No tienes ninguna revisión asignada aún"
+msgstr ""
+
+#: templates/reviewers/sign_in.html:7
+msgid "Acceso de revisores"
 msgstr ""
 
 #: templates/schedule/_slot.html:16
 msgid "Descargar presentación"
-msgstr ""
+msgstr "Aurkezpena deskargatu"
 
 #: templates/schedule/_slot.html:19
 msgid "Ver vídeo"
-msgstr ""
+msgstr "Bideoa ikusi"
 
 #: templates/schedule/show.html:16
 msgid "Track PSF (básico)"
-msgstr ""
+msgstr "PSF Tracka (oinarrizkoa)"
 
 #: templates/schedule/show.html:19
 msgid "Track Avanzado"
-msgstr ""
+msgstr "Track aurreratua"
 
 #: templates/schedule/show.html:22
 msgid "Track BigML (científico)"
-msgstr ""
+msgstr "BigML tracka (zientifikoa)"
 
 #: templates/schedule/show.html:28
 msgid "Talleres"
-msgstr ""
+msgstr "Tailerrak"
 
 #: templates/schedule/show.html:56
 msgid "Descargar en PDF"
-msgstr ""
+msgstr "PDF formatuan deskargatu"
 
 #: templates/schedule/show.html:59
 msgid "Descargar en iCalendar"
-msgstr ""
+msgstr "iCalendar formatuan deskargatu"
 
 #: templates/schedule/show.html:62
 msgid "Descargar en xCal"
-msgstr ""
+msgstr "xCal formatuan deskargatu"
 
 #: templates/schedule/show.html:65
 msgid "Descargar en Pentabarf XML"
-msgstr ""
-
-#, fuzzy
-#~| msgid "Folleto (ES)"
-#~ msgid "Folleto"
-#~ msgstr "Eskuorria (ES)"
-
-#~ msgid "Escuela Técnica Superior de Ingeniería Informática"
-#~ msgstr "Escuela Técnica Superior de Ingeniería Informática"
-
-#~ msgid "Universidad Politécnica de Valencia"
-#~ msgstr "Universidad Politécnica de Valencia"
-
-#~ msgid "Valencia 2015"
-#~ msgstr "Valencia 2015"
-
-#~ msgid ""
-#~ "\n"
-#~ "                    Concretamente, la conferencia tendrá lugar en la "
-#~ "<strong>Universidad Politécnica de Valencia (UPV)</strong> y\n"
-#~ "                    será organizada conjuntamente por la comunidad local "
-#~ "y la asociación Python España.\n"
-#~ "                "
-#~ msgstr ""
-#~ "\n"
-#~ "                    Konferentziaren egoitza <strong>Valentziako "
-#~ "Unibertsitate Politeknikoa</strong> izango da\n"
-#~ "                    Python Españak eta komunitate lokalak antolatuta.\n"
-#~ "                "
-
-#~ msgid "¿Cuándo?"
-#~ msgstr "Noiz?"
-
-#, fuzzy
-#~| msgid "Valencia, 21-22 de noviembre de 2015"
-#~ msgid "Valencia, del 20 al 22 de noviembre de 2015"
-#~ msgstr "Valentzia, 2015eko azaroaren 21-22"
-
-#~ msgid "¿Dónde?"
-#~ msgstr "Non?"
-
-#~ msgid "Detailed Abstract"
-#~ msgstr "Laburpen zehatza"
+msgstr "Pentabarf XML formatuan deskargatu"

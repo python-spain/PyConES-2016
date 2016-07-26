@@ -9,5 +9,4 @@ urlpatterns = [
     url(r'^request-restore-password/$', RequestRestorePasswordView.as_view(), name="request_restore_password"),
     url(r'^restore-password/(?P<restore_code>.+)/$', RestorePasswordView.as_view(), name="restore_password"),
     url(r'^profile/$', EditAttendanceView.as_view(), name="profile"),
-    url(r'^log-out/$', LogoutView.as_view(), name="log_out"),
 ]

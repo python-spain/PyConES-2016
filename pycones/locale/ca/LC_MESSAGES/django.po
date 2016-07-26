@@ -13,6 +13,7 @@ msgstr ""
 "PO-Revision-Date: 2016-07-21 16:04+0200\n"
 "Last-Translator: Mai Giménez <mai@immutable.es>\n"
 "Language-Team: Catalan (http://www.transifex.com/python-espana/web-"
+"pycones-2015/language/ca/)\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,7 +30,7 @@ msgid "Localizador"
 msgstr "Localitzador"
 
 #: attendees/forms.py:43 attendees/forms.py:46 attendees/forms.py:100
-#: attendees/forms.py:103
+#: attendees/forms.py:103 reviewers/forms.py:27
 msgid "Contraseña"
 msgstr "Contrasenya"
 
@@ -38,7 +39,7 @@ msgid "Repita la contraseña"
 msgstr "Repeteix la contrasenya"
 
 #: attendees/forms.py:59 attendees/forms.py:90 attendees/forms.py:110
-msgid "El localzador de entrada no existe"
+msgid "El localizador de entrada no existe"
 msgstr "El localitzador de l'entrada no existeix"
 
 #: attendees/forms.py:66
@@ -50,11 +51,11 @@ msgid "Código de restauración no válido"
 msgstr "Codi de restauració no vàlid"
 
 #: attendees/forms.py:84 attendees/forms.py:98
-#| msgid "Compra de entradas"
 msgid "Localizador de entrada"
 msgstr "Localitzador d'entrada"
 
 #: attendees/forms.py:117 attendees/forms.py:120 attendees/forms.py:122
+#: reviewers/forms.py:44
 msgid "La contraseña no es correcta"
 msgstr "La contrasenya no és correcte"
 
@@ -129,7 +130,7 @@ msgid "Seguir leyendo..."
 msgstr "Continua llegint"
 
 #: blog/views.py:48
-msgid "Web de la PyConES 2015"
+msgid "Web de la PyConES 2016"
 msgstr "Web de la PyConES 2016"
 
 #: conference/models.py:12 sponsorship/models.py:28 sponsorship/models.py:160
@@ -176,6 +177,15 @@ msgstr "Nom públic del paràmetre"
 msgid "Value"
 msgstr "Valor"
 
+#: proposals/admin.py:44 reviewers/admin.py:35
+#: templates/reviewers/list.html:21
+msgid "Media"
+msgstr ""
+
+#: proposals/admin.py:48
+msgid "Revisiones"
+msgstr ""
+
 #: proposals/forms.py:19
 msgid "Nombre del ponente"
 msgstr "Nom del ponent"
@@ -202,15 +212,15 @@ msgstr ""
 msgid "Name"
 msgstr "Nom"
 
-#: proposals/models.py:85
+#: proposals/models.py:85 templates/reviewers/details.html:36
 msgid "Tipo de propuesta"
 msgstr "Tipus de proposta"
 
-#: proposals/models.py:87
+#: proposals/models.py:87 templates/reviewers/list.html:14
 msgid "Título"
 msgstr "Títol"
 
-#: proposals/models.py:89
+#: proposals/models.py:89 templates/reviewers/details.html:40
 msgid "Breve descripción"
 msgstr "Descripció breu"
 
@@ -222,7 +232,7 @@ msgstr ""
 "Si la teva proposta es acceptada es farà pública i es mostrarà al programa. "
 "Serà un únic paràgraf d'un màxim de 500 caràcters."
 
-#: proposals/models.py:95
+#: proposals/models.py:95 templates/reviewers/details.html:44
 msgid "Resumen detallado"
 msgstr "Resum detallat"
 
@@ -236,7 +246,7 @@ msgstr ""
 "Escriure amb <a href='http://daringfireball.net/projects/markdown/basics' "
 "target='_blank'>Markdown</a>."
 
-#: proposals/models.py:104
+#: proposals/models.py:104 templates/reviewers/details.html:48
 msgid "Notas adicionales"
 msgstr "Notes adicionals"
 
@@ -256,55 +266,55 @@ msgstr ""
 msgid "[PyConES 2016] Confirmación de propuesta de charla"
 msgstr "[PyConEs 2016] Confirmació de proposta de la xerrada"
 
-#: proposals/models.py:187
+#: proposals/models.py:186
 msgid "Básico"
 msgstr "Bàsic"
 
-#: proposals/models.py:188
+#: proposals/models.py:187
 msgid "Intermedio"
 msgstr "Intermig"
 
-#: proposals/models.py:189
+#: proposals/models.py:188
 msgid "Avanzado"
 msgstr "Avançat"
 
-#: proposals/models.py:192 pycones/settings/base.py:72
+#: proposals/models.py:191 pycones/settings/base.py:72
 msgid "Español"
 msgstr "Espanyol"
 
-#: proposals/models.py:193
+#: proposals/models.py:192
 msgid "Inglés"
 msgstr "Anglès"
 
-#: proposals/models.py:196
+#: proposals/models.py:195
 msgid "15 minutos"
 msgstr "15 minuts"
 
-#: proposals/models.py:197
+#: proposals/models.py:196
 msgid "30 minutos"
 msgstr "30 minuts"
 
-#: proposals/models.py:200
+#: proposals/models.py:199 templates/reviewers/details.html:37
 msgid "Nivel de la audiencia"
 msgstr "Nivell de l'audència"
 
-#: proposals/models.py:203
+#: proposals/models.py:202 templates/reviewers/details.html:38
 msgid "Idioma"
 msgstr "Idioma"
 
-#: proposals/models.py:206
+#: proposals/models.py:205
 msgid "Duración"
 msgstr "Durada"
 
-#: proposals/models.py:217
+#: proposals/models.py:230
 msgid "Pending"
 msgstr "Pendent"
 
-#: proposals/models.py:218
+#: proposals/models.py:231
 msgid "Accepted"
 msgstr "Acceptat"
 
-#: proposals/models.py:219
+#: proposals/models.py:232
 msgid "Declined"
 msgstr "Rebutjat"
 
@@ -323,6 +333,58 @@ msgstr "Euskera"
 #: pycones/settings/base.py:76
 msgid "English"
 msgstr "Anglès"
+
+#: reviewers/forms.py:17
+msgid "Nombre de usuario"
+msgstr ""
+
+#: reviewers/forms.py:22
+msgid "El nombre de usuario es obligatorio"
+msgstr ""
+
+#: reviewers/forms.py:29
+msgid "La contraseña es obligatoria"
+msgstr ""
+
+#: reviewers/forms.py:35
+msgid "Nombre de usuario no encontrado"
+msgstr ""
+
+#: reviewers/forms.py:67
+msgid "Debes puntuar entre 1 y 10"
+msgstr ""
+
+#: reviewers/models.py:22 templates/reviewers/list.html:18
+msgid "Relevancia"
+msgstr ""
+
+#: reviewers/models.py:22 reviewers/models.py:25 reviewers/models.py:28
+msgid "Puntuación del 1 al 10"
+msgstr ""
+
+#: reviewers/models.py:25 templates/reviewers/list.html:19
+msgid "Interés General"
+msgstr ""
+
+#: reviewers/models.py:28 templates/reviewers/list.html:20
+msgid "Novedad"
+msgstr ""
+
+#: reviewers/models.py:31
+msgid "Notas del revisor"
+msgstr ""
+
+#: reviewers/models.py:33
+msgid "¿Existe un conflico de intereses?"
+msgstr ""
+
+#: reviewers/models.py:34
+msgid "¿Revisión finalizada?"
+msgstr ""
+
+#: reviewers/models.py:58
+msgid "[PyConES 2016] Tienes una nueva propuesta para revisar"
+msgstr ""
 
 #: schedule/models.py:80 schedule/models.py:200
 msgid "video URL"
@@ -500,7 +562,7 @@ msgstr ""
 "personalitzat, per lo que necessitam que ens indiquis\n"
 "                el teu DNI per poder donar les credencials d'accès.\n"
 
-#: templates/attendees/restore.html:50
+#: templates/attendees/restore.html:50 templates/reviewers/details.html:30
 msgid "Guardar"
 msgstr "Desar"
 
@@ -528,7 +590,7 @@ msgstr ""
 "                tens contrasenya pots generar-la entrant <a href="
 "\"%(request_restore_password)s\">aquí</a>).\n"
 
-#: templates/attendees/sign_in.html:36
+#: templates/attendees/sign_in.html:36 templates/reviewers/sign_in.html:22
 msgid "Entrar"
 msgstr "Entrar"
 
@@ -541,7 +603,6 @@ msgid "Toggle navigation"
 msgstr "Canviar navegació"
 
 #: templates/base.html:53
-#| msgid "PyConES 2015"
 msgid "PyConES 2016"
 msgstr "PyConES 2016"
 
@@ -553,7 +614,7 @@ msgstr "Informació del esdeveniment"
 msgid "Oradores Plenarios"
 msgstr "Principals oradors"
 
-#| msgid "Compra tus entradas"
+#: templates/base.html:57
 msgid "Compra tu entradas"
 msgstr "Compra les teves entrades"
 
@@ -565,11 +626,15 @@ msgstr "Envia la teva proposta"
 msgid "Blog"
 msgstr "Blog"
 
-#: templates/base.html:112
+#: templates/base.html:74
+msgid "Salir"
+msgstr ""
+
+#: templates/base.html:113 templates/pages/info.html:180
 msgid "Código de conducta"
 msgstr "Codi de conducta"
 
-#: templates/base.html:113
+#: templates/base.html:114
 msgid "Contacta con nosotros"
 msgstr "Contacta amb nosaltres"
 
@@ -606,7 +671,25 @@ msgid "¡Un saludo!"
 msgstr "Salutacions!"
 
 #: templates/emails/proposals/confirmation.html:13
+#: templates/emails/reviewers/new.html:14
 msgid "¡Un saludo!"
+msgstr ""
+
+#: templates/emails/reviewers/new.html:5
+#, python-format
+msgid ""
+"\n"
+"    <p>¡Hola %(first_name)s!</p>\n"
+"    <p>Se te ha asignado una propuesta para revisar, titulada: \"%(title)s"
+"\"</p>\n"
+"    <p>Para realizar tu revisión a esta y a otras que tengas asignadas "
+"puedes acceder directamente pinchando en el\n"
+"    siguiente enlace:</p>\n"
+"    "
+msgstr ""
+
+#: templates/emails/reviewers/new.html:12
+msgid "Revisar propuestas"
 msgstr ""
 
 #: templates/landing.html:42
@@ -625,9 +708,7 @@ msgstr ""
 "Estem preparant la nova edició de la PyConES, d'aquí a poc hi haurà més "
 "novetats."
 
-#: templates/pages/code_of_conduct.html:8 templates/pages/info.html:169
-#, fuzzy
-#| msgid "Código de conducta"
+#: templates/pages/code_of_conduct.html:8
 msgid "Codigo de conducta"
 msgstr "Codi de conducta"
 
@@ -799,8 +880,6 @@ msgstr ""
 " està disponible sota llicència Creative Commons Reconeixement 3.0 Espanya."
 
 #: templates/pages/home.html:9
-#, fuzzy
-#| msgid "¿Qué es PyConES 2015?"
 msgid "¿Que es PyConES 2016?"
 msgstr "Què és PyConES 2015?"
 
@@ -912,10 +991,10 @@ msgid "Folleto (EN)"
 msgstr "Fullet (EN)"
 
 #: templates/pages/info.html:10
-msgid "Localizacion"
+msgid "Localización"
 msgstr "Localització"
 
-#: templates/pages/info.html:14
+#: templates/pages/info.html:19
 msgid ""
 "\n"
 "                        La sede de PyConES 2016 está en el campus de la "
@@ -929,7 +1008,7 @@ msgstr ""
 "Facultad de Ciencias Sociales.\n"
 "                   "
 
-#: templates/pages/info.html:19
+#: templates/pages/info.html:24
 msgid ""
 "\n"
 "                        Dispondremos de tres salas para acomodar hasta tres "
@@ -941,12 +1020,12 @@ msgstr ""
 "sessions paral·leles:\n"
 "                    "
 
-#: templates/pages/info.html:29
+#: templates/pages/info.html:34
+#, python-format
 msgid ""
-"\n"
-"                        Os hemos preparado un mapa Google Maps compilando "
-"toda la información que creemos podéis necesitar: <a href=\"http://bit.ly/"
-"PyConES16\" target=\"_blank\">http://bit.ly/PyConES16</a>\n"
+"                \n"
+"                La universidad nos ha confirmado que los tres espacios "
+"principales son 100%% accesibles para público y conferenciantes.\n"
 "                    "
 msgstr ""
 "\n"
@@ -955,7 +1034,23 @@ msgstr ""
 "PyConES16\" target=\"_blank\">http://bit.ly/PyConES16</a>\n"
 "                    "
 
-#: templates/pages/info.html:34
+#: templates/pages/info.html:40
+msgid ""
+"\n"
+"                        Os hemos preparado <a href=\"http://bit.ly/"
+"PyConES16\">un mapa Google Maps</a> compilando toda la información que "
+"creemos podéis necesitar: <a href=\"http://bit.ly/PyConES16\" target=\"_blank"
+"\">http://bit.ly/PyConES16</a>\n"
+"                    "
+msgid ""
+"\n"
+"                        Hem preparat <a href=\"http://bit.ly/"
+"PyConES16\">un mapa  deGoogle Maps</a> compilant tota la informació que "
+"creim podeu necessitar: <a href=\"http://bit.ly/PyConES16\" target=\"_blank"
+"\">http://bit.ly/PyConES16</a>\n"
+"
+
+#: templates/pages/info.html:45
 msgid ""
 "\n"
 "                    El horario principal del congreso previsto es:\n"
@@ -965,19 +1060,19 @@ msgstr ""
 "                    L’horari principal del congrés previst és: \n"
 "                    "
 
-#: templates/pages/info.html:39
+#: templates/pages/info.html:50
 msgid "viernes 07/10/16 de 15:00 a 20:30."
 msgstr "divendres 07/10/16 de 15:00 a 20:30."
 
-#: templates/pages/info.html:40
+#: templates/pages/info.html:51
 msgid "sábado 08/10/16 de 9:00 a 20:30."
 msgstr "dissabte 08/10/16 de 9:00 a 20:30."
 
-#: templates/pages/info.html:41
+#: templates/pages/info.html:52
 msgid "domingo 09/10/16 de 9:00 a 18:30."
 msgstr "diumenge 09/10/16 de 9:00 a 18:30."
 
-#: templates/pages/info.html:44
+#: templates/pages/info.html:55
 msgid ""
 "\n"
 "                        Obviamente llegado el momento os ofreceremos un "
@@ -989,22 +1084,23 @@ msgstr ""
 "detallat.\n"
 "                    "
 
-#: templates/pages/info.html:53
-msgid "Sobre Almeria"
-msgstr "Quant a Almeria"
+#: templates/pages/info.html:64
+msgid "Sobre Almería"
+msgstr "Quant a Almería"
 
-#: templates/pages/info.html:57
+#: templates/pages/info.html:68
 msgid ""
 "\n"
 "                        A algunos nos gusta decir que Almería es lo más "
 "parecido que tiene España a una isla sin salir de la Península. La relativa "
 "inaccesibilidad ha servido para proteger del turismo desaforado una "
-"diversidad de paisajes que suelen enamorar al viajero. Almería es un gran "
-"plató a cielo abierto donde se han rodado toda clase de filmes, anuncios o "
-"vídeos musicales. Nuestro clima es cálido pero templado todo el año. Nuestro "
-"cielo, tan claro, es el que enamoró al director David Lean. Si queréis "
-"explorar las posibilidades turísticas de Almería podéis consultar las "
-"siguientes fuentes:\n"
+"diversidad de paisajes que suelen enamorar al viajero. <a href=\"http://www."
+"rtve.es/alacarta/videos/el-documental/documental-spanish-western/3628601/"
+"\">Almería es un gran plató a cielo abierto</a> donde se han rodado toda "
+"clase de filmes, anuncios o vídeos musicales. Nuestro clima es cálido pero "
+"templado todo el año. Nuestro cielo, tan claro, es el que enamoró al "
+"director David Lean. Si queréis explorar las posibilidades turísticas de "
+"Almería podéis consultar las siguientes fuentes:\n"
 "                    "
 msgstr ""
 "\n"
@@ -1018,19 +1114,19 @@ msgstr ""
 "turístiques d’Almería podeu consultar les següents fonts:\n"
 "                    "
 
-#: templates/pages/info.html:62
+#: templates/pages/info.html:73
 msgid "Costa de Almería"
 msgstr "Costa d’Almería"
 
-#: templates/pages/info.html:63
+#: templates/pages/info.html:74
 msgid "Patronato provincial de turismo de Almería"
 msgstr "Patronat provincial de turisme d'Almería"
 
-#: templates/pages/info.html:64
+#: templates/pages/info.html:75
 msgid "Turismo de Almería (ciudad)"
 msgstr "Turisme de Almería (ciutat)"
 
-#: templates/pages/info.html:67
+#: templates/pages/info.html:78
 msgid ""
 "\n"
 "                        Económicamente Almería es además una pequeña "
@@ -1038,9 +1134,10 @@ msgid ""
 "exportan fruta y hortalizas a toda Europa y es una de las referencias "
 "mundiales del sector. Y si creías que la única construcción humana que podía "
 "verse desde el espacio era la Muralla China tenemos que confirmarte que no "
-"es cierto, pero que sí se ve el reflejo del inmenso mar de plástico del "
-"Campo de Dalías bajo el que se cultivan alimentos que probablemente consumes "
-"con regularidad.\n"
+"es cierto, pero que sí se ve el reflejo del <a href=\"http://"
+"earthobservatory.nasa.gov/IOTD/view.php?id=4508\">inmenso mar de plástico "
+"del Campo de Dalías</a> bajo el que se cultivan alimentos que probablemente "
+"consumes con regularidad.\n"
 "                    "
 msgstr ""
 "\n"
@@ -1053,11 +1150,11 @@ msgstr ""
 "cultiven aliments que probablement consumeixes amb regularitat. \n"
 "                    "
 
-#: templates/pages/info.html:76
+#: templates/pages/info.html:87
 msgid "Como desplazarse hasta el campus"
 msgstr "Com desplaçar-se fins al campus"
 
-#: templates/pages/info.html:80
+#: templates/pages/info.html:91
 msgid ""
 "\n"
 "                        El campus tiene varios espacios de aparcamiento para "
@@ -1072,18 +1169,18 @@ msgstr ""
 "agafant la sortida de La Cañada, com per la carretera de la costa.\n"
 "                    "
 
-#: templates/pages/info.html:85
+#: templates/pages/info.html:96
 msgid ""
 "\n"
 "                        Quienes optéis por el transporte público tendréis "
 "disponible especialmente la línea 18 de la empresa local de transportes, "
 "Surbus. Dicha línea regular contará con refuerzos puntuales para los "
-"desplazamientos al congreso. La parada de la Universidad es la número 144 "
-"(http://m.surbus.com/tiempo-espera/parada/144). Surbús dispone de una "
-"aplicación web para consultar los tiempos de espera de cada parada (http://m."
-"surbus.com/tiempo-espera/paradas). En el mapa del evento tenéis anotadas "
-"todas las paradas de la línea 18 (<a href=\"http://bit.ly/PyConES16\" target="
-"\"_blank\">http://bit.ly/PyConES16</a> )\n"
+"desplazamientos al congreso. La parada de la Universidad es la <a href="
+"\"http://m.surbus.com/tiempo-espera/parada/144\">número 144</a> Surbús "
+"dispone de una aplicación web para <a href=\"http://m.surbus.com/tiempo-"
+"espera/paradas\">consultar los tiempos de espera de cada parada</a>. En <a "
+"href=\"http://bit.ly/PyConES16\" target=\"_blank\">el mapa del evento</a> "
+"tenéis anotadas todas las paradas de la línea 18.\n"
 "                    "
 msgstr ""
 "\n"
@@ -1098,7 +1195,7 @@ msgstr ""
 "\"_blank\">http://bit.ly/PyConES16</a> )\n"
 "                    "
 
-#: templates/pages/info.html:90
+#: templates/pages/info.html:101
 msgid ""
 "\n"
 "                        También disponemos de dos servicios de taxi:\n"
@@ -1106,7 +1203,7 @@ msgid ""
 msgstr ""
 "\n"
 
-#: templates/pages/info.html:95
+#: templates/pages/info.html:106
 msgid ""
 "\n"
 "                        <strong>Radio taxi</strong> <br/>\n"
@@ -1120,29 +1217,29 @@ msgstr ""
 "                        950 22 22 22 - 950 22 61 61<br/>\n"
 "                        <a href=\"http://www.radiotaxialmeria.es/\" target="
 "\"_blank\">http://www.radiotaxialmeria.es/</a>\n"
-"                    "
-
-#: templates/pages/info.html:102
-msgid ""
-"\n"
-"                        <strong>Tele Taxi</strong> <br/>\n"
-"                        950 251 111<br/>\n"
-"                        <a href=\"http://teletaxialmeria.com/\" target="
-"\"_blank\">http://teletaxialmeria.com/</a>\n"
-"                    "
-msgstr ""
-"\n"
-"                        <strong>Tele Taxi</strong> <br/>\n"
-"                        950 251 111<br/>\n"
-"                        <a href=\"http://teletaxialmeria.com/\" target="
-"\"_blank\">http://teletaxialmeria.com/</a>\n"
 "                    "
 
 #: templates/pages/info.html:113
-msgid "Como llegar a Almeria"
+msgid ""
+"\n"
+"                        <strong>Tele Taxi</strong> <br/>\n"
+"                        950 251 111<br/>\n"
+"                        <a href=\"http://teletaxialmeria.com/\" target="
+"\"_blank\">http://teletaxialmeria.com/</a>\n"
+"                    "
+msgstr ""
+"\n"
+"                        <strong>Tele Taxi</strong> <br/>\n"
+"                        950 251 111<br/>\n"
+"                        <a href=\"http://teletaxialmeria.com/\" target="
+"\"_blank\">http://teletaxialmeria.com/</a>\n"
+"                    "
+
+#: templates/pages/info.html:124
+msgid "Cómo llegar a Almería"
 msgstr "Com arribar a Almería"
 
-#: templates/pages/info.html:117
+#: templates/pages/info.html:128
 msgid ""
 "\n"
 "                        <strong>Avión</strong>: El <a href=\"http://www.aena."
@@ -1154,7 +1251,6 @@ msgid ""
 "(<a href=\"http://www.aena.es/es/aeropuerto-almeria/transporte-publico.html"
 "\" target=\"_blank\">línea 22</a>)\n"
 "                    "
-msgstr ""
 "\n"
 "                        <strong>Avió</strong>: L’ <a href=\"http://www.aena."
 "es/es/aeropuerto-almeria/index.html\" target=\"_blank\">aeroport d’Almería</"
@@ -1165,16 +1261,20 @@ msgstr ""
 "aena.es/es/aeropuerto-almeria/transporte-publico.html\" target=\"_blank"
 "\">línia 22</a>)\n"
 "                    "
-#: templates/pages/info.html:122
+
+#: templates/pages/info.html:133
+#, python-format
 msgid ""
 "\n"
-"                        <strong>Tren</strong>: La magnífica estación de "
-"ferrocarril de Almería, en proceso de restauración, está en el mismísimo "
-"centro de la ciudad. Forma parte de una moderna <a href=\"http://www.adif.es/"
-"es_ES/infraestructuras/estaciones/56312/informacion_000069.shtml\"> estación "
-"intermodal</a>. Las conexiones por tren principales son con Madrid y Granada-"
-"Sevilla. Y no, no sólo no tenemos AVE sino que se están tapiando los túneles "
-"ya construidos «para que no les roben el cobre» 😃\n"
+"                        <strong>Tren</strong>: La magnífica <a href="
+"\"https://es.wikipedia.org/wiki/Estaci%%C3%%B3n_de_Almer%%C3%%ADa#/media/"
+"File:Estaciontrenesalmeria.jpg\">estación de ferrocarril de Almería</a>, en "
+"proceso de restauración, está en el mismísimo centro de la ciudad. Forma "
+"parte de una moderna <a href=\"http://www.adif.es/es_ES/infraestructuras/"
+"estaciones/56312/informacion_000069.shtml\"> estación intermodal</a>. Las "
+"conexiones por tren principales son con Madrid y Granada-Sevilla. Y no, no "
+"sólo no tenemos AVE sino que se están tapiando los túneles ya construidos "
+"«para que no les roben el cobre» 😃\n"
 "                    "
 msgstr ""
 "\n"
@@ -1187,7 +1287,7 @@ msgstr ""
 "que no els hi robin el coure» 😃\n"
 "                    "
 
-#: templates/pages/info.html:127
+#: templates/pages/info.html:138
 msgid ""
 "\n"
 "                        <strong>Puerto</strong>: También en el mismísimo "
@@ -1205,7 +1305,8 @@ msgstr ""
 "option=com_content&view=article&id=95&Itemid=92&lang=es\"> connexions "
 "regulars amb Melilla, Nador, Ghazaouet i Orán</a>.\n"
 "                    "
-#: templates/pages/info.html:132
+
+#: templates/pages/info.html:143
 msgid ""
 "\n"
 "                        <strong>Autobús</strong>: Llegando a la misma "
@@ -1218,7 +1319,8 @@ msgstr ""
 "estació intermodal ja estmentada, Hi ha connexions diaries a ciutats "
 "d’Andalusia, a Madrid i per llevant fins a Barcelona.\n"
 "                    "
-#: templates/pages/info.html:137
+
+#: templates/pages/info.html:148
 msgid ""
 "\n"
 "                        <strong>Vehículo propio</strong>:\n"
@@ -1228,19 +1330,29 @@ msgstr ""
 "                        <strong>Vehícle propi</strong>:\n"
 "                    "
 
-#: templates/pages/info.html:142
-msgid "por la costa, a través de la Autovía del Mediterráneo A-7, E-15"
-msgstr "per la costa, a través de l’Autovia del Mediterrani A-7, E-15"
+#: templates/pages/info.html:153
+#, python-format
+msgid ""
+"por la costa, a través de la <a href='https://es.wikipedia.org/wiki/Autov"
+"%%C3%%ADa_del_Mediterr%%C3%%A1neo'>Autovía del Mediterráneo A-7, E-15</a>"
+msgstr ""
+"per la costa, mitjançant <a href='https://es.wikipedia.org/wiki/Autov"
+"%%C3%%ADa_del_Mediterr%%C3%%A1neo'>Autovía de la Mediterrànea A-7, E-15</a>"
 
-#: templates/pages/info.html:143
-msgid "desde el interior, a través de la A-92"
-msgstr "desde l’interior, a través de la A-92"
+#: templates/pages/info.html:154
+#, python-format
+msgid ""
+"desde el interior, a través de la <a href='https://es.wikipedia.org/wiki/"
+"Autov%%C3%%ADa_A-92'>A-92</a>"
+msgstr""
+"des de l'interior, mitjançant la <a href='https://es.wikipedia.org/wiki/"
+"Autov%%C3%%ADa_A-92'>A-92</a>"
 
-#: templates/pages/info.html:149
+#: templates/pages/info.html:160
 msgid "Alojamiento"
 msgstr "Allotjament"
 
-#: templates/pages/info.html:153
+#: templates/pages/info.html:164
 msgid ""
 "\n"
 "                        Estamos trabajando para ofreceros un hotel "
@@ -1265,19 +1377,21 @@ msgstr ""
 "apuntats els allotjaments més pròxims a la línia 18 d’autobús\n"
 "                        "
 
-#: templates/pages/info.html:163
+#: templates/pages/info.html:174
+#, python-format
 msgid ""
 "en el mismo mapa opcionalmente tenéis indicada la situación de otros dos "
-"grupos de hoteles, uno en la capital y otro en el complejo hotelero de El "
-"Toyo, en la zona de Retamar, que puede ser de vuestro interés si viajáis en "
-"familia y con vehículo propio"
+"grupos de hoteles, uno en la capital y otro en el complejo hotelero de <a "
+"href=\"https://es.wikipedia.org/wiki/Retamar_(Almer%%C3%%ADa)#El_Toyo\">El "
+"Toyo</a>, en la zona de Retamar, que puede ser de vuestro interés si viajáis "
+"en familia y con vehículo propio"
 msgstr ""
 "en el mateix mapa opcionalment tindreu indicada la situació d’altres dos "
 "grups d’hotels, un el la capital i l’altre en un complexe hoteler d’El Toyó, "
 "en la zona de Retamar, que pot ser del seu interes si viatjau en família i "
 "amb vehícle propi"
 
-#: templates/pages/info.html:171
+#: templates/pages/info.html:182
 msgid ""
 "\n"
 "                        PyConES aspira a crear un ambiente libre de acosos o "
@@ -1293,7 +1407,7 @@ msgstr ""
 "discriminació sota cap circumstància. \n"
 "                    "
 
-#: templates/pages/info.html:176
+#: templates/pages/info.html:187
 msgid ""
 "\n"
 "                        Todo el contenido de la conferencia deberá ajustarse "
@@ -1310,7 +1424,7 @@ msgstr ""
 "inapropiades a la conferència i a les xerrades.\n"
 "                    "
 
-#: templates/pages/info.html:181
+#: templates/pages/info.html:192
 msgid ""
 "\n"
 "                        Sé amable con los demás. No insultes o humilles a "
@@ -1324,7 +1438,7 @@ msgstr ""
 "sexistes, racistes o discriminatòries estan prohibides a la PyConES.\n"
 "                    "
 
-#: templates/pages/info.html:186
+#: templates/pages/info.html:197
 msgid ""
 "\n"
 "                        Los asistentes que incumplan estas reglas podrán -a "
@@ -1339,7 +1453,7 @@ msgstr ""
 "\n"
 "                    "
 
-#: templates/pages/info.html:191
+#: templates/pages/info.html:202
 msgid ""
 "\n"
 "                        Gracias por ayudarnos a hacer este evento amistoso y "
@@ -1351,8 +1465,8 @@ msgstr ""
 "amistós i obert a tothom.\n"
 "                    "
 
-#: templates/pages/info.html:195
-msgid "Codigo de Conducta Completo"
+#: templates/pages/info.html:206
+msgid "Código de Conducta Completo"
 msgstr "Codi de Conducta Complet"
 
 #: templates/pages/keynoters.html:15
@@ -1407,8 +1521,6 @@ msgstr ""
 "Python."
 
 #: templates/pages/tickets.html:11
-#, fuzzy
-#| msgid "Compra tus entradas"
 msgid "Compra aquí tus tickets"
 msgstr "Compra les teves entrades"
 
@@ -1440,8 +1552,6 @@ msgstr ""
 "        "
 
 #: templates/proposals/create.html:18
-#, fuzzy
-#| msgid "Información del evento"
 msgid "Más información en el blog"
 msgstr "Informació del esdeveniment"
 
@@ -1452,6 +1562,50 @@ msgstr "Editeu la vostra proposta"
 #: templates/proposals/success.html:7
 msgid "¡Gracias por tu propuesta!"
 msgstr "Gràcies per la vostra proposta!"
+
+#: templates/reviewers/base.html:9
+msgid "Revision de propuestas"
+msgstr ""
+
+#: templates/reviewers/details.html:7
+msgid "Puntuar propuesta"
+msgstr ""
+
+#: templates/reviewers/details.html:31
+msgid "Volver"
+msgstr ""
+
+#: templates/reviewers/list.html:9
+msgid "Listado de revisiones asignadas"
+msgstr ""
+
+#: templates/reviewers/list.html:16
+msgid "Revisor"
+msgstr ""
+
+#: templates/reviewers/list.html:22
+msgid "¿Conflicto de intereses?"
+msgstr ""
+
+#: templates/reviewers/list.html:23
+msgid "¿Finalizada?"
+msgstr ""
+
+#: templates/reviewers/list.html:24
+msgid "Acciones"
+msgstr ""
+
+#: templates/reviewers/list.html:40
+msgid "Acceder"
+msgstr ""
+
+#: templates/reviewers/list.html:45
+msgid "No tienes ninguna revisión asignada aún"
+msgstr ""
+
+#: templates/reviewers/sign_in.html:7
+msgid "Acceso de revisores"
+msgstr ""
 
 #: templates/schedule/_slot.html:16
 msgid "Descargar presentación"
@@ -1492,45 +1646,3 @@ msgstr "Descarregar en xCal"
 #: templates/schedule/show.html:65
 msgid "Descargar en Pentabarf XML"
 msgstr "Descarregar en Pentabarf XML"
-
-#, fuzzy
-#~| msgid "Folleto (ES)"
-#~ msgid "Folleto"
-#~ msgstr "Fullet (ES)"
-
-#~ msgid "Escuela Técnica Superior de Ingeniería Informática"
-#~ msgstr "Escola Tècnica Superior d'Enginyeria Informàtica"
-
-#~ msgid "Universidad Politécnica de Valencia"
-#~ msgstr "Universitat Politècnica de València"
-
-#~ msgid "Valencia 2015"
-#~ msgstr "València 2015"
-
-#~ msgid ""
-#~ "\n"
-#~ "                    Concretamente, la conferencia tendrá lugar en la "
-#~ "<strong>Universidad Politécnica de Valencia (UPV)</strong> y\n"
-#~ "                    será organizada conjuntamente por la comunidad local "
-#~ "y la asociación Python España.\n"
-#~ "                "
-#~ msgstr ""
-#~ "\n"
-#~ "Concretament, la conferència tindrà lloc a l' <strong>Universitat "
-#~ "Politècnica de València (UPV)</strong> i\n"
-#~ "serà organitzada conjuntament per la comunitat local i l'associació "
-#~ "Python Espanya."
-
-#~ msgid "¿Cuándo?"
-#~ msgstr "Quan?"
-
-#, fuzzy
-#~| msgid "Valencia, 21-22 de noviembre de 2015"
-#~ msgid "Valencia, del 20 al 22 de noviembre de 2015"
-#~ msgstr "València, 21-22 de novembre de 2015"
-
-#~ msgid "¿Dónde?"
-#~ msgstr "On?"
-
-#~ msgid "Detailed Abstract"
-#~ msgstr "Resúm detallat"

@@ -176,7 +176,6 @@ class ProposalBase(models.Model):
         self.notified = True
         self.save()
 
-
 reversion.register(ProposalBase)
 
 
@@ -205,6 +204,20 @@ class Proposal(ProposalBase):
     duration = models.PositiveIntegerField(
         verbose_name=_("Duración"), choices=PROPOSAL_DURATIONS, default=30, null=True, blank=True
     )
+
+    @property
+    def avg_property(self):
+        return self.avg()
+
+    @property
+    def reviews_property(self):
+        return self.reviews.filter(finished=True).count()
+
+    def avg(self):
+        data = [review.avg() for review in self.reviews.filter(finished=True) if review.avg() is not None]
+        if data:
+            return sum(data) / len(data)
+        return None
 
 
 class AdditionalSpeaker(models.Model):

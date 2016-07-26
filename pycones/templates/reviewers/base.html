@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block claim %}
+    <div class="wrapper-claim">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 claim text-center relative">
+                    <h1>{% trans "Revision de propuestas" %}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock claim %}
+
+{% block container %}
+    <div class="container" style="min-height: 475px">
+        {% block content %}
+        {% endblock content %}
+    </div>
+{% endblock container %}

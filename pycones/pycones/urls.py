@@ -6,18 +6,21 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.views.generic import TemplateView
 
+from core.views import LogoutView
 from schedule.views import icalendar_view
 
 admin.autodiscover()
 
 urlpatterns = i18n_patterns(
     url(r'^$', TemplateView.as_view(template_name='pages/home.html'), name="home"),
+    url(r'^log-out/$', LogoutView.as_view(), name="log-out"),
     url(r'^tickets/$', TemplateView.as_view(template_name='pages/tickets.html'), name="tickets"),
     url(r'^code-of-conduct/$', TemplateView.as_view(template_name='pages/code_of_conduct.html'), name="code_of_conduct"),
     url(r'^keynoters-speakers/$', TemplateView.as_view(template_name='pages/keynoters.html'), name="keynoters"),
     url(r'^info/$', TemplateView.as_view(template_name='pages/info.html'), name="info"),
     url(r'^blog/', include('blog.urls', namespace="blog")),
     url(r'^proposals/', include('proposals.urls', namespace="proposals")),
+    url(r'^reviewers/', include('reviewers.urls', namespace="reviewers")),
     # url(r'^schedule/', include('schedule.urls', namespace="schedule")),
     # url(r'^attendees/', include('attendees.urls', namespace="attendees")),
 )
