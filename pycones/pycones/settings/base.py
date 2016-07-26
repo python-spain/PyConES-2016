@@ -226,6 +226,7 @@ LOCAL_APPS = (
     'proposals',
     'sponsorship',
     'attendees',
+    'reviewers',
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -246,6 +247,8 @@ SUIT_CONFIG = {
         'speakers': 'icon-bullhorn',
         'sponsorship': 'icon-briefcase',
         'attendees': 'icon-user',
+        'reviewers': 'icon-thumbs-up',
+        'configurations': 'icon-wrench',
     }
 }
 
