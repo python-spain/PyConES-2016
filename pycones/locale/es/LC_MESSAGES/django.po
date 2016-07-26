@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-23 18:17+0200\n"
+"POT-Creation-Date: 2016-07-26 15:49+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,7 +27,7 @@ msgid "Localizador"
 msgstr ""
 
 #: attendees/forms.py:43 attendees/forms.py:46 attendees/forms.py:100
-#: attendees/forms.py:103
+#: attendees/forms.py:103 reviewers/forms.py:27
 msgid "Contraseña"
 msgstr ""
 
@@ -52,6 +52,7 @@ msgid "Localizador de entrada"
 msgstr ""
 
 #: attendees/forms.py:117 attendees/forms.py:120 attendees/forms.py:122
+#: reviewers/forms.py:44
 msgid "La contraseña no es correcta"
 msgstr ""
 
@@ -168,6 +169,15 @@ msgstr ""
 msgid "Value"
 msgstr ""
 
+#: proposals/admin.py:44 reviewers/admin.py:35
+#: templates/reviewers/list.html:21
+msgid "Media"
+msgstr ""
+
+#: proposals/admin.py:48
+msgid "Revisiones"
+msgstr ""
+
 #: proposals/forms.py:19
 msgid "Nombre del ponente"
 msgstr ""
@@ -191,15 +201,15 @@ msgstr ""
 msgid "Name"
 msgstr ""
 
-#: proposals/models.py:85
+#: proposals/models.py:85 templates/reviewers/details.html:36
 msgid "Tipo de propuesta"
 msgstr ""
 
-#: proposals/models.py:87
+#: proposals/models.py:87 templates/reviewers/list.html:14
 msgid "Título"
 msgstr ""
 
-#: proposals/models.py:89
+#: proposals/models.py:89 templates/reviewers/details.html:40
 msgid "Breve descripción"
 msgstr ""
 
@@ -211,7 +221,7 @@ msgstr ""
 "Si tu propuesta es aceptada esto se hará público y se añadirá al programa. "
 "Tiene que ser un párrafo, máximo 500 caracteres."
 
-#: proposals/models.py:95
+#: proposals/models.py:95 templates/reviewers/details.html:44
 msgid "Resumen detallado"
 msgstr ""
 
@@ -225,7 +235,7 @@ msgstr ""
 "usando <a href='http://daringfireball.net/projects/markdown/basics' "
 "target='_blank'>Markdown</a>."
 
-#: proposals/models.py:104
+#: proposals/models.py:104 templates/reviewers/details.html:48
 msgid "Notas adicionales"
 msgstr ""
 
@@ -245,55 +255,55 @@ msgstr ""
 msgid "[PyConES 2016] Confirmación de propuesta de charla"
 msgstr ""
 
-#: proposals/models.py:187
+#: proposals/models.py:186
 msgid "Básico"
 msgstr ""
 
-#: proposals/models.py:188
+#: proposals/models.py:187
 msgid "Intermedio"
 msgstr ""
 
-#: proposals/models.py:189
+#: proposals/models.py:188
 msgid "Avanzado"
 msgstr ""
 
-#: proposals/models.py:192 pycones/settings/base.py:72
+#: proposals/models.py:191 pycones/settings/base.py:72
 msgid "Español"
 msgstr ""
 
-#: proposals/models.py:193
+#: proposals/models.py:192
 msgid "Inglés"
 msgstr ""
 
-#: proposals/models.py:196
+#: proposals/models.py:195
 msgid "15 minutos"
 msgstr ""
 
-#: proposals/models.py:197
+#: proposals/models.py:196
 msgid "30 minutos"
 msgstr ""
 
-#: proposals/models.py:200
+#: proposals/models.py:199 templates/reviewers/details.html:37
 msgid "Nivel de la audiencia"
 msgstr ""
 
-#: proposals/models.py:203
+#: proposals/models.py:202 templates/reviewers/details.html:38
 msgid "Idioma"
 msgstr ""
 
-#: proposals/models.py:206
+#: proposals/models.py:205
 msgid "Duración"
 msgstr ""
 
-#: proposals/models.py:217
+#: proposals/models.py:230
 msgid "Pending"
 msgstr ""
 
-#: proposals/models.py:218
+#: proposals/models.py:231
 msgid "Accepted"
 msgstr ""
 
-#: proposals/models.py:219
+#: proposals/models.py:232
 msgid "Declined"
 msgstr ""
 
@@ -311,6 +321,58 @@ msgstr ""
 
 #: pycones/settings/base.py:76
 msgid "English"
+msgstr ""
+
+#: reviewers/forms.py:17
+msgid "Nombre de usuario"
+msgstr ""
+
+#: reviewers/forms.py:22
+msgid "El nombre de usuario es obligatorio"
+msgstr ""
+
+#: reviewers/forms.py:29
+msgid "La contraseña es obligatoria"
+msgstr ""
+
+#: reviewers/forms.py:35
+msgid "Nombre de usuario no encontrado"
+msgstr ""
+
+#: reviewers/forms.py:67
+msgid "Debes puntuar entre 1 y 10"
+msgstr ""
+
+#: reviewers/models.py:22 templates/reviewers/list.html:18
+msgid "Relevancia"
+msgstr ""
+
+#: reviewers/models.py:22 reviewers/models.py:25 reviewers/models.py:28
+msgid "Puntuación del 1 al 10"
+msgstr ""
+
+#: reviewers/models.py:25 templates/reviewers/list.html:19
+msgid "Interés General"
+msgstr ""
+
+#: reviewers/models.py:28 templates/reviewers/list.html:20
+msgid "Novedad"
+msgstr ""
+
+#: reviewers/models.py:31
+msgid "Notas del revisor"
+msgstr ""
+
+#: reviewers/models.py:33
+msgid "¿Existe un conflico de intereses?"
+msgstr ""
+
+#: reviewers/models.py:34
+msgid "¿Revisión finalizada?"
+msgstr ""
+
+#: reviewers/models.py:58
+msgid "[PyConES 2016] Tienes una nueva propuesta para revisar"
 msgstr ""
 
 #: schedule/models.py:80 schedule/models.py:200
@@ -480,7 +542,7 @@ msgid ""
 "                "
 msgstr ""
 
-#: templates/attendees/restore.html:50
+#: templates/attendees/restore.html:50 templates/reviewers/details.html:30
 msgid "Guardar"
 msgstr ""
 
@@ -503,7 +565,7 @@ msgid ""
 "                "
 msgstr ""
 
-#: templates/attendees/sign_in.html:36
+#: templates/attendees/sign_in.html:36 templates/reviewers/sign_in.html:22
 msgid "Entrar"
 msgstr ""
 
@@ -539,11 +601,15 @@ msgstr ""
 msgid "Blog"
 msgstr ""
 
-#: templates/base.html:112 templates/pages/info.html:180
+#: templates/base.html:74
+msgid "Salir"
+msgstr ""
+
+#: templates/base.html:113 templates/pages/info.html:180
 msgid "Código de conducta"
 msgstr ""
 
-#: templates/base.html:113
+#: templates/base.html:114
 msgid "Contacta con nosotros"
 msgstr ""
 
@@ -567,7 +633,25 @@ msgid "Editar propuesta"
 msgstr ""
 
 #: templates/emails/proposals/confirmation.html:13
+#: templates/emails/reviewers/new.html:14
 msgid "¡Un saludo!"
+msgstr ""
+
+#: templates/emails/reviewers/new.html:5
+#, python-format
+msgid ""
+"\n"
+"    <p>¡Hola %(first_name)s!</p>\n"
+"    <p>Se te ha asignado una propuesta para revisar, titulada: \"%(title)s"
+"\"</p>\n"
+"    <p>Para realizar tu revisión a esta y a otras que tengas asignadas "
+"puedes acceder directamente pinchando en el\n"
+"    siguiente enlace:</p>\n"
+"    "
+msgstr ""
+
+#: templates/emails/reviewers/new.html:12
+msgid "Revisar propuestas"
 msgstr ""
 
 #: templates/landing.html:42
@@ -1060,10 +1144,13 @@ msgid ""
 msgstr ""
 
 #: templates/pages/info.html:174
+#, python-format
 msgid ""
 "en el mismo mapa opcionalmente tenéis indicada la situación de otros dos "
 "grupos de hoteles, uno en la capital y otro en el complejo hotelero de <a "
-"href="
+"href=\"https://es.wikipedia.org/wiki/Retamar_(Almer%%C3%%ADa)#El_Toyo\">El "
+"Toyo</a>, en la zona de Retamar, que puede ser de vuestro interés si viajáis "
+"en familia y con vehículo propio"
 msgstr ""
 
 #: templates/pages/info.html:182
@@ -1184,6 +1271,50 @@ msgstr ""
 
 #: templates/proposals/success.html:7
 msgid "¡Gracias por tu propuesta!"
+msgstr ""
+
+#: templates/reviewers/base.html:9
+msgid "Revision de propuestas"
+msgstr ""
+
+#: templates/reviewers/details.html:7
+msgid "Puntuar propuesta"
+msgstr ""
+
+#: templates/reviewers/details.html:31
+msgid "Volver"
+msgstr ""
+
+#: templates/reviewers/list.html:9
+msgid "Listado de revisiones asignadas"
+msgstr ""
+
+#: templates/reviewers/list.html:16
+msgid "Revisor"
+msgstr ""
+
+#: templates/reviewers/list.html:22
+msgid "¿Conflicto de intereses?"
+msgstr ""
+
+#: templates/reviewers/list.html:23
+msgid "¿Finalizada?"
+msgstr ""
+
+#: templates/reviewers/list.html:24
+msgid "Acciones"
+msgstr ""
+
+#: templates/reviewers/list.html:40
+msgid "Acceder"
+msgstr ""
+
+#: templates/reviewers/list.html:45
+msgid "No tienes ninguna revisión asignada aún"
+msgstr ""
+
+#: templates/reviewers/sign_in.html:7
+msgid "Acceso de revisores"
 msgstr ""
 
 #: templates/schedule/_slot.html:16
