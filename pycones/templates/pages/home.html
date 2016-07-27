@@ -15,12 +15,6 @@
                     <a href="http://pycon.org" target="_blank">PyCon</a>.
                 {% endblocktrans %}
             </p>
-            {#            <p class="loud indented">#}
-            {#                {% blocktrans %}#}
-            {#                    Concretamente, la conferencia tendrá lugar en la <strong>Universidad Politécnica de Valencia (UPV)</strong> y#}
-            {#                    será organizada conjuntamente por la comunidad local y la asociación Python España.#}
-            {#                {% endblocktrans %}#}
-            {#            </p>#}
             <h3 class="indented">{% trans "Ediciones anteriores" %}:</h3>
             <p class="text-center loud indented">
                 <a href="http://2013.es.pycon.org/" target="_blank">PyConES 2013</a> |
@@ -30,6 +24,7 @@
         </div>
     </div>
 
+    {% if is_submit_proposal_opened %}
         <div class="row">
             <div class="col-xs-12">
                 <h2>{% trans "Llamada a propuestas" %}</h2>
@@ -42,37 +37,34 @@
                         las 00:00.
                     {% endblocktrans %}
                 </p>
-{#                <ul class="loud">#}
-{#                    <li>{% trans "<strong>Charla</strong>: 30 minutos + 5 de preguntas + 5 de pausa. Sábado 21 y domingo 22." %}</li>#}
-{#                    <li>{% trans "<strong>Taller/Tutorial</strong>: 2-3 horas. Viernes 20." %}</li>#}
-{#                </ul>#}
             </div>
         </div>
+    {% endif %}
 
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="row">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="row">
 
-                    <h2>{% trans "Oradores Plenarios" %}</h2>
+                <h2>{% trans "Oradores Plenarios" %}</h2>
 
-                    <div class="col-xs-6 text-center">
-                        <h3>{% trans "Manuel Kaufmann" %}</h3>
-                        <img src="{% static "img/manuel.jpg" %}" class="img-responsive img-circle img-thumbnail">
-                        <h4>{% trans "Argentina en Python: comunidad, sueños, viajes y aprendizaje" %}</h4>
-                    </div>
-                    <div class="col-xs-6 text-center">
-                        <h3>{% trans "Gema Parreño" %}</h3>
-                        <img src="{% static "img/gema.jpg" %}" class="img-responsive img-circle img-thumbnail">
-                        <h4>{% trans "TensorFlow y Space Apps Challenge" %}</h4>
-                    </div>
-                    <div class="col-xs-12">
-                        <p class="text-center" style="margin: 35px 0 35px 0">
-                            <a href="{% url "keynoters" %}" class="btn btn-primary btn-lg" >{% trans "¡Conoce más de nuestros keynoters!" %}</a>
-                        </p>
-                    </div>
+                <div class="col-xs-6 text-center">
+                    <h3>{% trans "Manuel Kaufmann" %}</h3>
+                    <img src="{% static "img/manuel.jpg" %}" class="img-responsive img-circle img-thumbnail">
+                    <h4>{% trans "Argentina en Python: comunidad, sueños, viajes y aprendizaje" %}</h4>
+                </div>
+                <div class="col-xs-6 text-center">
+                    <h3>{% trans "Gema Parreño" %}</h3>
+                    <img src="{% static "img/gema.jpg" %}" class="img-responsive img-circle img-thumbnail">
+                    <h4>{% trans "TensorFlow y Space Apps Challenge" %}</h4>
+                </div>
+                <div class="col-xs-12">
+                    <p class="text-center" style="margin: 35px 0 35px 0">
+                        <a href="{% url "keynoters" %}" class="btn btn-primary btn-lg" >{% trans "¡Conoce más de nuestros keynoters!" %}</a>
+                    </p>
                 </div>
             </div>
         </div>
+    </div>
 
     {% if is_activated_tickets_sale_button %}
         <div class="row">
