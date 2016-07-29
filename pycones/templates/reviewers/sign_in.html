@@ -21,6 +21,9 @@
                     <div class="col-sm-offset-2 col-sm-10">
                         <button type="submit" class="btn btn-primary">{% trans "Entrar" %}</button>
                     </div>
+                    <div class="col-sm-offset-2 col-sm-10 text-center" style="margin-top: 30px">
+                        <a href="{% url "reviewers:request_restore_password" %}">{% trans "¿No tienes contraseña o la has olvidado?" %}</a>
+                    </div>
                 </div>
             </form>
         </div>
