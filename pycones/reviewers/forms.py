@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 
 from django import forms
 from django.contrib.auth.models import User
+from django.core.exceptions import ValidationError
 from django.utils.translation import ugettext_lazy as _
 
 from reviewers.models import Review
@@ -14,12 +15,12 @@ class SignInForm(forms.Form):
     username = forms.fields.CharField(
         widget=forms.TextInput(attrs={
             "class": "form-control",
-            "placeholder": _("Nombre de usuario"),
+            "placeholder": _("Email o nombre de usuario"),
             "autocapitalize": "off",
             "autocorrect": "off",
             "autofocus": "autofocus",
         }),
-        error_messages={'required': _('El nombre de usuario es obligatorio')}
+        error_messages={'required': _('El email o nombre de usuario es obligatorio')}
     )
     password = forms.fields.CharField(
         widget=forms.PasswordInput(attrs={
@@ -31,9 +32,18 @@ class SignInForm(forms.Form):
 
     def clean_username(self):
         username = self.cleaned_data.get('username')
-        if not User.objects.filter(username=username).exists():
-            raise forms.ValidationError(_("Nombre de usuario no encontrado"))
-        return username
+        email_validator = forms.EmailField()
+        try:
+            email = email_validator.clean(username)
+            if User.objects.filter(email=email).exists():
+                username = User.objects.get(email=email).username
+                return username
+            else:
+                raise forms.ValidationError(_("Email no encontrado"))
+        except ValidationError:
+            if not User.objects.filter(username=username).exists():
+                raise forms.ValidationError(_("Nombre de usuario no encontrado"))
+            return username
 
     def clean_password(self):
         password = self.cleaned_data.get('password')
@@ -78,3 +88,58 @@ class ReviewForm(forms.ModelForm):
     def clean_newness(self):
         newness = self.cleaned_data.get("newness")
         return self._clean_metric(newness)
+
+
+class RestorePasswordForm(forms.Form):
+
+    email = forms.EmailField(label=_("Email"), widget=forms.HiddenInput())
+    restore_code = forms.CharField(widget=forms.HiddenInput())
+    password = forms.CharField(label=_("Contraseña"), widget=forms.PasswordInput(
+        attrs={
+            "class": "form-control",
+            "placeholder": _("Contraseña"),
+        }
+    ))
+    repeat_password = forms.CharField(label=_("Repita la contraseña"), widget=forms.PasswordInput(
+        attrs={
+            "class": "form-control",
+            "placeholder": _("Repita la contraseña"),
+        }
+    ))
+
+    def clean_email(self):
+        email = self.cleaned_data.get("email")
+        if not Review.objects.filter(user__email=email).exists():
+            raise forms.ValidationError(_("El email no existe"))
+        return email
+
+    def clean_repeat_password(self):
+        password = self.cleaned_data.get("password")
+        repeat_password = self.cleaned_data.get("repeat_password")
+        if password != repeat_password:
+            raise forms.ValidationError(_("Las contraseñas no son iguales"))
+        return repeat_password
+
+    def clean_restore_code(self):
+        email = self.cleaned_data.get("email")
+        restore_code = self.cleaned_data.get("restore_code")
+        if not Review.objects.filter(user__email=email).exists():
+            raise forms.ValidationError(_("Código de restauración no válido"))
+        review = Review.objects.get(user__email=email)
+        if review.restore_code != restore_code:
+            raise forms.ValidationError(_("Código de restauración no válido"))
+        return restore_code
+
+
+class RequestRestoreCodeForm(forms.Form):
+
+    email = forms.EmailField(label=_("Email"), widget=forms.EmailInput(attrs={
+            "class": "form-control",
+            "placeholder": _("Email"),
+    }))
+
+    def clean_email(self):
+        email = self.cleaned_data.get("email")
+        if not Review.objects.filter(user__email=email).exists():
+            raise forms.ValidationError(_("El email no pertenece a un revisor"))
+        return email

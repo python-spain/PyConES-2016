@@ -1,12 +1,15 @@
 from braces.views import CsrfExemptMixin
 from braces.views import GroupRequiredMixin
+from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.core.urlresolvers import reverse, reverse_lazy
+from django.http import Http404
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import View
+from django.utils.translation import ugettext_lazy as _
 
 from reviewers import review_group_name
-from reviewers.forms import SignInForm, ReviewForm
+from reviewers.forms import SignInForm, ReviewForm, RequestRestoreCodeForm, RestorePasswordForm
 from reviewers.models import Review
 
 
@@ -102,3 +105,67 @@ class ReviewView(BaseReviewerView):
             "form": form
         }
         return render(request, self.template_name, data)
+
+
+class RestorePasswordView(View):
+
+    @staticmethod
+    def get(request, restore_code):
+        try:
+            review = Review.objects.get(restore_code=restore_code)
+        except Review.DoesNotExist:
+            raise Http404
+        data = {
+            "review": review,
+            "restore_code": restore_code,
+            "form": RestorePasswordForm(initial={"restore_code": restore_code, "email": review.user.email})
+        }
+        return render(request, "reviewers/restore.html", data)
+
+    @staticmethod
+    def post(request, restore_code):
+        form = RestorePasswordForm(request.POST)
+        try:
+            review = Review.objects.get(restore_code=restore_code)
+        except Review.DoesNotExist:
+            raise Http404
+        if form.is_valid():
+            user = review.user
+            user.set_password(form.cleaned_data.get('password'))
+            user.save()
+            review.restore_code = None
+            review.save()
+            messages.success(request, _("Se ha establecido la nueva contraseña"))
+        data = {
+            "review": review,
+            "restore_code": restore_code,
+            "form": form
+        }
+        return render(request, "reviewers/restore.html", data)
+
+
+class RequestRestorePasswordView(View):
+
+    @staticmethod
+    def get(request):
+        data = {
+            "form": RequestRestoreCodeForm()
+        }
+        return render(request, "reviewers/request_code.html", data)
+
+    @staticmethod
+    def post(request):
+        form = RequestRestoreCodeForm(request.POST)
+        if form.is_valid():
+            email = form.cleaned_data.get('email')
+            try:
+                review = Review.objects.get(user__email=email)
+            except Review.DoesNotExist:
+                raise Http404
+            review.send_restore_password_link()
+            messages.success(request, _("Se ha enviado un correo a tu dirección "
+                                        "con un enlace para establecer tu contraseña."))
+        data = {
+            "form": form
+        }
+        return render(request, "reviewers/request_code.html", data)
