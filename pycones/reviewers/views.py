@@ -136,6 +136,7 @@ class RestorePasswordView(View):
             reviewer.restore_code = None
             reviewer.save()
             messages.success(request, _("Se ha establecido la nueva contraseña"))
+            return redirect(reverse("reviewers:sign-in"))
         data = {
             "reviewer": reviewer,
             "restore_code": restore_code,
