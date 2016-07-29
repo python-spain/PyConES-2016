@@ -104,3 +104,8 @@ class Reviewer(TimeStampedModel):
             template_name="emails/reviewers/restore_email.html",
             context=context
         )
+
+    def save(self, **kwargs):
+        if self.restore_code == "":
+            self.restore_code = None
+        return super(Reviewer, self).save(**kwargs)
