@@ -80,6 +80,9 @@ class Reviewer(TimeStampedModel):
     user = models.OneToOneField(settings.AUTH_USER_MODEL)
     restore_code = models.CharField(max_length=16, null=True, blank=True, unique=True)
 
+    def reviews_count(self):
+        return self.user.reviews.count()
+
     def generate_restore_code(self):
         self.restore_code = random_string(16)
         self.save()

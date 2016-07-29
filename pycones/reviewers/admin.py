@@ -45,4 +45,8 @@ class ReviewAdmin(admin.ModelAdmin):
 
 @admin.register(Reviewer)
 class ReviewerAdmin(admin.ModelAdmin):
-    list_display = ["id", "user", "created"]
+    list_display = ["id", "user", "get_reviews", "created"]
+
+    def get_reviews(self, instance):
+        return instance.reviews_count()
+    get_reviews.short_description = _("Revisiones")
