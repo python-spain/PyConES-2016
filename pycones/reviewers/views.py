@@ -9,8 +9,8 @@ from django.views.generic import View
 from django.utils.translation import ugettext_lazy as _
 
 from reviewers import review_group_name
-from reviewers.forms import SignInForm, ReviewForm, RequestRestoreCodeForm, RestorePasswordForm
-from reviewers.models import Review
+from .forms import SignInForm, ReviewForm, RequestRestoreCodeForm, RestorePasswordForm
+from .models import Review
 
 
 class SignInView(CsrfExemptMixin, View):

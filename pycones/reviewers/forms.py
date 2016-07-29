@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.utils.translation import ugettext_lazy as _
 
-from reviewers.models import Review
+from .models import Review
 
 
 class SignInForm(forms.Form):
