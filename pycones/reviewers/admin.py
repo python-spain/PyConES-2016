@@ -23,6 +23,13 @@ class ReviewAdminForm(forms.ModelForm):
             Q(groups__name=review_group_name) | Q(is_superuser=True)
         )
 
+    def clean(self):
+        cleaned_data = super(ReviewAdminForm, self).clean()
+        user = cleaned_data.get("user")
+        proposal = cleaned_data.get("proposal")
+        if user == proposal.speaker.user:
+            raise forms.ValidationError("You can not asign a review to its author!")
+
 
 @admin.register(Review)
 class ReviewAdmin(admin.ModelAdmin):
