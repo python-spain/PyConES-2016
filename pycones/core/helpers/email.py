@@ -8,7 +8,7 @@ from django.template import Context
 from django.template.loader import get_template
 
 
-def send_template_email(subject, from_email, to, template_name, context=Context()):
+def send_template_email(subject, from_email, to, template_name, context=None):
     """
     :param subject:
     :param from_email:
@@ -16,6 +16,8 @@ def send_template_email(subject, from_email, to, template_name, context=Context(
     :param template_name:
     :param context:
     """
+    if context is None:
+        context = {}
     current_site = Site.objects.get_current()
     context.update({
         "site": current_site,

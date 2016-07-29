@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.utils.translation import ugettext_lazy as _
 
-from .models import Review
+from .models import Review, Reviewer
 
 
 class SignInForm(forms.Form):
@@ -109,7 +109,7 @@ class RestorePasswordForm(forms.Form):
 
     def clean_email(self):
         email = self.cleaned_data.get("email")
-        if not Review.objects.filter(user__email=email).exists():
+        if not Reviewer.objects.filter(user__email=email).exists():
             raise forms.ValidationError(_("El email no existe"))
         return email
 
@@ -123,10 +123,10 @@ class RestorePasswordForm(forms.Form):
     def clean_restore_code(self):
         email = self.cleaned_data.get("email")
         restore_code = self.cleaned_data.get("restore_code")
-        if not Review.objects.filter(user__email=email).exists():
+        if not Reviewer.objects.filter(user__email=email).exists():
             raise forms.ValidationError(_("Código de restauración no válido"))
-        review = Review.objects.get(user__email=email)
-        if review.restore_code != restore_code:
+        reviewer = Reviewer.objects.get(user__email=email)
+        if reviewer.restore_code != restore_code:
             raise forms.ValidationError(_("Código de restauración no válido"))
         return restore_code
 
@@ -140,6 +140,6 @@ class RequestRestoreCodeForm(forms.Form):
 
     def clean_email(self):
         email = self.cleaned_data.get("email")
-        if not Review.objects.filter(user__email=email).exists():
+        if not Reviewer.objects.filter(user__email=email).exists():
             raise forms.ValidationError(_("El email no pertenece a un revisor"))
         return email

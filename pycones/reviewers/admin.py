@@ -8,7 +8,7 @@ from django.db.models import Q
 from django.utils.translation import ugettext_lazy as _
 
 from reviewers import review_group_name
-from reviewers.models import Review
+from reviewers.models import Review, Reviewer
 
 
 class ReviewAdminForm(forms.ModelForm):
@@ -33,3 +33,8 @@ class ReviewAdmin(admin.ModelAdmin):
     def get_avg(self, instance):
         return instance.avg()
     get_avg.short_description = _("Media")
+
+
+@admin.register(Reviewer)
+class ReviewerAdmin(admin.ModelAdmin):
+    list_display = ["id", "user", "created"]

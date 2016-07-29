@@ -38,8 +38,6 @@ class Review(TimeStampedModel):
     conflict = models.BooleanField(verbose_name=_("¿Existe un conflico de intereses?"), default=False)
     finished = models.BooleanField(verbose_name=_("¿Revisión finalizada?"), default=False)
 
-    restore_code = models.CharField(max_length=16, null=True, blank=True, unique=True)
-
     class Meta:
         unique_together = ["user", "proposal"]
 
@@ -64,7 +62,7 @@ class Review(TimeStampedModel):
             template="emails/reviewers/new.html",
             subject=_("[PyConES 2016] Tienes una nueva propuesta para revisar"),
             to=self.user.email,
-            from_email="contacto2016@es.pycon.org"
+            from_email="PyConES 2016 <contacto2016@es.pycon.org>"
         )
 
     def save(self, **kwargs):
@@ -75,6 +73,12 @@ class Review(TimeStampedModel):
         super(Review, self).save(**kwargs)
         if is_insert or self.user != old_user:
             self.notify()
+
+
+class Reviewer(TimeStampedModel):
+
+    user = models.OneToOneField(settings.AUTH_USER_MODEL)
+    restore_code = models.CharField(max_length=16, null=True, blank=True, unique=True)
 
     def generate_restore_code(self):
         self.restore_code = random_string(16)
@@ -87,13 +91,13 @@ class Review(TimeStampedModel):
         """Sends email with link to restore password."""
         if not self.restore_code:
             self.generate_restore_code()
-        context = Context({
-            "reviewers": self,
-        })
+        context = {
+            "reviewer": self,
+        }
         send_template_email(
-            _("Establece tu contraseña"),
-            "PyConES 2016 <contacto2016@es.pycon.org>",
-            self.user.email,
-            "emails/reviewers/restore_email.html",
-            context
+            subject=_("[PyConES 2016] Establece tu contraseña"),
+            from_email="PyConES 2016 <contacto2016@es.pycon.org>",
+            to=self.user.email,
+            template_name="emails/reviewers/restore_email.html",
+            context=context
         )
