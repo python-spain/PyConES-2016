@@ -210,8 +210,12 @@ class Proposal(ProposalBase):
         return self.avg()
 
     @property
-    def reviews_property(self):
+    def completed_reviews_property(self):
         return self.reviews.filter(finished=True).count()
+
+    @property
+    def assigned_reviews_property(self):
+        return self.reviews.count()
 
     def avg(self):
         data = [review.avg() for review in self.reviews.filter(finished=True) if review.avg() is not None]
