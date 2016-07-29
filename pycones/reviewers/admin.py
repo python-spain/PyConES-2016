@@ -33,7 +33,8 @@ class ReviewAdminForm(forms.ModelForm):
 
 @admin.register(Review)
 class ReviewAdmin(admin.ModelAdmin):
-    list_display = ["id", "proposal", "user", "relevance", "interest", "newness", "get_avg", "conflict", "finished", "created"]
+    list_display = ["id", "proposal", "user", "relevance", "interest", "newness", "get_avg", "conflict", "finished",
+                    "created"]
     list_filter = ["proposal", "user", "conflict", "finished"]
     form = ReviewAdminForm
 
