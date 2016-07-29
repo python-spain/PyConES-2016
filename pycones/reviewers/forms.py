@@ -63,9 +63,12 @@ class ReviewForm(forms.ModelForm):
         model = Review
         fields = ["relevance", "interest", "newness", "notes", "conflict", "finished"]
         widgets = {
-            "relevance": forms.NumberInput(attrs={"class": "form-control"}),
-            "interest": forms.NumberInput(attrs={"class": "form-control"}),
-            "newness": forms.NumberInput(attrs={"class": "form-control"}),
+            "relevance": forms.NumberInput(attrs={"class": "form-control", 
+                                                  "min": "1", "max": "10", "step": "1"}),
+            "interest": forms.NumberInput(attrs={"class": "form-control", 
+                                                 "min": "1", "max": "10", "step": "1"}),
+            "newness": forms.NumberInput(attrs={"class": "form-control", 
+                                                "min": "1", "max": "10", "step": "1"}),
             "notes": forms.Textarea(attrs={"class": "form-control"}),
         }
 
