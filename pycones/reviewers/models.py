@@ -3,12 +3,17 @@ from __future__ import unicode_literals, print_function, absolute_import
 
 from django.conf import settings
 from django.contrib.sites.models import Site
+from django.core.urlresolvers import reverse
 from django.db import models
+from django.template import Context
 from django.utils.translation import ugettext_lazy as _
 from django_extensions.db.models import TimeStampedModel
 
 from configurations.models import Option
 from core.emails import send_email
+
+from core.helpers.email import send_template_email
+from core.helpers.generators import random_string
 
 
 class Review(TimeStampedModel):
@@ -57,7 +62,7 @@ class Review(TimeStampedModel):
             template="emails/reviewers/new.html",
             subject=_("[PyConES 2016] Tienes una nueva propuesta para revisar"),
             to=self.user.email,
-            from_email="contacto2016@es.pycon.org"
+            from_email="PyConES 2016 <contacto2016@es.pycon.org>"
         )
 
     def save(self, **kwargs):
@@ -68,3 +73,31 @@ class Review(TimeStampedModel):
         super(Review, self).save(**kwargs)
         if is_insert or self.user != old_user:
             self.notify()
+
+
+class Reviewer(TimeStampedModel):
+
+    user = models.OneToOneField(settings.AUTH_USER_MODEL)
+    restore_code = models.CharField(max_length=16, null=True, blank=True, unique=True)
+
+    def generate_restore_code(self):
+        self.restore_code = random_string(16)
+        self.save()
+
+    def restore_password_link(self):
+        return reverse("reviewers:restore_password", kwargs={"restore_code": self.restore_code})
+
+    def send_restore_password_link(self):
+        """Sends email with link to restore password."""
+        if not self.restore_code:
+            self.generate_restore_code()
+        context = {
+            "reviewer": self,
+        }
+        send_template_email(
+            subject=_("[PyConES 2016] Establece tu contraseña"),
+            from_email="PyConES 2016 <contacto2016@es.pycon.org>",
+            to=self.user.email,
+            template_name="emails/reviewers/restore_email.html",
+            context=context
+        )

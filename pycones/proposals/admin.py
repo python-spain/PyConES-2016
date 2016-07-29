@@ -20,7 +20,8 @@ class ProposalAdmin(admin.ModelAdmin):
         "audience_level",
         "language",
         "get_avg",
-        "get_reviews",
+        "get_assigned_reviews",
+        "get_completed_reviews",
         "notified",
     ]
     list_filter = ["kind__name", "notified"]
@@ -34,7 +35,8 @@ class ProposalAdmin(admin.ModelAdmin):
             "audience_level",
             "language",
             "avg_property",
-            "reviews_property",
+            "assigned_reviews_property",
+            "completed_reviews_property",
         ]),
         send_confirmation_action("Sends confirmation email")
     ]
@@ -43,9 +45,13 @@ class ProposalAdmin(admin.ModelAdmin):
         return instance.avg()
     get_avg.short_description = _("Media")
 
-    def get_reviews(self, instance):
-        return instance.reviews_property
-    get_reviews.short_description = _("Revisiones")
+    def get_completed_reviews(self, instance):
+        return instance.completed_reviews_property
+    get_completed_reviews.short_description = _("Revisiones completadas")
+
+    def get_assigned_reviews(self, instance):
+        return instance.assigned_reviews_property
+    get_assigned_reviews.short_description = _("Revisiones asignadas")
 
 admin.site.register(ProposalSection)
 admin.site.register(ProposalKind)
