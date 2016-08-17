@@ -61,6 +61,61 @@
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
+                <h2>{% trans "Alojamiento" %}</h2>
+            </div>
+            <div class="col-md-8 col-md-offset-2">
+                <p class="loud">
+                    {% blocktrans %}
+                    Hemos preparado una selección de hoteles con oferta especial para el congreso. <em>Es importante confirmar las reservas lo más pronto posible, porque los hoteles sólo pueden mantener las ofertas por tiempo limitado y octubre es un mes de temporada alta hotelera en Almería capital.</em>
+
+                    {% endblocktrans %}
+                </p>
+                <ul class="loud">
+                    <li>
+                        {% blocktrans %}
+                        <a href="http://www.nh-hotels.com/hotels/almeria">Hotel NH Ciudad de Almería</a>, 4 estrellas<br/>
+                        Régimen: alojamiento y desayuno
+                        <ul>
+                        <li>Precio habitación doble uso individual: 	61€ + 10% IVA</li>
+                        <li>Precio habitación doble uso doble:       	69€ + 10% IVA</li> 
+                        </ul>
+                        Reservar a través de teléfono: 950182500 o correo-e: <a href="mailto:nhciudaddealmeria@nh-hotels.com">nhciudaddealmeria@nh-hotels.com</a> indicando la referencia <em>CONGRESO PYCONES</em>.
+                        {% endblocktrans %}
+                    </li>
+                    
+                    <li>
+                        {% blocktrans %}
+                        <a href="http://www.hotelembajador.es/es/">Hotel Embajador</a>, 2 estrellas<br/>
+                        <ul>
+                        <li>Precio por persona desde 35€ + 10% IVA</li>
+                        <li>Con opciones a habitaciones de clase superior y de desayuno en el hotel (buffet continental).</li> 
+                        </ul>
+                        Reservar a través de teléfono: 950278825 o correo-e: <a href="mailto:reservas@hotelembajador.es">reservas@hotelembajador.es</a> indicando la referencia <em>CONGRESO PYCONES</em>.
+                    
+                        {% endblocktrans %}
+                    </li>
+                </ul>
+                <ul class="loud">
+                    <li>
+                        {% blocktrans %}
+                        <a href="https://www.google.com/maps/d/viewer?mid=1Qm5_h5uTqriVSYBHS_SP3NVgjHc">en el mapa que hemos preparado</a> tenéis apuntados los alojamientos más próximos a la línea 18 de autobús que es la que llega a la universidad todos los días de la semana.
+                        {% endblocktrans %}
+                    </li>
+                    
+                    <li>{% trans "en el mismo mapa opcionalmente tenéis indicada la situación de otros grupos de hoteles en la capital y otro en el complejo hotelero de <a href='https://es.wikipedia.org/wiki/Retamar_(Almer%C3%ADa)#El_Toyo'>El Toyo</a>, en la zona de Retamar fuera del casco urbano, que puede ser de vuestro interés si viajáis en familia y con vehículo propio" %}</li>
+                </ul>
+                
+                <p class="loud">
+                    {% blocktrans %}
+                    Insistimos en la importancia de confirmar las reservas de hotel rápidamente. Considerad también la posibilidad de compartir y reservar las habitaciones dobles con vuestros conocidos, para aprovechar mejor las plazas disponibles. ¡No queremos que nadie se quede fuera!
+                    {% endblocktrans %}
+                </p>
+            </div>
+        </div>
+        
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
                 <h2>{% trans "Sobre Almería" %}</h2>
             </div>
             <div class="col-md-8 col-md-offset-2">
@@ -154,25 +209,14 @@
                     <li>{% trans "desde el interior, a través de la <a href='https://es.wikipedia.org/wiki/Autov%C3%ADa_A-92'>A-92</a>" %}</li>
                 </ul>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h2>{% trans "Alojamiento" %}</h2>
-            </div>
             <div class="col-md-8 col-md-offset-2">
                 <p class="loud">
-                    {% blocktrans %}
-                        Estamos trabajando para ofreceros un hotel recomendado, hasta entonces os sugerimos las siguientes indicaciones:
-                    {% endblocktrans %}
+                    <strong>{% trans "Compartiendo coche" %}</strong>
                 </p>
-                <ul class="loud">
-                    <li>
-                        {% blocktrans %}
-                        <a href="https://www.google.com/maps/d/viewer?mid=1Qm5_h5uTqriVSYBHS_SP3NVgjHc">en el mapa que hemos preparado</a> tenéis apuntados los alojamientos más próximos a la línea 18 de autobús
-                        {% endblocktrans %}
-                    </li>
-                    <li>{% trans 'en el mismo mapa opcionalmente tenéis indicada la situación de otros dos grupos de hoteles, uno en la capital y otro en el complejo hotelero de <a href="https://es.wikipedia.org/wiki/Retamar_(Almer%C3%ADa)#El_Toyo">El Toyo</a>, en la zona de Retamar, que puede ser de vuestro interés si viajáis en familia y con vehículo propio' %}</li>
-                </ul>
+                <p class="loud text-center">
+                    <iframe src="http://www.blablacar.es/widget/ES_PARTNER_EVENT- Python16_PSGR&?from=&to=Almería" style="border:0px; padding:0px;" width="100%" height="270px" frameborder="0" scrolling="no"></iframe><a href="http://www.blablacar.es/coche-compartido/a-Almería/#&utm_source=PARTNER&utm_medium=Link&utm_campaign=ES_PARTNER_EVENT- Python16_PSGR&comuto_cmkt=ES_PARTNER_EVENT- Python16_PSGR"></a>
+                    <a href="http://www.blablacar.es/coche-compartido/a-Almería/#&utm_source=PARTNER&utm_medium=Link&utm_campaign=ES_PARTNER_EVENT- Python16_PSGR&comuto_cmkt=ES_PARTNER_EVENT- Python16_PSGR" class="btn btn-primary">{% trans "Comparte coche a Almeria" %}</a>
+                </p>
             </div>
         </div>
         <div class="row">

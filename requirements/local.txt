@@ -1,5 +1,5 @@
 -r base.txt
 coverage==3.7.1
-django-debug-toolbar==1.4
+django-debug-toolbar==1.5
 model_mommy==1.2.6
 transifex-client==0.11b3
