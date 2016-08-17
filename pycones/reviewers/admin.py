@@ -10,6 +10,8 @@ from django.utils.translation import ugettext_lazy as _
 from reviewers import review_group_name
 from reviewers.models import Review, Reviewer
 
+from pycones.reviewers.actions import export_as_csv_action
+
 
 class ReviewAdminForm(forms.ModelForm):
 
@@ -36,6 +38,22 @@ class ReviewAdmin(admin.ModelAdmin):
     list_display = ["id", "proposal", "user", "relevance", "interest", "newness", "get_avg", "conflict", "finished",
                     "created"]
     list_filter = ["proposal", "user", "conflict", "finished"]
+
+    actions = [
+        export_as_csv_action("CSV Export", fields=[
+            "id",
+            "proposal",
+            "user",
+            "relevance",
+            "interest",
+            "newness",
+            "get_avg",
+            "conflict",
+            "finished",
+            "created",
+        ])
+    ]
+
     form = ReviewAdminForm
 
     def get_avg(self, instance):
