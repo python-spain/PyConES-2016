@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Web PyConES 2015\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-26 15:49+0200\n"
+"POT-Creation-Date: 2016-08-17 11:00+0200\n"
 "PO-Revision-Date: 2015-07-12 17:01+0000\n"
 "Last-Translator: Miguel González <migonzalvar@gmail.com>\n"
 "Language-Team: Galician (http://www.transifex.com/python-espana/web-"
@@ -30,11 +30,13 @@ msgid "Localizador"
 msgstr ""
 
 #: attendees/forms.py:43 attendees/forms.py:46 attendees/forms.py:100
-#: attendees/forms.py:103 reviewers/forms.py:27
+#: attendees/forms.py:103 reviewers/forms.py:28 reviewers/forms.py:100
+#: reviewers/forms.py:103
 msgid "Contraseña"
 msgstr ""
 
-#: attendees/forms.py:49 attendees/forms.py:52
+#: attendees/forms.py:49 attendees/forms.py:52 reviewers/forms.py:106
+#: reviewers/forms.py:109
 msgid "Repita la contraseña"
 msgstr ""
 
@@ -42,11 +44,12 @@ msgstr ""
 msgid "El localizador de entrada no existe"
 msgstr "Merca de entradas"
 
-#: attendees/forms.py:66
+#: attendees/forms.py:66 reviewers/forms.py:123
 msgid "Las contraseñas no son iguales"
 msgstr ""
 
-#: attendees/forms.py:73 attendees/forms.py:76
+#: attendees/forms.py:73 attendees/forms.py:76 reviewers/forms.py:130
+#: reviewers/forms.py:133
 msgid "Código de restauración no válido"
 msgstr ""
 
@@ -55,7 +58,7 @@ msgid "Localizador de entrada"
 msgstr "Merca de entradas"
 
 #: attendees/forms.py:117 attendees/forms.py:120 attendees/forms.py:122
-#: reviewers/forms.py:44
+#: reviewers/forms.py:54
 msgid "La contraseña no es correcta"
 msgstr ""
 
@@ -63,7 +66,8 @@ msgstr ""
 msgid "Nombre completo y apellidos"
 msgstr ""
 
-#: attendees/models.py:22
+#: attendees/models.py:22 reviewers/forms.py:98 reviewers/forms.py:139
+#: reviewers/forms.py:141
 msgid "Email"
 msgstr ""
 
@@ -98,7 +102,7 @@ msgstr ""
 msgid "Establece tu contraseña"
 msgstr ""
 
-#: attendees/views.py:80
+#: attendees/views.py:80 reviewers/views.py:138
 msgid "Se ha establecido la nueva contraseña"
 msgstr ""
 
@@ -172,13 +176,16 @@ msgstr ""
 msgid "Value"
 msgstr ""
 
-#: proposals/admin.py:44 reviewers/admin.py:35
-#: templates/reviewers/list.html:21
+#: proposals/admin.py:46 reviewers/admin.py:43 templates/reviewers/list.html:21
 msgid "Media"
 msgstr ""
 
-#: proposals/admin.py:48
-msgid "Revisiones"
+#: proposals/admin.py:50
+msgid "Revisiones completadas"
+msgstr ""
+
+#: proposals/admin.py:54
+msgid "Revisiones asignadas"
 msgstr ""
 
 #: proposals/forms.py:19
@@ -298,15 +305,15 @@ msgstr ""
 msgid "Duración"
 msgstr ""
 
-#: proposals/models.py:230
+#: proposals/models.py:234
 msgid "Pending"
 msgstr "En espera"
 
-#: proposals/models.py:231
+#: proposals/models.py:235
 msgid "Accepted"
 msgstr "Aceptado"
 
-#: proposals/models.py:232
+#: proposals/models.py:236
 msgid "Declined"
 msgstr "Declinado"
 
@@ -326,56 +333,86 @@ msgstr ""
 msgid "English"
 msgstr "Inglés"
 
-#: reviewers/forms.py:17
-msgid "Nombre de usuario"
+#: reviewers/admin.py:52
+msgid "Revisiones"
 msgstr ""
 
-#: reviewers/forms.py:22
-msgid "El nombre de usuario es obligatorio"
+#: reviewers/forms.py:18
+msgid "Email o nombre de usuario"
 msgstr ""
 
-#: reviewers/forms.py:29
+#: reviewers/forms.py:23
+msgid "El email o nombre de usuario es obligatorio"
+msgstr ""
+
+#: reviewers/forms.py:30
 msgid "La contraseña es obligatoria"
 msgstr ""
 
-#: reviewers/forms.py:35
+#: reviewers/forms.py:42
+msgid "Email no encontrado"
+msgstr ""
+
+#: reviewers/forms.py:45
 msgid "Nombre de usuario no encontrado"
 msgstr ""
 
-#: reviewers/forms.py:67
+#: reviewers/forms.py:80
 msgid "Debes puntuar entre 1 y 10"
 msgstr ""
 
-#: reviewers/models.py:22 templates/reviewers/list.html:18
+#: reviewers/forms.py:116
+msgid "El email no existe"
+msgstr ""
+
+#: reviewers/forms.py:147
+msgid "El email no pertenece a un revisor"
+msgstr ""
+
+#: reviewers/models.py:27 templates/reviewers/list.html:18
 msgid "Relevancia"
 msgstr ""
 
-#: reviewers/models.py:22 reviewers/models.py:25 reviewers/models.py:28
+#: reviewers/models.py:27 reviewers/models.py:30 reviewers/models.py:33
 msgid "Puntuación del 1 al 10"
 msgstr ""
 
-#: reviewers/models.py:25 templates/reviewers/list.html:19
+#: reviewers/models.py:30 templates/reviewers/list.html:19
 msgid "Interés General"
 msgstr ""
 
-#: reviewers/models.py:28 templates/reviewers/list.html:20
+#: reviewers/models.py:33 templates/reviewers/list.html:20
 msgid "Novedad"
 msgstr ""
 
-#: reviewers/models.py:31
+#: reviewers/models.py:36
 msgid "Notas del revisor"
 msgstr ""
 
-#: reviewers/models.py:33
+#: reviewers/models.py:38
 msgid "¿Existe un conflico de intereses?"
 msgstr ""
 
-#: reviewers/models.py:34
+#: reviewers/models.py:39
 msgid "¿Revisión finalizada?"
 msgstr ""
 
-#: reviewers/models.py:58
+#: reviewers/models.py:63
 msgid "[PyConES 2016] Tienes una nueva propuesta para revisar"
+msgstr ""
+
+#: reviewers/models.py:101
+msgid "[PyConES 2016] Establece tu contraseña"
+msgstr ""
+
+#: reviewers/views.py:165
+msgid "No se ha encontrado el correo electrónico."
+msgstr ""
+
+#: reviewers/views.py:168
+msgid ""
+"Se ha enviado un correo a tu dirección con un enlace para establecer tu "
+"contraseña."
 msgstr ""
 
 #: schedule/models.py:80 schedule/models.py:200
@@ -529,10 +566,12 @@ msgid ""
 msgstr ""
 
 #: templates/attendees/request_code.html:7 templates/attendees/restore.html:7
+#: templates/reviewers/request_code.html:7 templates/reviewers/restore.html:7
 msgid "Establece o restaura tu contraseña"
 msgstr ""
 
 #: templates/attendees/request_code.html:33
+#: templates/reviewers/request_code.html:33
 msgid "Enviar"
 msgstr ""
 
@@ -546,10 +585,12 @@ msgid ""
 msgstr ""
 
 #: templates/attendees/restore.html:50 templates/reviewers/details.html:30
+#: templates/reviewers/restore.html:43
 msgid "Guardar"
 msgstr ""
 
 #: templates/attendees/restore_email.html:3
+#: templates/emails/reviewers/restore_email.html:3
 msgid "Entra en este enlace para establecer tu contraseña:"
 msgstr ""
 
@@ -568,51 +609,51 @@ msgid ""
 "                "
 msgstr ""
 
-#: templates/attendees/sign_in.html:36 templates/reviewers/sign_in.html:22
+#: templates/attendees/sign_in.html:36 templates/reviewers/sign_in.html:32
 msgid "Entrar"
 msgstr ""
 
-#: templates/attendees/sign_in.html:39
+#: templates/attendees/sign_in.html:39 templates/reviewers/sign_in.html:35
 msgid "¿No tienes contraseña o la has olvidado?"
 msgstr ""
 
-#: templates/base.html:45
+#: templates/base.html:46
 msgid "Toggle navigation"
 msgstr "Activar navegación"
 
-#: templates/base.html:53
+#: templates/base.html:54
 msgid "PyConES 2016"
 msgstr "PyConES 2015"
 
-#: templates/base.html:54
+#: templates/base.html:55
 msgid "Información del evento"
 msgstr "Información do evento"
 
-#: templates/base.html:55 templates/pages/home.html:56
+#: templates/base.html:56 templates/pages/home.html:48
 msgid "Oradores Plenarios"
 msgstr ""
 
-#: templates/base.html:57
+#: templates/base.html:58
 msgid "Compra tu entradas"
 msgstr "Merca as túas entradas"
 
-#: templates/base.html:60
+#: templates/base.html:61
 msgid "Envía tu propuesta"
 msgstr ""
 
-#: templates/base.html:62
+#: templates/base.html:63
 msgid "Blog"
 msgstr "Blog"
 
-#: templates/base.html:74
+#: templates/base.html:75
 msgid "Salir"
 msgstr ""
 
-#: templates/base.html:113 templates/pages/info.html:180
+#: templates/base.html:114 templates/pages/info.html:236
 msgid "Código de conducta"
 msgstr "Código de comportamento"
 
-#: templates/base.html:114
+#: templates/base.html:115
 msgid "Contacta con nosotros"
 msgstr "Contacta con nós"
 
@@ -869,19 +910,19 @@ msgstr ""
 "segundo o formato do evento mundial <a href=\"http://pycon.org\" target="
 "\"_blank\">PyCon</a>."
 
-#: templates/pages/home.html:24
+#: templates/pages/home.html:18
 msgid "Ediciones anteriores"
 msgstr "Edicións anteriores"
 
-#: templates/pages/home.html:35
+#: templates/pages/home.html:30
 msgid "Llamada a propuestas"
 msgstr ""
 
-#: templates/pages/home.html:37
+#: templates/pages/home.html:32
 msgid "¡Envía tu propuesta!"
 msgstr ""
 
-#: templates/pages/home.html:40
+#: templates/pages/home.html:35
 msgid ""
 "\n"
 "                        ¡Está abierta la llamada a propuestas para la "
@@ -890,27 +931,35 @@ msgid ""
 "                    "
 msgstr ""
 
-#: templates/pages/home.html:59 templates/pages/keynoters.html:11
+#: templates/pages/home.html:51 templates/pages/keynoters.html:11
 msgid "Manuel Kaufmann"
 msgstr ""
 
-#: templates/pages/home.html:61 templates/pages/keynoters.html:13
+#: templates/pages/home.html:53 templates/pages/keynoters.html:13
 msgid "Argentina en Python: comunidad, sueños, viajes y aprendizaje"
 msgstr ""
 
-#: templates/pages/home.html:70
+#: templates/pages/home.html:56 templates/pages/keynoters.html:25
+msgid "Gema Parreño"
+msgstr ""
+
+#: templates/pages/home.html:58 templates/pages/keynoters.html:27
+msgid "TensorFlow y Space Apps Challenge"
+msgstr ""
+
+#: templates/pages/home.html:62
 msgid "¡Conoce más de nuestros keynoters!"
 msgstr ""
 
-#: templates/pages/home.html:80
+#: templates/pages/home.html:72
 msgid "Compra de entradas"
 msgstr "Merca de entradas"
 
-#: templates/pages/home.html:87 templates/pages/tickets.html:18
+#: templates/pages/home.html:79 templates/pages/tickets.html:18
 msgid "¡Entradas agotadas!"
 msgstr ""
 
-#: templates/pages/home.html:91
+#: templates/pages/home.html:83
 msgid ""
 "Con tu entrada podrás acceder los tres días de la conferencia completos. En "
 "la entrada del edificio te cambiaremos tu entrada de ticketea (no olvides "
@@ -923,11 +972,11 @@ msgstr ""
 "                    entregarémoste o WelcomePack.\n"
 "                "
 
-#: templates/pages/home.html:99
+#: templates/pages/home.html:91
 msgid "Patrocinadores"
 msgstr "Patrocinadores"
 
-#: templates/pages/home.html:129
+#: templates/pages/home.html:121
 #, python-format
 msgid ""
 "\n"
@@ -942,11 +991,11 @@ msgstr ""
 "\">¡Contacta connosco!</a>\n"
 "                        "
 
-#: templates/pages/home.html:138
+#: templates/pages/home.html:130
 msgid "Folleto (ES)"
 msgstr "Folleto (EN)"
 
-#: templates/pages/home.html:141
+#: templates/pages/home.html:133
 msgid "Folleto (EN)"
 msgstr "Folleto (EN)"
 
@@ -1023,11 +1072,95 @@ msgstr ""
 "\n"
 "Gracias por axudarnos a facer este evento amigable e aberto para todos."
 
-#: templates/pages/info.html:64
-msgid "Sobre Almería"
+#: templates/pages/info.html:64 templates/pages/info.html:215
+msgid "Alojamiento"
 msgstr ""
 
 #: templates/pages/info.html:68
+msgid ""
+"\n"
+"                    Hemos preparado una selección de hoteles con oferta "
+"especial para el congreso. Debemos enfatizar la importancia de confirmar "
+"vuestras reservas lo más pronto que sea posible, porque los hoteles sólo "
+"pueden mantener las ofertas por tiempo limitado y octubre se ha descubierto "
+"como temporada alta hotelera en Almería capital.\n"
+"\n"
+"                    "
+msgstr ""
+
+#: templates/pages/info.html:75
+#, python-format
+msgid ""
+"\n"
+"                        <a href=\"http://www.nh-hotels.com/hotels/almeria"
+"\">Hotel NH Ciudad de Almería</a>, 4 estrellas<br/>\n"
+"                        Régimen: alojamiento y desayuno\n"
+"                        <ul>\n"
+"                        <li>Precio habitación doble uso individual: \t61€ + "
+"10%% IVA</li>\n"
+"                        <li>Precio habitación doble uso doble:       \t69€ + "
+"10%% IVA</li> \n"
+"                        </ul>\n"
+"                        Reservar a través de teléfono: 950182500 o correo-e: "
+"<a href=\"mailto:nhciudaddealmeria@nh-hotels.com\">nhciudaddealmeria@nh-"
+"hotels.com</a> indicando la referencia <em>CONGRESO PYCONES</em>.\n"
+"                        "
+msgstr ""
+
+#: templates/pages/info.html:87
+#, python-format
+msgid ""
+"\n"
+"                        <a href=\"http://www.hotelembajador.es/es/\">Hotel "
+"Embajador</a>, 2 estrellas<br/>\n"
+"                        <ul>\n"
+"                        <li>Precio por persona desde 35€ + 10%% IVA</li>\n"
+"                        <li>Con opciones a habitaciones de clase superior y "
+"de desayuno en el hotel (buffet continental).</li> \n"
+"                        </ul>\n"
+"                        Reservar a través de teléfono:    950278825 o correo-"
+"e: <a href=\"mailto:reservas@hotelembajador.es\">reservas@hotelembajador.es</"
+"a> indicando la referencia <em>CONGRESO PYCONES</em>.\n"
+"                    \n"
+"                        "
+msgstr ""
+
+#: templates/pages/info.html:100
+msgid ""
+"\n"
+"                        <a href=\"https://www.google.com/maps/d/viewer?"
+"mid=1Qm5_h5uTqriVSYBHS_SP3NVgjHc\">en el mapa que hemos preparado</a> tenéis "
+"apuntados los alojamientos más próximos a la línea 18 de autobús que es la "
+"que llega a la universidad todos los días de la semana.\n"
+"                        "
+msgstr ""
+
+#: templates/pages/info.html:105
+#, python-format
+msgid ""
+"en el mismo mapa opcionalmente tenéis indicada la situación de otros grupos "
+"de hoteles en la capital y otro en el complejo hotelero de <a href='https://"
+"es.wikipedia.org/wiki/Retamar_(Almer%%C3%%ADa)#El_Toyo'>El Toyo</a>, en la "
+"zona de Retamar que está fuera del casco urbano, que puede ser de vuestro "
+"interés si viajáis en familia y con vehículo propio"
+msgstr ""
+
+#: templates/pages/info.html:109
+msgid ""
+"\n"
+"                    Insistimos en la importancia de confirmar tus reservas "
+"de hotel rápidamente. También os rogamos que consideréis la posibilidad de "
+"compartir y reservar las habitaciones dobles con vuestros conocidos, por "
+"poder optimizar el provechamiento de las plazas disponibles.  No queremos "
+"que nadie se quede fuera.\n"
+"                    "
+msgstr ""
+
+#: templates/pages/info.html:119
+msgid "Sobre Almería"
+msgstr ""
+
+#: templates/pages/info.html:123
 msgid ""
 "\n"
 "                        A algunos nos gusta decir que Almería es lo más "
@@ -1043,19 +1176,19 @@ msgid ""
 "                    "
 msgstr ""
 
-#: templates/pages/info.html:73
+#: templates/pages/info.html:128
 msgid "Costa de Almería"
 msgstr ""
 
-#: templates/pages/info.html:74
+#: templates/pages/info.html:129
 msgid "Patronato provincial de turismo de Almería"
 msgstr ""
 
-#: templates/pages/info.html:75
+#: templates/pages/info.html:130
 msgid "Turismo de Almería (ciudad)"
 msgstr ""
 
-#: templates/pages/info.html:78
+#: templates/pages/info.html:133
 msgid ""
 "\n"
 "                        Económicamente Almería es además una pequeña "
@@ -1070,11 +1203,11 @@ msgid ""
 "                    "
 msgstr ""
 
-#: templates/pages/info.html:87
+#: templates/pages/info.html:142
 msgid "Como desplazarse hasta el campus"
 msgstr ""
 
-#: templates/pages/info.html:91
+#: templates/pages/info.html:146
 msgid ""
 "\n"
 "                        El campus tiene varios espacios de aparcamiento para "
@@ -1084,7 +1217,7 @@ msgid ""
 "                    "
 msgstr ""
 
-#: templates/pages/info.html:96
+#: templates/pages/info.html:151
 msgid ""
 "\n"
 "                        Quienes optéis por el transporte público tendréis "
@@ -1099,7 +1232,7 @@ msgid ""
 "                    "
 msgstr ""
 
-#: templates/pages/info.html:101
+#: templates/pages/info.html:156
 msgid ""
 "\n"
 "                        También disponemos de dos servicios de taxi:\n"
@@ -1108,7 +1241,7 @@ msgstr ""
 "\n"
 "Gracias por axudarnos a facer este evento amigable e aberto para todos."
 
-#: templates/pages/info.html:106
+#: templates/pages/info.html:161
 msgid ""
 "\n"
 "                        <strong>Radio taxi</strong> <br/>\n"
@@ -1118,7 +1251,7 @@ msgid ""
 "                    "
 msgstr ""
 
-#: templates/pages/info.html:113
+#: templates/pages/info.html:168
 msgid ""
 "\n"
 "                        <strong>Tele Taxi</strong> <br/>\n"
@@ -1128,11 +1261,11 @@ msgid ""
 "                    "
 msgstr ""
 
-#: templates/pages/info.html:124
+#: templates/pages/info.html:179
 msgid "Cómo llegar a Almería"
 msgstr ""
 
-#: templates/pages/info.html:128
+#: templates/pages/info.html:183
 msgid ""
 "\n"
 "                        <strong>Avión</strong>: El <a href=\"http://www.aena."
@@ -1146,7 +1279,7 @@ msgid ""
 "                    "
 msgstr ""
 
-#: templates/pages/info.html:133
+#: templates/pages/info.html:188
 #, python-format
 msgid ""
 "\n"
@@ -1162,7 +1295,7 @@ msgid ""
 "                    "
 msgstr ""
 
-#: templates/pages/info.html:138
+#: templates/pages/info.html:193
 msgid ""
 "\n"
 "                        <strong>Puerto</strong>: También en el mismísimo "
@@ -1174,7 +1307,7 @@ msgid ""
 "                    "
 msgstr ""
 
-#: templates/pages/info.html:143
+#: templates/pages/info.html:198
 msgid ""
 "\n"
 "                        <strong>Autobús</strong>: Llegando a la misma "
@@ -1183,32 +1316,28 @@ msgid ""
 "                    "
 msgstr ""
 
-#: templates/pages/info.html:148
+#: templates/pages/info.html:203
 msgid ""
 "\n"
 "                        <strong>Vehículo propio</strong>:\n"
 "                    "
 msgstr ""
 
-#: templates/pages/info.html:153
+#: templates/pages/info.html:208
 #, python-format
 msgid ""
 "por la costa, a través de la <a href='https://es.wikipedia.org/wiki/Autov"
 "%%C3%%ADa_del_Mediterr%%C3%%A1neo'>Autovía del Mediterráneo A-7, E-15</a>"
 msgstr ""
 
-#: templates/pages/info.html:154
+#: templates/pages/info.html:209
 #, python-format
 msgid ""
 "desde el interior, a través de la <a href='https://es.wikipedia.org/wiki/"
 "Autov%%C3%%ADa_A-92'>A-92</a>"
 msgstr ""
 
-#: templates/pages/info.html:160
-msgid "Alojamiento"
-msgstr ""
-
-#: templates/pages/info.html:164
+#: templates/pages/info.html:219
 msgid ""
 "\n"
 "                        Estamos trabajando para ofreceros un hotel "
@@ -1218,7 +1347,7 @@ msgstr ""
 "\n"
 "Gracias por axudarnos a facer este evento amigable e aberto para todos."
 
-#: templates/pages/info.html:170
+#: templates/pages/info.html:225
 msgid ""
 "\n"
 "                        <a href=\"https://www.google.com/maps/d/viewer?"
@@ -1227,7 +1356,7 @@ msgid ""
 "                        "
 msgstr ""
 
-#: templates/pages/info.html:174
+#: templates/pages/info.html:229
 #, python-format
 msgid ""
 "en el mismo mapa opcionalmente tenéis indicada la situación de otros dos "
@@ -1237,7 +1366,7 @@ msgid ""
 "en familia y con vehículo propio"
 msgstr ""
 
-#: templates/pages/info.html:182
+#: templates/pages/info.html:238
 msgid ""
 "\n"
 "                        PyConES aspira a crear un ambiente libre de acosos o "
@@ -1253,7 +1382,7 @@ msgstr ""
 "discriminación algunha baixo ningunha circunstancia.\n"
 "                            "
 
-#: templates/pages/info.html:187
+#: templates/pages/info.html:243
 msgid ""
 "\n"
 "                        Todo el contenido de la conferencia deberá ajustarse "
@@ -1268,7 +1397,7 @@ msgstr ""
 "coma as imaxes sexualmente explícitas son inapropiados na conferencia e nas "
 "charlas."
 
-#: templates/pages/info.html:192
+#: templates/pages/info.html:248
 msgid ""
 "\n"
 "                        Sé amable con los demás. No insultes o humilles a "
@@ -1281,7 +1410,7 @@ msgstr ""
 "Compórtate de xeito profesional. Lembra que as bromas sexistas, racistas ou "
 "discriminatorias están prohibidas na PyConES."
 
-#: templates/pages/info.html:197
+#: templates/pages/info.html:253
 msgid ""
 "\n"
 "                        Los asistentes que incumplan estas reglas podrán -a "
@@ -1294,7 +1423,7 @@ msgstr ""
 "organizadores- ser sancionados ou expulsados da conferencia sen dereito a "
 "reembolso."
 
-#: templates/pages/info.html:202
+#: templates/pages/info.html:258
 msgid ""
 "\n"
 "                        Gracias por ayudarnos a hacer este evento amistoso y "
@@ -1304,7 +1433,7 @@ msgstr ""
 "\n"
 "Gracias por axudarnos a facer este evento amigable e aberto para todos."
 
-#: templates/pages/info.html:206
+#: templates/pages/info.html:262
 msgid "Código de Conducta Completo"
 msgstr "Código de Conduta Completo"
 
@@ -1318,7 +1447,7 @@ msgid ""
 "comunidad Python a nivel internacional serán los tópicos de esta charla."
 msgstr ""
 
-#: templates/pages/keynoters.html:17
+#: templates/pages/keynoters.html:17 templates/pages/keynoters.html:31
 msgid "Acerca de"
 msgstr ""
 
@@ -1339,6 +1468,26 @@ msgid ""
 "como One Laptop Per Child y en febrero de 2016 fue nombrado \"Embajador de "
 "Python\" por la Python Software Foundation por su trabajo con Argentina en "
 "Python."
+msgstr ""
+
+#: templates/pages/keynoters.html:29
+msgid ""
+"¿Ha cambiado la aproximación de la visión por ordenador y la inteligencia "
+"artificial? ¿Cuáles son los casos de uso que puede dar la tecnología de "
+"TensorFlow? Gema nos contará en qué consisten las redes neuronales y que "
+"aplicaciones tienen, ¡incluyendo demos en directo!"
+msgstr ""
+
+#: templates/pages/keynoters.html:33
+msgid ""
+"Gema Parreño se licenció en Arquitectura por la Universidad Politécnica de "
+"Madrid. Fundó su propia startup de animación 3D y videojuegos y empezó a "
+"aprender programación para poder entender los procesos de trabajo de sus "
+"compañeros desarrolladores y ayudar a crear productos y aplicaciones. Hace "
+"dos años comenzó a estudiar redes neuronales y a programar en Python, y "
+"desde entonces ha sido ponente en varios eventos sobre TensorFlow. Está "
+"interesada en la ingeniería inversa y \"affective computing\", que considera "
+"el futuro."
 msgstr ""
 
 #: templates/pages/tickets.html:11
@@ -1416,6 +1565,10 @@ msgstr ""
 
 #: templates/reviewers/list.html:45
 msgid "No tienes ninguna revisión asignada aún"
+msgstr ""
+
+#: templates/reviewers/restore.html:21
+msgid "Email de usuario"
 msgstr ""
 
 #: templates/reviewers/sign_in.html:7
