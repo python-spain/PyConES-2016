@@ -214,6 +214,7 @@ DJANGO_APPS = (
     'django.contrib.admin',
     # 'django.contrib.admindocs',
     'rosetta',
+    'taggit',
 )
 
 # Apps specific for this project go here.

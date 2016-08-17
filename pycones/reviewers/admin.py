@@ -10,7 +10,7 @@ from django.utils.translation import ugettext_lazy as _
 from reviewers import review_group_name
 from reviewers.models import Review, Reviewer
 
-from pycones.reviewers.actions import export_as_csv_action
+from .actions import export_as_csv_action
 
 
 class ReviewAdminForm(forms.ModelForm):
@@ -47,7 +47,7 @@ class ReviewAdmin(admin.ModelAdmin):
             "relevance",
             "interest",
             "newness",
-            "get_avg",
+            "avg_property",
             "conflict",
             "finished",
             "created",

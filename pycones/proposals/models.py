@@ -16,6 +16,8 @@ from django.utils.translation import ugettext_lazy as _
 from markupfield.fields import MarkupField
 from model_utils.managers import InheritanceManager
 
+from taggit.managers import TaggableManager
+
 from core.emails import send_email
 from core.helpers.generators import random_string
 
@@ -205,6 +207,8 @@ class Proposal(ProposalBase):
         verbose_name=_("Duración"), choices=PROPOSAL_DURATIONS, default=30, null=True, blank=True
     )
 
+    tags = TaggableManager()
+
     @property
     def avg_property(self):
         return self.avg()
@@ -216,6 +220,10 @@ class Proposal(ProposalBase):
     @property
     def assigned_reviews_property(self):
         return self.reviews.count()
+
+    @property
+    def tag_list_property(self):
+        return u", ".join(tag.name for tag in self.tags.all())
 
     def avg(self):
         data = [review.avg() for review in self.reviews.filter(finished=True) if review.avg() is not None]
