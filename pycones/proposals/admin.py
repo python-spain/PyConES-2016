@@ -19,6 +19,7 @@ class ProposalAdmin(admin.ModelAdmin):
         "kind",
         "audience_level",
         "language",
+        "get_tag_list",
         "get_avg",
         "get_assigned_reviews",
         "get_completed_reviews",
@@ -37,6 +38,7 @@ class ProposalAdmin(admin.ModelAdmin):
             "avg_property",
             "assigned_reviews_property",
             "completed_reviews_property",
+            "tag_list_property"
         ]),
         send_confirmation_action("Sends confirmation email")
     ]
@@ -52,6 +54,10 @@ class ProposalAdmin(admin.ModelAdmin):
     def get_assigned_reviews(self, instance):
         return instance.assigned_reviews_property
     get_assigned_reviews.short_description = _("Revisiones asignadas")
+
+    def get_tag_list(self, instance):
+        return u", ".join(tag.name for tag in instance.tags.all())
+    get_tag_list.short_description = _("Lista de etiquetas")
 
 admin.site.register(ProposalSection)
 admin.site.register(ProposalKind)

@@ -31,6 +31,7 @@ urlpatterns += [
     url(r'schedule\.ics', icalendar_view, name="schedule_icalendar"),
     url(r'^i18n/', include('django.conf.urls.i18n')),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^taggit_autosuggest/', include('taggit_autosuggest.urls')),
 ]
 
 if settings.DEBUG:
