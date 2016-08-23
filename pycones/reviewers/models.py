@@ -41,6 +41,10 @@ class Review(TimeStampedModel):
     class Meta:
         unique_together = ["user", "proposal"]
 
+    @property
+    def avg_property(self):
+        return self.avg()
+
     def avg(self):
         data = [self.relevance, self.interest, self.newness]
         weights = [

@@ -214,6 +214,8 @@ DJANGO_APPS = (
     'django.contrib.admin',
     # 'django.contrib.admindocs',
     'rosetta',
+    'taggit',
+    'taggit_autosuggest',
 )
 
 # Apps specific for this project go here.
@@ -396,3 +398,7 @@ ROSETTA_MESSAGES_SOURCE_LANGUAGE_CODE = 'es'
 ROSETTA_MESSAGES_SOURCE_LANGUAGE_NAME = 'Español'
 ROSETTA_STORAGE_CLASS = 'rosetta.storage.CacheRosettaStorage'
 ROSETTA_MESSAGES_PER_PAGE = 25
+
+# Taggit settings
+# ------------------------------------------------------------------------------
+TAGGIT_CASE_INSENSITIVE = True
