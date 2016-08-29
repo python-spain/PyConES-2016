@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 import os
 import uuid
 
+import numpy as np
 import reversion
 from django.contrib.auth.models import User
 from django.contrib.sites.models import Site
@@ -20,6 +21,8 @@ from taggit_autosuggest.managers import TaggableManager
 
 from core.emails import send_email
 from core.helpers.generators import random_string
+
+from reviewers.models import Reviewer
 
 
 @python_2_unicode_compatible
@@ -81,7 +84,6 @@ class ProposalKind(models.Model):
 
 @python_2_unicode_compatible
 class ProposalBase(models.Model):
-
     objects = InheritanceManager()
 
     kind = models.ForeignKey(ProposalKind, verbose_name=_("Tipo de propuesta"))
@@ -178,11 +180,11 @@ class ProposalBase(models.Model):
         self.notified = True
         self.save()
 
+
 reversion.register(ProposalBase)
 
 
 class Proposal(ProposalBase):
-
     BASIC_LEVEL, INTERMEDIATE_LEVEL, ADVANCED_LEVEL = "basic", "intermediate", "advanced"
     PROPOSAL_LEVELS = (
         (BASIC_LEVEL, _("Básico")),
@@ -233,9 +235,34 @@ class Proposal(ProposalBase):
             return sum(data) / len(data)
         return None
 
+    def renormalization_O0(self):
+        """Renormalization with order 0. Average value of 0"""
+        relevance, interest, newness = [], [], []
+        for review in self.reviews.all():
+            reviewer = Reviewer.objects.get(user=review.user)
+            mean = reviewer.mean()
+            if reviewer.num_reviews() <= 1:
+                continue
+            relevance.append(review.relevance - mean)
+            interest.append(review.interest - mean)
+            newness.append(review.newness - mean)
+        return np.mean(interest + relevance + newness)
+
+    def renormalization_O1(self):
+        """Renormalization with order 1. Expand the value to get the same standard deviation for everyone"""
+        relevance, interest, newness = [], [], []
+        for review in self.reviews.all():
+            reviewer = Reviewer.objects.get(user=review.user)
+            std = reviewer.std()
+            if reviewer.num_reviews() <= 1 or std < 0.75:
+                continue
+            relevance.append(review.relevance - std)
+            interest.append(review.interest - std)
+            newness.append(review.newness - std)
+        return np.mean(interest + relevance + newness)
+
 
 class AdditionalSpeaker(models.Model):
-
     SPEAKING_STATUS_PENDING = 1
     SPEAKING_STATUS_ACCEPTED = 2
     SPEAKING_STATUS_DECLINED = 3
@@ -261,7 +288,6 @@ def uuid_filename(instance, filename):
 
 
 class SupportingDocument(models.Model):
-
     proposal = models.ForeignKey(ProposalBase, related_name="supporting_documents")
 
     uploaded_by = models.ForeignKey(User)
