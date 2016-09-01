@@ -115,18 +115,18 @@ class Reviewer(TimeStampedModel):
     def mean(self):
         values = []
         for review in Review.objects.filter(user=self.user):
-            values.append(review.relevance)
-            values.append(review.interest)
-            values.append(review.newness)
+            values.append(review.relevance or 0)
+            values.append(review.interest or 0)
+            values.append(review.newness or 0)
 
         return np.mean(values)
 
     def std(self):
         values = []
         for review in Review.objects.filter(user=self.user):
-            values.append(review.relevance)
-            values.append(review.interest)
-            values.append(review.newness)
+            values.append(review.relevance or 0)
+            values.append(review.interest or 0)
+            values.append(review.newness or 0)
 
         return np.std(values)
 
