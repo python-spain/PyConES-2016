@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals, print_function, absolute_import
 
+import numpy as np
 from django.conf import settings
 from django.contrib.sites.models import Site
 from django.core.urlresolvers import reverse
@@ -49,7 +50,7 @@ class Review(TimeStampedModel):
         data = [self.relevance, self.interest, self.newness]
         weights = [
             Option.objects.get_value("{}_weights".format(name), 1.0) for name in ("relevance", "interest", "newness")
-        ]
+            ]
         if None not in data:
             data = zip(data, weights)
             return sum([attr * weight for attr, weight in data]) / sum(weights)
@@ -80,7 +81,6 @@ class Review(TimeStampedModel):
 
 
 class Reviewer(TimeStampedModel):
-
     user = models.OneToOneField(settings.AUTH_USER_MODEL)
     restore_code = models.CharField(max_length=16, null=True, blank=True, unique=True)
 
@@ -108,6 +108,27 @@ class Reviewer(TimeStampedModel):
             template_name="emails/reviewers/restore_email.html",
             context=context
         )
+
+    def num_reviews(self):
+        return Review.objects.filter(user=self.user).count()
+
+    def mean(self):
+        values = []
+        for review in Review.objects.filter(user=self.user):
+            values.append(review.relevance)
+            values.append(review.interest)
+            values.append(review.newness)
+
+        return np.mean(values)
+
+    def std(self):
+        values = []
+        for review in Review.objects.filter(user=self.user):
+            values.append(review.relevance)
+            values.append(review.interest)
+            values.append(review.newness)
+
+        return np.std(values)
 
     def save(self, **kwargs):
         if self.restore_code == "":
