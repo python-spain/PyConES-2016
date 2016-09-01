@@ -21,6 +21,8 @@ class ProposalAdmin(admin.ModelAdmin):
         "language",
         "get_tag_list",
         "get_avg",
+        'get_O0',
+        'get_O1',
         "get_assigned_reviews",
         "get_completed_reviews",
         "notified",
@@ -36,6 +38,8 @@ class ProposalAdmin(admin.ModelAdmin):
             "audience_level",
             "language",
             "avg_property",
+            "renormalization_O0_property",
+            "renormalization_O1_property",
             "assigned_reviews_property",
             "completed_reviews_property",
             "tag_list_property"
@@ -58,6 +62,14 @@ class ProposalAdmin(admin.ModelAdmin):
     def get_tag_list(self, instance):
         return u", ".join(tag.name for tag in instance.tags.all())
     get_tag_list.short_description = _("Lista de etiquetas")
+
+    def get_O0(self, instance):
+        return instance.renormalization_O0()
+    get_O0.short_description = _("O0")
+
+    def get_O1(self, instance):
+        return instance.renormalization_O1()
+    get_O1.short_description = _("O1")
 
 admin.site.register(ProposalSection)
 admin.site.register(ProposalKind)
