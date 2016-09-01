@@ -125,6 +125,8 @@ class ProposalBase(models.Model):
                                                  blank=True)
     cancelled = models.BooleanField(default=False)
     notified = models.BooleanField(default=False)
+    accepted = models.NullBooleanField(verbose_name=_('Aceptada'), default=None)
+    accepted_notified = models.BooleanField(verbose_name=_('Notificación de aceptación enviada'), default=False)
     code = models.CharField(max_length=64, null=True, blank=True)
 
     def __str__(self):

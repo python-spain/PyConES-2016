@@ -26,8 +26,10 @@ class ProposalAdmin(admin.ModelAdmin):
         "get_assigned_reviews",
         "get_completed_reviews",
         "notified",
+        "accepted",
+        "accepted_notified",
     ]
-    list_filter = ["kind__name", "notified"]
+    list_filter = ["kind__name", "notified", "accepted"]
     actions = [
         export_as_csv_action("CSV Export", fields=[
             "id",
