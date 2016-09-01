@@ -251,9 +251,9 @@ class Proposal(ProposalBase):
             mean = reviewer.mean()
             if reviewer.num_reviews() <= 1:
                 continue
-            relevance.append(review.relevance - mean)
-            interest.append(review.interest - mean)
-            newness.append(review.newness - mean)
+            relevance.append((review.relevance or 0) - mean)
+            interest.append((review.interest or 0) - mean)
+            newness.append((review.newness or 0) - mean)
         return np.mean(interest + relevance + newness)
 
     def renormalization_O1(self):
@@ -264,9 +264,9 @@ class Proposal(ProposalBase):
             std = reviewer.std()
             if reviewer.num_reviews() <= 1 or std < 0.75:
                 continue
-            relevance.append(review.relevance - std)
-            interest.append(review.interest - std)
-            newness.append(review.newness - std)
+            relevance.append((review.relevance or 0) - std)
+            interest.append((review.interest or 0) - std)
+            newness.append((review.newness or 0) - std)
         return np.mean(interest + relevance + newness)
 
 
