@@ -38,6 +38,8 @@ class ProposalAdmin(admin.ModelAdmin):
             "audience_level",
             "language",
             "avg_property",
+            "renormalization_O0_property",
+            "renormalization_O1_property",
             "assigned_reviews_property",
             "completed_reviews_property",
             "tag_list_property"

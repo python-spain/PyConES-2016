@@ -229,6 +229,14 @@ class Proposal(ProposalBase):
     def tag_list_property(self):
         return u", ".join(tag.name for tag in self.tags.all())
 
+    @property
+    def renormalization_O0_property(self):
+        return self.renormalization_O0()
+
+    @property
+    def renormalization_O1_property(self):
+        return self.renormalization_O1()
+
     def avg(self):
         data = [review.avg() for review in self.reviews.filter(finished=True) if review.avg() is not None]
         if data:
