@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 
-from proposals.actions import export_as_csv_action, send_confirmation_action
+from proposals.actions import export_as_csv_action, send_confirmation_action, send_acceptance_action
 from proposals.models import ProposalSection, Proposal
 from proposals.models import ProposalKind
 
@@ -26,8 +26,10 @@ class ProposalAdmin(admin.ModelAdmin):
         "get_assigned_reviews",
         "get_completed_reviews",
         "notified",
+        "accepted",
+        "accepted_notified",
     ]
-    list_filter = ["kind__name", "notified"]
+    list_filter = ["kind__name", "notified", "accepted"]
     actions = [
         export_as_csv_action("CSV Export", fields=[
             "id",
@@ -44,7 +46,8 @@ class ProposalAdmin(admin.ModelAdmin):
             "completed_reviews_property",
             "tag_list_property"
         ]),
-        send_confirmation_action("Sends confirmation email")
+        send_confirmation_action("Sends confirmation email"),
+        send_acceptance_action("Sends acceptance email")
     ]
 
     def get_avg(self, instance):

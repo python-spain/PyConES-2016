@@ -44,3 +44,11 @@ def send_confirmation_action(description="Send confirmation email"):
             item.notify()
     send_confirmation.short_description = description
     return send_confirmation
+
+
+def send_acceptance_action(description="Send acceptance email"):
+    def send_acceptance(modeladmin, request, queryset):
+        for item in queryset:
+            item.notify_acceptance()
+    send_acceptance.short_description = description
+    return send_acceptance
