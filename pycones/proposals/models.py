@@ -182,6 +182,24 @@ class ProposalBase(models.Model):
         self.notified = True
         self.save()
 
+    def notify_acceptance(self):
+        """Sends an email to the creator of the proposal with an email with the resolution of the acceptance or not
+        of his proposal.
+        """
+        context = self.notification_email_context()
+        if self.accepted is None:
+            return
+        template = "emails/proposals/accepted.html" if self.accepted else "emails/proposals/rejected.html"
+        send_email(
+            context=context,
+            template=template,
+            subject=_("[PyConES 2016] Notificación de propuesta de charla"),
+            to=self.speaker.email,
+            from_email="contacto2016@es.pycon.org"
+        )
+        self.accepted_notified = True
+        self.save()
+
 
 reversion.register(ProposalBase)
 
