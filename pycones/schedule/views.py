@@ -29,6 +29,7 @@ class ShowSchedule(View):
         data = {"days": []}
         for day in schedule.day_set.all():
             data["days"].append({
+                "tracks": day.track_set.order_by("order"),
                 "date": day.date,
                 "slots": day.slot_set.all().select_related(),
                 "slot_groups": day.slot_groups(),

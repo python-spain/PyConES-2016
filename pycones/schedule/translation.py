@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from modeltranslation.translator import TranslationOptions, translator
 
-from schedule.models import Room, SlotKind, Presentation, Slot
+from schedule.models import Room, SlotKind, Presentation, Slot, Track
 
 
 class RoomTranslationOptions(TranslationOptions):
@@ -21,7 +21,12 @@ class PresentationTranslationOptions(TranslationOptions):
 class SlotTranslationOptions(TranslationOptions):
     fields = ('content_override', )
 
+
+class TrackTranslationOptions(TranslationOptions):
+    fields = ('name', )
+
 translator.register(Room, RoomTranslationOptions)
 translator.register(SlotKind, SlotKindTranslationOptions)
 translator.register(Presentation, PresentationTranslationOptions)
 translator.register(Slot, SlotTranslationOptions)
+translator.register(Track, TrackTranslationOptions)

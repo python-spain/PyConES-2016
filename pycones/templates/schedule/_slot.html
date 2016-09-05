@@ -3,8 +3,8 @@
     <div class="col-xs-12">
         <div class="slot-inner" data-slot="{{ slot.id }}">
             {% if slot.content %}
-                <strong>{{ slot.start }}</strong>
-                <h3>{{ slot.content.get_title }}</h3>
+                <strong>{{ slot.start }} - {{ slot.kind.label }}</strong>
+                <h3>{{ slot.content.get_title }} <small>{{ slot.content_ptr.language }}</small></h3>
                 <p><strong>{{ slot.content_ptr.speaker.name }}</strong></p>
             {% else %}
                 <strong>{{ slot.start }}</strong>
