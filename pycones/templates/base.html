@@ -60,18 +60,15 @@
                     {% if is_submit_proposal_opened %}
                     <li><a href="{% url "proposals:submit" %}">{% trans "Envía tu propuesta" %}</a></li>
                     {% endif %}
+                    {% if is_schedule_opened %}
+                        <li><a href="{% url "schedule:show" %}">{% trans "Agenda" %}</a></li>
+                    {% endif %}
+
                     <li><a href="{% url "blog:list" %}">{% trans "Blog" %}</a></li>
-                    {#                    <li><a href="{% url "home" %}">{% trans "PyConES 2016" %}</a></li>#}
-                    {#                    <li><a href="{% url "info" %}">{% trans "Información del evento" %}</a></li>#}
-                    {#                    <li><a href="{% url "keynoters" %}">{% trans "Oradores Plenarios" %}</a></li>#}
-                    {#                    {% if is_schedule_active %}#}
-                    {#                    <li><a href="{% url "schedule:show" %}">{% trans "Agenda" %}</a></li>#}
-                    {#                    {% endif %}#}
-                    {#                    <li><a href="{% url "blog:list" %}">{% trans "Blog" %}</a></li>#}
                     {#                    <li><a href="{% static "photos/index.html" %}">{% trans "Fotos" %}</a></li>#}
-                    {#                    {% if not request.user.is_authenticated %}#}
-                    {#                        <li><a href="{% url "attendees:sign_in" %}">{% trans "Zona de Asistentes" %}</a></li>#}
-                    {% if request.user.is_authenticated %}
+                    {% if not request.user.is_authenticated and is_attendees_zone_activated %}
+                        <li><a href="{% url "attendees:sign_in" %}">{% trans "Zona de Asistentes" %}</a></li>
+                    {% elif request.user.is_authenticated %}
                         <li><a href="{% url "log-out" %}">{% trans "Salir" %}</a></li>
                     {% endif %}
                 </ul>

@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-xs-12" style="min-height: 300px">
 
-            <h2><i class="icon-arrow"></i>{% trans "Accede a la zona de asistentes" %}</h2>
+            <h2>{% trans "Accede a la zona de asistentes" %}</h2>
             <p>
                 {% url "attendees:request_restore_password" as request_restore_password%}
                 {% blocktrans %}
@@ -12,13 +12,7 @@
                 tienes contraseña la puedes generar entrando <a href="{{ request_restore_password }}">aquí</a>).
                 {% endblocktrans %}
             </p>
-            <p>
-                {% blocktrans%}
-                Este año el acceso a la red WiFi durante el evento es personalizado, por lo que necesitamos que nos indiques
-                tu DNI para poder darte los credenciales de acceso.
-                {% endblocktrans %}
-            </p>
-            <form method="post" class="form-horizontal" style="margin-top: 50px">
+            <form method="post" class="form-horizontal" style="margin-top: 20px">
                 {% csrf_token %}
                 {% for field in form %}
                     <div class="form-group {% if field.errors %}has-error{% endif %}">
