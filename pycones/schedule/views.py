@@ -30,7 +30,8 @@ class ShowSchedule(View):
         for day in schedule.day_set.all():
             data["days"].append({
                 "date": day.date,
-                "slots": day.slot_set.all().select_related()
+                "slots": day.slot_set.all().select_related(),
+                "slot_groups": day.slot_groups(),
             })
         return render(request, self.template_name, data)
 
