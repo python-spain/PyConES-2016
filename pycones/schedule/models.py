@@ -2,6 +2,8 @@
 from __future__ import unicode_literals
 
 import datetime
+from collections import OrderedDict
+from collections import defaultdict
 
 from django.core.exceptions import ObjectDoesNotExist
 from django.db import models
@@ -39,6 +41,18 @@ class Day(models.Model):
     class Meta:
         unique_together = [("schedule", "date")]
         ordering = ["date"]
+
+    def slot_groups(self):
+        """Returns all the groups of slots, grouped by start and end hours."""
+        groups = OrderedDict()
+        for slot in self.slot_set.all().select_related():
+            key = "{}-{}".format(slot.start, slot.end)
+            try:
+                groups[key].append(slot)
+            except KeyError:
+                groups[key] = [slot]
+        values = groups.values()
+        return values
 
 
 @python_2_unicode_compatible
