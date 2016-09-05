@@ -52,7 +52,10 @@ class Day(models.Model):
             except KeyError:
                 groups[key] = [slot]
         values = groups.values()
-        return values
+        ordered_values = []
+        for value in values:
+            ordered_values.append(sorted(value, key=lambda item: item.order))
+        return ordered_values
 
 
 @python_2_unicode_compatible
@@ -75,10 +78,16 @@ class SlotKind(models.Model):
 
     schedule = models.ForeignKey(Schedule)
     label = models.CharField(max_length=50)
+    class_attr = models.CharField(max_length=50, null=True, blank=True)
     plenary = models.BooleanField(default=False)
 
     def __str__(self):
         return self.label
+
+    def css_class(self):
+        if not self.class_attr:
+            return "slot-{}".format(self.label.lower())
+        return "slot-{}".format(self.class_attr.lower())
 
 
 @python_2_unicode_compatible
@@ -88,6 +97,7 @@ class Slot(models.Model):
     kind = models.ForeignKey(SlotKind)
     start = models.TimeField()
     end = models.TimeField()
+    order = models.PositiveIntegerField(default=0)
     content_override = MarkupField(blank=True, default_markup_type='markdown')
     default_room = models.ForeignKey(Room, null=True, blank=True)
 
@@ -264,3 +274,14 @@ class Presentation(models.Model):
 
     class Meta:
         ordering = ["slot"]
+
+
+@python_2_unicode_compatible
+class Track(models.Model):
+    """Tracks used in the conference."""
+    name = models.TextField(max_length=120)
+    order = models.PositiveIntegerField(default=0)
+    day = models.ForeignKey(Day, null=True, blank=True)
+
+    def __str__(self):
+        return self.name

@@ -1,7 +1,7 @@
 .schedule {
   .day {
     text-align: center;
-    background-color: @brand-info;
+    background-color: @brand-primary;
     h2 {
       color: #fff;
     }
@@ -9,21 +9,24 @@
     margin-bottom: 7px;
   }
   .track-title {
-    color:#fff;
+    color: #fff;
     h2, h3, h4 {
       font-weight: bold;
       color:#444;
     }
     text-align: center;
     margin-bottom: 7px;
-    &-basic {
-      background-color: @brand-warning;
+    &-1 {
+      background-color: @logo1;
     }
-    &-advanced {
-      background-color: @brand-primary;
+    &-2 {
+      background-color: @logo4;
     }
-    &-science {
-      background-color: @brand-danger;
+    &-3 {
+      background-color: @logo3;
+      h2, h3, h4 {
+        color:#fff;
+      }
     }
   }
   .slot {
@@ -34,6 +37,8 @@
       font-size: 18px;
     }
     margin-bottom: 15px;
+    background-color: #fff;
+    border-left: 4px solid @logo1;
     .slot-inner {
       cursor: pointer;
       padding: 5px 7px;
@@ -48,14 +53,48 @@
         border: none;
       }
     }
-    &-basic, &-1, &-4 {
-      border-left: 4px solid @brand-warning;
+    //&-basic, &-1 {
+    //  border-left: 4px solid @logo2;
+    //}
+    //&-advanced, &-2 {
+    //  border-left: 4px solid @logo3;
+    //}
+    //&-science, &-3 {
+    //  border-left: 4px solid @logo4;
+    //}
+    //&-4 {
+    //  border-left: 4px solid @logo1;
+    //}
+
+    // Slot kind classes
+    @light_percentage: 30%;
+    &-security {
+      border-left: 4px solid #e74c3c;
+      background-color: lighten(#e74c3c, @light_percentage);
     }
-    &-advanced, &-2 {
-      border-left: 4px solid @brand-primary;
+    &-science {
+      border-left: 4px solid #d35400;
+      background-color: lighten(#d35400, @light_percentage);
     }
-    &-science, &-3 {
-      border-left: 4px solid @brand-danger;
+    &-python {
+      border-left: 4px solid #3498db;
+      background-color: lighten(#3498db, @light_percentage);
+    }
+    &-web {
+      border-left: 4px solid #9b59b6;
+      background-color: lighten(#9b59b6, @light_percentage);
+    }
+    &-iot {
+      border-left: 4px solid #27ae60;
+      background-color: lighten(#27ae60, @light_percentage);
+    }
+    &-comunity {
+      border-left: 4px solid #f1c40f;
+      background-color: lighten(#f1c40f, @light_percentage);
+    }
+    &-bigdata {
+      border-left: 4px solid #34495e;
+      background-color: lighten(#34495e, @light_percentage);
     }
   }
 }

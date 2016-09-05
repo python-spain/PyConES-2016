@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 from django.contrib import admin
 from django.contrib.admin import ModelAdmin
 
-from schedule.models import Schedule, Day, Room, SlotKind, Slot, SlotRoom, Presentation
+from schedule.models import Schedule, Day, Room, SlotKind, Slot, SlotRoom, Presentation, Track
 
 
 class SlotAdmin(ModelAdmin):
@@ -27,4 +27,5 @@ admin.site.register(
     list_display=("id", "slot", "room")
 )
 admin.site.register(Presentation)
+admin.site.register(Track)
 

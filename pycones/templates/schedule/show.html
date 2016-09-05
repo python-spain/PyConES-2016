@@ -11,28 +11,16 @@
                     <h2>{{ day.date }}</h2>
                 </div>
             </div>
-            {% if forloop.counter0 != 0 %}
             <div class="row">
-                <div class="col-xs-12 col-sm-4 track-title track-title-basic">
-                    <h3>{% trans "Track PSF (básico)" %}</h3>
+                {% for track in day.tracks %}
+                <div class="col-xs-12 {% slot_col_size day.tracks|length %} track-title track-title-{{ forloop.counter }}">
+                    <h3>{{ track.name }}</h3>
                 </div>
-                <div class="col-xs-12 col-sm-4 track-title track-title-advanced">
-                    <h3>{% trans "Track Avanzado" %}</h3>
-                </div>
-                <div class="col-xs-12 col-sm-4 track-title track-title-science">
-                    <h3>{% trans "Track BigML (científico)" %}</h3>
-                </div>
+                {% endfor %}
             </div>
-            {% else %}
-            <div class="row">
-                <div class="col-xs-12 track-title track-title-advanced">
-                    <h3>{% trans "Talleres" %}</h3>
-                </div>
-            </div>
-            {% endif %}
             {% for group in day.slot_groups %}
                 {% for slot in group %}
-                    {% if slot.kind.plenary %}
+                    {% if slotplenary %}
                         <div class="row">
                             <div class="col-xs-12 slot slot-plenary">
                                 {% include "schedule/_slot.html" %}
@@ -41,7 +29,7 @@
                     {# If not plenay, 3 columns #}
                     {% else %}
                         {% if forloop.first %}<div class="row">{% endif %}
-                        <div class="col-xs-12 {% slot_col_size group|length %} slot slot-{{ forloop.counter }}">
+                        <div class="col-xs-12 {% slot_col_size group|length %} slot {{ slot.kind.css_class }}">
                             {% include "schedule/_slot.html" %}
                         </div>
                         {% if forloop.last %}</div>{% endif %}
