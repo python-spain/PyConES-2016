@@ -12,6 +12,13 @@ from django.utils.translation import ugettext_lazy as _
 
 from attendees.forms import AttendeeForm, RestorePasswordForm, AttendeeSigInForm, RequestRestoreCodeForm
 from attendees.models import Attendee
+from configurations.models import Option
+
+
+def check_attendee_view(request):
+    is_attendees_zone_activated = bool(Option.objects.get_value("attendees_zone_activated", 0))
+    if not is_attendees_zone_activated:
+        raise Http404()
 
 
 class EditAttendanceView(LoginRequiredMixin, View):
@@ -19,6 +26,7 @@ class EditAttendanceView(LoginRequiredMixin, View):
     @staticmethod
     def get(request):
         """Show form to register an attendee."""
+        check_attendee_view(request)
         try:
             attendee = Attendee.objects.get(user=request.user)
         except Attendee.DoesNotExist:
@@ -33,26 +41,28 @@ class EditAttendanceView(LoginRequiredMixin, View):
     @staticmethod
     def post(request):
         """Register an attendee."""
-        # try:
-        #     attendee = Attendee.objects.get(user=request.user)
-        # except Attendee.DoesNotExist:
-        #     raise Http404
-        # form = AttendeeForm(request.POST, instance=attendee)
-        # if form.is_valid():
-        #     form.save()
-        #     messages.success(request, _("Datos guardados correctamente"))
-        # data = {
-        #     "attendee": attendee,
-        #     "form": form
-        # }
-        # return render(request, "attendees/profile.html", data)
-        return redirect(reverse("attendees:profile"))
+        check_attendee_view(request)
+        try:
+            attendee = Attendee.objects.get(user=request.user)
+        except Attendee.DoesNotExist:
+            raise Http404
+        form = AttendeeForm(request.POST, instance=attendee)
+        if form.is_valid():
+            form.save()
+            messages.success(request, _("Datos guardados correctamente"))
+            return redirect(reverse("attendees:profile"))
+        data = {
+            "attendee": attendee,
+            "form": form
+        }
+        return render(request, "attendees/profile.html", data)
 
 
 class RestorePasswordView(View):
 
     @staticmethod
     def get(request, restore_code):
+        check_attendee_view(request)
         try:
             attendee = Attendee.objects.get(restore_code=restore_code)
         except Attendee.DoesNotExist:
@@ -66,6 +76,7 @@ class RestorePasswordView(View):
 
     @staticmethod
     def post(request, restore_code):
+        check_attendee_view(request)
         form = RestorePasswordForm(request.POST)
         try:
             attendee = Attendee.objects.get(restore_code=restore_code)
@@ -90,6 +101,7 @@ class RequestRestorePasswordView(View):
 
     @staticmethod
     def get(request):
+        check_attendee_view(request)
         data = {
             "form": RequestRestoreCodeForm()
         }
@@ -97,6 +109,7 @@ class RequestRestorePasswordView(View):
 
     @staticmethod
     def post(request):
+        check_attendee_view(request)
         form = RequestRestoreCodeForm(request.POST)
         if form.is_valid():
             tracker = form.cleaned_data.get('tracker')
@@ -117,6 +130,7 @@ class AttendeeSignInView(View):
 
     @staticmethod
     def get(request):
+        check_attendee_view(request)
         if request.user.is_authenticated():
             return redirect("attendees:profile")
         data = {
@@ -126,6 +140,7 @@ class AttendeeSignInView(View):
 
     @staticmethod
     def post(request):
+        check_attendee_view(request)
         form = AttendeeSigInForm(request.POST)
         if form.is_valid():
             user = authenticate(

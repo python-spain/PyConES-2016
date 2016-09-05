@@ -251,6 +251,7 @@ SUIT_CONFIG = {
         'attendees': 'icon-user',
         'reviewers': 'icon-thumbs-up',
         'configurations': 'icon-wrench',
+        'taggit': 'icon-tags',
     }
 }
 

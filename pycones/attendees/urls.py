@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.conf.urls import url
-from attendees.views import AttendeeSignInView, RequestRestorePasswordView, RestorePasswordView, EditAttendanceView, \
-    LogoutView
+from attendees.views import AttendeeSignInView, RequestRestorePasswordView, RestorePasswordView, EditAttendanceView
 
 urlpatterns = [
     url(r'^sign-in/$', AttendeeSignInView.as_view(), name="sign_in"),

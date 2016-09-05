@@ -7,7 +7,7 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 
 from core.views import LogoutView
-from schedule.views import icalendar_view
+from schedule.views import icalendar_view, pentabarf_view, xcal_view
 
 admin.autodiscover()
 
@@ -21,13 +21,13 @@ urlpatterns = i18n_patterns(
     url(r'^blog/', include('blog.urls', namespace="blog")),
     url(r'^proposals/', include('proposals.urls', namespace="proposals")),
     url(r'^reviewers/', include('reviewers.urls', namespace="reviewers")),
-    # url(r'^schedule/', include('schedule.urls', namespace="schedule")),
-    # url(r'^attendees/', include('attendees.urls', namespace="attendees")),
+    url(r'^schedule/', include('schedule.urls', namespace="schedule")),
+    url(r'^attendees/', include('attendees.urls', namespace="attendees")),
 )
 
 urlpatterns += [
-    # url(r'schedule/pentabarf\.xml', pentabarf_view, name="schedule_pentabarf"),
-    # url(r'schedule/xcal\.xml', xcal_view, name="schedule_xcal"),
+    url(r'schedule/pentabarf\.xml', pentabarf_view, name="schedule_pentabarf"),
+    url(r'schedule/xcal\.xml', xcal_view, name="schedule_xcal"),
     url(r'schedule\.ics', icalendar_view, name="schedule_icalendar"),
     url(r'^i18n/', include('django.conf.urls.i18n')),
     url(r'^admin/', include(admin.site.urls)),
