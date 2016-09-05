@@ -4,7 +4,7 @@
         <div class="slot-inner" data-slot="{{ slot.id }}">
             {% if slot.content %}
                 <strong>{{ slot.start }} - {{ slot.kind.label }}</strong>
-                <h3>{{ slot.content.get_title }} <small>{{ slot.content_ptr.language }}</small></h3>
+                <h3>{{ slot.content.get_title }} <small style="text-transform: uppercase">{{ slot.content.get_language }}</small></h3>
                 <p><strong>{{ slot.content_ptr.speaker.name }}</strong></p>
             {% else %}
                 <strong>{{ slot.start }}</strong>

@@ -257,6 +257,9 @@ class Presentation(models.Model):
             return self.abstract
         return self.proposal_base.abstract
 
+    def get_language(self):
+        return self.proposal.language
+
     def get_video_url(self):
         if not self.video_url:
             return ""
