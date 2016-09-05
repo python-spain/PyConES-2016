@@ -24,6 +24,8 @@ class ShowSchedule(View):
     def get(self, request):
         check_schedule_view(request)
         schedule = Schedule.objects.filter(published=True, hidden=False).first()
+        if not schedule:
+            raise Http404()
         data = {"days": []}
         for day in schedule.day_set.all():
             data["days"].append({
