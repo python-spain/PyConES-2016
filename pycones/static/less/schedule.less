@@ -1,3 +1,6 @@
+@light-percentage: 30%;
+@border-size: 8px;
+
 .schedule {
   .day {
     text-align: center;
@@ -41,7 +44,7 @@
     flex-direction: column;
     margin-bottom: 15px;
     background-color: #fff;
-    border-left: 4px solid @logo1;
+    border-left: @border-size solid @logo1;
     .slot-inner {
       cursor: pointer;
       padding: 5px 7px;
@@ -63,8 +66,6 @@
       font-weight: bold;
     }
     // Slot kind classes
-    @light_percentage: 30%;
-    @border-size: 8px;
     &-security {
       //border-top: @border-size solid #e74c3c;
       //border-left: none;
