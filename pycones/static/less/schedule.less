@@ -16,17 +16,11 @@
     }
     text-align: center;
     margin-bottom: 7px;
-    &-1 {
+    &:nth-child(odd) {
       background-color: @logo1;
     }
-    &-2 {
-      background-color: @logo4;
-    }
-    &-3 {
-      background-color: @palette-color-3;
-      //h2, h3, h4 {
-      //  color:#fff;
-      //}
+    &:nth-child(even) {
+      background-color: @logo2;
     }
   }
   .slot-row {
