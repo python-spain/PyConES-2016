@@ -4,7 +4,9 @@
         <div class="slot-inner" data-slot="{{ slot.id }}">
             {% if slot.content %}
                 <strong>{{ slot.start }}</strong>
+                {% if not slot.plenary %}
                 <span class="slot-kind">{{ slot.kind.label }}</span>
+                {% endif %}
                 <h3>{{ slot.content.get_title }} <small style="text-transform: uppercase">{{ slot.content.get_language }}</small></h3>
                 <p><strong>{{ slot.content_ptr.speaker.name }}</strong></p>
             {% else %}
