@@ -20,7 +20,7 @@
             </div>
             {% for group in day.slot_groups %}
                 {% for slot in group %}
-                    {% if slotplenary %}
+                    {% if slot.plenary %}
                         <div class="row slot-row">
                             <div class="col-xs-12 slot slot-plenary">
                                 {% include "schedule/_slot.html" %}
