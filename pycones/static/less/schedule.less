@@ -23,11 +23,18 @@
       background-color: @logo4;
     }
     &-3 {
-      background-color: @logo3;
-      h2, h3, h4 {
-        color:#fff;
-      }
+      background-color: @palette-color-3;
+      //h2, h3, h4 {
+      //  color:#fff;
+      //}
     }
+  }
+  .slot-row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
   }
   .slot {
     h2, h3, h4 {
@@ -36,6 +43,8 @@
     h3 {
       font-size: 18px;
     }
+    display: flex;
+    flex-direction: column;
     margin-bottom: 15px;
     background-color: #fff;
     border-left: 4px solid @logo1;
