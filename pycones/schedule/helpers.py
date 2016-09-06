@@ -21,7 +21,7 @@ def export_to_pentabarf(schedule):
     title.text = "PyConES 2016"
     ElementTree.SubElement(conference_element, 'subtitle')
     venue = ElementTree.SubElement(conference_element, 'venue')
-    venue.text = "Universidad Politécnica de Valencia"
+    venue.text = "Universidad de Almería"
     start = ElementTree.SubElement(conference_element, 'start')
     start.text = "2016-10-07"
     end = ElementTree.SubElement(conference_element, 'end')

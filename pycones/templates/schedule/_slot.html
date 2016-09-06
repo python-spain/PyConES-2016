@@ -23,7 +23,7 @@
                     {% endif %}
                 </ul>
             {% endif %}
-            {% if not slot.kind.plenary %}
+            {% if not slot.kind.plenary and slot.content.get_description %}
             <p class="text-center no-margin">
                 <i class="fa fa-angle-down"></i>
             </p>
