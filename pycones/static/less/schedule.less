@@ -57,35 +57,76 @@
         border: none;
       }
     }
+    .slot-kind {
+      text-align: right;
+      float: right;
+      font-weight: bold;
+    }
     // Slot kind classes
     @light_percentage: 30%;
+    @border-size: 8px;
     &-security {
-      border-left: 4px solid #e74c3c;
-      background-color: lighten(#e74c3c, @light_percentage);
+      //border-top: @border-size solid #e74c3c;
+      //border-left: none;
+      border-left: @border-size solid #e74c3c;
+      //background-color: lighten(#e74c3c, @light_percentage);
+      .slot-kind {
+        color: #e74c3c;
+      }
     }
     &-science {
-      border-left: 4px solid #d35400;
-      background-color: lighten(#d35400, @light_percentage);
+      //border-top: @border-size solid #d35400;
+      //border-left: none;
+      border-left: @border-size solid #d35400;
+      //background-color: lighten(#d35400, @light_percentage);
+      .slot-kind {
+        color: #d35400;
+      }
     }
     &-python {
-      border-left: 4px solid #3498db;
-      background-color: lighten(#3498db, @light_percentage);
+      //border-top: @border-size solid #3498db;
+      //border-left: none;
+      border-left: @border-size solid #3498db;
+      //background-color: lighten(#3498db, @light_percentage);
+      .slot-kind {
+        color: #3498db;
+      }
     }
     &-web {
-      border-left: 4px solid #9b59b6;
-      background-color: lighten(#9b59b6, @light_percentage);
+      //border-top: @border-size solid #9b59b6;
+      //border-left: none;
+      border-left: @border-size solid #9b59b6;
+      //background-color: lighten(#9b59b6, @light_percentage);
+      .slot-kind {
+        color: #9b59b6;
+      }
     }
     &-iot {
-      border-left: 4px solid #27ae60;
-      background-color: lighten(#27ae60, @light_percentage);
+      //border-top: @border-size solid #27ae60;
+      //border-left: none;
+      border-left: @border-size solid #27ae60;
+      //background-color: lighten(#27ae60, @light_percentage);
+      .slot-kind {
+        color: #27ae60;
+      }
     }
     &-comunity {
-      border-left: 4px solid #f1c40f;
-      background-color: lighten(#f1c40f, @light_percentage);
+      //border-top: @border-size solid #f1c40f;
+      //border-left: none;
+      border-left: @border-size solid #f1c40f;
+      //background-color: lighten(#f1c40f, @light_percentage);
+      .slot-kind {
+        color: #f1c40f;
+      }
     }
     &-bigdata {
-      border-left: 4px solid #34495e;
-      background-color: lighten(#34495e, @light_percentage);
+      //border-top: @border-size solid #34495e;
+      //border-left: none;
+      border-left: @border-size solid #34495e;
+      //background-color: lighten(#34495e, @light_percentage);
+      .slot-kind {
+        color: #34495e;
+      }
     }
   }
 }
