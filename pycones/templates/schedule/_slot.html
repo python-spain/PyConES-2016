@@ -28,8 +28,10 @@
         </div>
     </div>
 </div>
+{% if slot.content.get_description %}
 <div id="slot-description-{{ slot.id }}" class="row" style="display: none">
     <div class="col-xs-12">
         <p>{{ slot.content.get_description|linebreaksbr }}</p>
     </div>
 </div>
+{% endif %}

@@ -138,19 +138,21 @@ class Slot(models.Model):
     def get_video_url(self):
         if self.video_url:
             return self.video_url
-        if not self.content_ptr.video_url:
-            return ""
-        return self.content_ptr.video_url
+        try:
+            return self.content_ptr.get_video_url()
+        except ObjectDoesNotExist:
+            pass
+        return ""
 
     def get_keynote_url(self):
         if self.keynote and not self.keynote_url:
             return self.keynote
         elif self.keynote_url:
             return self.keynote_url
-        if self.content_ptr.keynote and not self.content_ptr.keynote_url:
-            return self.content_ptr.keynote.url
-        elif self.content_ptr.keynote_url:
-            return self.content_ptr.keynote_url
+        try:
+            return self.content_ptr.get_keynote_url()
+        except ObjectDoesNotExist:
+            pass
         return ""
 
     @property
