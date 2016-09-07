@@ -41,16 +41,16 @@
 
     <div class="container">
         <div class="row text-center" style="margin: 15px 0">
-            <div class="col-sm-3">
-                <a href="{% static "pdf/Agenda_PyConES_2016.pdf" %}" target="_blank" class="btn btn-success">{% trans "Descargar en PDF" %}</a>
-            </div>
-            <div class="col-sm-3">
+{#            <div class="col-sm-3">#}
+{#                <a href="{% static "pdf/Agenda_PyConES_2016.pdf" %}" target="_blank" class="btn btn-success">{% trans "Descargar en PDF" %}</a>#}
+{#            </div>#}
+            <div class="col-sm-4">
                 <a href="{% url "schedule_icalendar" %}" target="_blank" class="btn btn-success">{% trans "Descargar en iCalendar" %}</a>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-4">
                 <a href="{% url "schedule_xcal" %}" target="_blank" class="btn btn-success">{% trans "Descargar en xCal" %}</a>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-4">
                 <a href="{% url "schedule_pentabarf" %}" target="_blank" class="btn btn-success">{% trans "Descargar en Pentabarf XML" %}</a>
             </div>
         </div>
