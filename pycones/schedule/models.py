@@ -6,9 +6,11 @@ from collections import OrderedDict
 from collections import defaultdict
 
 from django.core.exceptions import ObjectDoesNotExist
+from django.core.urlresolvers import reverse
 from django.db import models
 from django.db.models import SET_NULL
 from django.utils.encoding import python_2_unicode_compatible
+from django.utils.text import slugify
 from django.utils.translation import ugettext_lazy as _
 from markupfield.fields import MarkupField
 
@@ -182,6 +184,11 @@ class Slot(models.Model):
     def rooms(self):
         return Room.objects.filter(pk__in=self.slotroom_set.values("room"))
 
+    def get_absolute_url(self):
+        if self.content and self.content.slug:
+            return reverse("schedule:slot", kwargs={"slot": self.content.slug})
+        return reverse("schedule:slot", kwargs={"slot": self.pk})
+
     def __str__(self):
         if not self.rooms:
             return "%s %s (%s - %s)" % (self.day, self.kind, self.start, self.end)
@@ -214,8 +221,11 @@ class Presentation(models.Model):
 
     slot = models.OneToOneField(Slot, null=True, blank=True, related_name="content_ptr", on_delete=SET_NULL)
     title = models.CharField(max_length=100, default="", blank=True)
+    slug = models.SlugField(null=True, blank=True, allow_unicode=True)
+
     description = MarkupField(default="", blank=True, default_markup_type='markdown')
     abstract = MarkupField(default="", blank=True, default_markup_type='markdown')
+
     speaker = models.ForeignKey("speakers.Speaker", related_name="presentations")
     additional_speakers = models.ManyToManyField("speakers.Speaker", related_name="copresentations",
                                                  blank=True)
@@ -259,6 +269,11 @@ class Presentation(models.Model):
             return self.abstract
         return self.proposal_base.abstract
 
+    def get_additional_notes(self):
+        if self.additional_notes.raw:
+            return self.additional_notes
+        return self.proposal_base.additional_notes
+
     def get_language(self):
         return self.proposal.language
 
@@ -279,6 +294,12 @@ class Presentation(models.Model):
 
     class Meta:
         ordering = ["slot"]
+
+    def save(self, *args, **kwargs):
+        title = self.get_title()
+        if title and not self.slug:
+            self.slug = slugify(title)
+        super(Presentation, self).save(*args, **kwargs)
 
 
 @python_2_unicode_compatible

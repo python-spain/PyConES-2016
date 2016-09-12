@@ -67,3 +67,6 @@ class Speaker(models.Model):
             for p in self.copresentations.all():
                 presentations.append(p)
         return presentations
+
+    def has_biography(self):
+        return bool(self.biography.raw)

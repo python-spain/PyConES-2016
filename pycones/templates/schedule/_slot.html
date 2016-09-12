@@ -7,7 +7,11 @@
                 {% if not slot.kind.plenary %}
                 <span class="slot-kind">{{ slot.kind.label }}</span>
                 {% endif %}
-                <h3>{{ slot.content.get_title }} <small style="text-transform: uppercase">{{ slot.content.get_language }}</small></h3>
+                <h3>
+                    <a href="{{ slot.get_absolute_url }}">
+                    {{ slot.content.get_title }} <small style="text-transform: uppercase">{{ slot.content.get_language }}</small>
+                    </a>
+                </h3>
                 <p><strong>{{ slot.content_ptr.speaker.name }}</strong></p>
             {% else %}
                 <strong>{{ slot.start }}</strong>
@@ -24,7 +28,7 @@
                 </ul>
             {% endif %}
             {% if not slot.kind.plenary and slot.content.get_description %}
-            <p class="text-center no-margin">
+            <p class="text-center no-margin js-slot-expand" data-slot="{{ slot.id }}">
                 <i class="fa fa-angle-down"></i>
             </p>
             {% endif %}

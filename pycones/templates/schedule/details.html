@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+    <div class="slot-details {{ slot.kind.css_class }}">
+        <span class="slot-kind">{{ slot.kind.label }}</span>
+        <div class="row">
+            <div class="col-xs-12">
+
+                <h1>
+                    {{ slot.content.get_title }} <br>
+                    <small>{{ slot.content.speaker.name }}</small>
+                </h1>
+
+                <ul class="list-unstyled">
+                    <li>{{ slot.day.date }}, {{ slot.start }} - {{ slot.end }}</li>
+                    {% if slot.default_room %}
+                    <li>{{ slot.default_room }}</li>
+                    {% endif %}
+                    <li>{% trans "Idioma" %}:  <span style="text-transform: uppercase">{{ slot.content.get_language }}</span></li>
+                </ul>
+                <p>{{ slot.content.get_abstract }}</p>
+                {% if slot.get_video_url or slot.get_keynote_url %}
+                <ul class="list-unstyled">
+                    {% if slot.get_keynote_url %}
+                        <li><a href="{{ slot.get_keynote_url }}" target="_blank">{% trans "Descargar presentación" %}</a></li>
+                    {% endif %}
+                    {% if slot.get_video_url %}
+                        <li><a href="{{ slot.get_video_url }}" target="_blank">{% trans "Ver vídeo" %}</a></li>
+                    {% endif %}
+                </ul>
+                {% endif %}
+                {% if slot.content.speaker.has_biography %}
+                <h2>{% trans "Acerca de" %}</h2>
+                <p>{{ slot.content.speaker.biography }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 text-center">
+            <a href="{% url "schedule:show" %}" class="btn btn-danger">&leftarrow; {% trans "Volver" %}</a>
+        </div>
+    </div>
+{% endblock content %}

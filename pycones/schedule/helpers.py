@@ -189,7 +189,8 @@ def export_to_icalendar(schedule):
                     day.date.strftime("%Y%m%d"),
                     slot.end.strftime("%H%M%S"),
                 )
-                event.add('location', slot.default_room.name)
+                if slot.default_room:
+                    event.add('location', slot.default_room.name)
                 event.add('summary', slot.content_override.raw)
                 cal.add_component(event)
             if slot.content is not None:

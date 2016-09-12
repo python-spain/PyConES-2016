@@ -46,10 +46,9 @@
     background-color: #fff;
     border-left: @border-size solid @logo1;
     .slot-inner {
-      cursor: pointer;
       padding: 5px 7px;
     }
-    &-plenary {
+      &-plenary {
       height: auto;
       border-left: @border-size solid @logo3;
       background-color: lighten(@logo3, 15%);
@@ -65,69 +64,66 @@
       float: right;
       font-weight: bold;
     }
-    // Slot kind classes
-    &-security {
-      //border-top: @border-size solid #e74c3c;
-      //border-left: none;
-      border-left: @border-size solid #e74c3c;
-      //background-color: lighten(#e74c3c, @light_percentage);
-      .slot-kind {
-        color: #e74c3c;
-      }
-    }
-    &-science {
-      //border-top: @border-size solid #d35400;
-      //border-left: none;
-      border-left: @border-size solid #e67e22;
-      //background-color: lighten(#d35400, @light_percentage);
-      .slot-kind {
-        color: #e67e22;
-      }
-    }
-    &-python {
-      //border-top: @border-size solid #3498db;
-      //border-left: none;
-      border-left: @border-size solid #3498db;
-      //background-color: lighten(#3498db, @light_percentage);
-      .slot-kind {
-        color: #3498db;
-      }
-    }
-    &-web {
-      //border-top: @border-size solid #9b59b6;
-      //border-left: none;
-      border-left: @border-size solid #9b59b6;
-      //background-color: lighten(#9b59b6, @light_percentage);
-      .slot-kind {
-        color: #9b59b6;
-      }
-    }
-    &-iot {
-      //border-top: @border-size solid #27ae60;
-      //border-left: none;
-      border-left: @border-size solid #27ae60;
-      //background-color: lighten(#27ae60, @light_percentage);
-      .slot-kind {
-        color: #27ae60;
-      }
-    }
-    &-comunity {
-      //border-top: @border-size solid #f1c40f;
-      //border-left: none;
-      border-left: @border-size solid #f1c40f;
-      //background-color: lighten(#f1c40f, @light_percentage);
-      .slot-kind {
-        color: #f1c40f;
-      }
-    }
-    &-bigdata {
-      //border-top: @border-size solid #34495e;
-      //border-left: none;
-      border-left: @border-size solid #34495e;
-      //background-color: lighten(#34495e, @light_percentage);
-      .slot-kind {
-        color: #34495e;
-      }
+  }
+}
+
+.slot {
+  // Slot kind classes
+  &-security {
+    border-left: @border-size solid #e74c3c !important;
+    .slot-kind {
+      color: #e74c3c;
     }
   }
+  &-science {
+    border-left: @border-size solid #e67e22 !important;
+    .slot-kind {
+      color: #e67e22;
+    }
+  }
+  &-python {
+    border-left: @border-size solid #3498db !important;
+    .slot-kind {
+      color: #3498db;
+    }
+  }
+  &-web {
+    border-left: @border-size solid #9b59b6 !important;
+    .slot-kind {
+      color: #9b59b6;
+    }
+  }
+  &-iot {
+    border-left: @border-size solid #27ae60 !important;
+    .slot-kind {
+      color: #27ae60;
+    }
+  }
+  &-comunity {
+    border-left: @border-size solid #f1c40f !important;
+    .slot-kind {
+      color: #f1c40f;
+    }
+  }
+  &-bigdata {
+    border-left: @border-size solid #34495e !important;
+    .slot-kind {
+      color: #34495e;
+    }
+  }
+}
+
+.js-slot-expand {
+  cursor: pointer;
+}
+
+.slot-details {
+  background-color: #fff;
+  padding: 15px;
+  margin: 10px 0;
+  .slot-kind {
+      text-align: right;
+      float: right;
+      font-weight: bold;
+    }
 }
