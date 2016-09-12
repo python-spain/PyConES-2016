@@ -203,7 +203,8 @@ def export_to_icalendar(schedule):
                     day.date.strftime("%Y%m%d"),
                     slot.end.strftime("%H%M%S"),
                 )
-                event.add('location', slot.default_room.name)
+                if slot.default_room:
+                    event.add('location', slot.default_room.name)
                 event.add('summary', slot.content.get_title())
                 description = slot.content.get_description()
                 event.add('description', (description.raw if hasattr(description, "raw") else description).replace("\r\n", ""))
