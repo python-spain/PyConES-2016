@@ -5,7 +5,6 @@ import datetime
 
 from django.conf import settings
 from django.db import models
-from django.core.urlresolvers import reverse
 from django.utils.encoding import python_2_unicode_compatible
 from markupfield.fields import MarkupField
 
@@ -67,3 +66,9 @@ class Speaker(models.Model):
             for p in self.copresentations.all():
                 presentations.append(p)
         return presentations
+
+    def has_biography(self):
+        return bool(self.biography.raw)
+
+    def get_api_id(self):
+        return "S{:05d}".format(self.pk)

@@ -3,7 +3,7 @@
  */
 (function(){
     $(document).ready(function(){
-        $(".slot-inner").on("click", function(event) {
+        $(".js-slot-expand").on("click", function(event) {
             var description = $("#slot-description-" + $(this).data("slot"));
             description.fadeToggle();
             var ad = $(this).find(".fa-angle-down");

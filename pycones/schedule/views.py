@@ -3,12 +3,12 @@ from __future__ import unicode_literals
 
 from django.http import Http404
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic import View
 
 from configurations.models import Option
 from schedule.helpers import export_to_pentabarf, export_to_xcal, export_to_icalendar
-from schedule.models import Schedule
+from schedule.models import Schedule, Slot
 
 
 def check_schedule_view(request):
@@ -34,6 +34,24 @@ class ShowSchedule(View):
                 "slots": day.slot_set.all().select_related(),
                 "slot_groups": day.slot_groups(),
             })
+        return render(request, self.template_name, data)
+
+
+class ShowSlot(View):
+    template_name = "schedule/details.html"
+
+    def get(self, request, slot):
+        check_schedule_view(request)
+        try:
+            slot_id = int(slot)
+            slot = get_object_or_404(Slot, pk=slot_id)
+            if slot.content_ptr.slug:
+                return redirect(slot.get_absolute_url(), permanent=True)
+        except ValueError:
+            slot = get_object_or_404(Slot, content_ptr__slug=slot)
+        data = {
+            "slot": slot
+        }
         return render(request, self.template_name, data)
 
 
