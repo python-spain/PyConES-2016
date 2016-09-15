@@ -11,9 +11,12 @@ def update_slugs(apps, schema_editor):
     ProposalBase = apps.get_model("proposals", "ProposalBase")
     Proposal = apps.get_model("proposals", "Proposal")
     for presentation in Presentation.objects.all():
-        title = presentation.title or presentation.proposal_base.title
-        presentation.slug = slugify(title)
-        presentation.save()
+        try:
+            title = presentation.title or presentation.proposal_base.title
+            presentation.slug = slugify(title)
+            presentation.save()
+        except:
+            pass
 
 
 class Migration(migrations.Migration):

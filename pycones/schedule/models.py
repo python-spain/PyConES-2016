@@ -3,7 +3,6 @@ from __future__ import unicode_literals
 
 import datetime
 from collections import OrderedDict
-from collections import defaultdict
 
 from django.core.exceptions import ObjectDoesNotExist
 from django.core.urlresolvers import reverse
