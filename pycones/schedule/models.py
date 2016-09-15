@@ -295,6 +295,9 @@ class Presentation(models.Model):
     class Meta:
         ordering = ["slot"]
 
+    def get_api_id(self):
+        return "T{:04d}".format(self.pk)
+
     def save(self, *args, **kwargs):
         title = self.get_title()
         if title and not self.slug:

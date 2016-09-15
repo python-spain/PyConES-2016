@@ -70,3 +70,6 @@ class Speaker(models.Model):
 
     def has_biography(self):
         return bool(self.biography.raw)
+
+    def get_api_id(self):
+        return "S{:05d}".format(self.pk)

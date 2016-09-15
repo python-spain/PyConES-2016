@@ -25,6 +25,12 @@ urlpatterns = i18n_patterns(
     url(r'^attendees/', include('attendees.urls', namespace="attendees")),
 )
 
+# API
+urlpatterns += [
+    url(r'^api/v1/', include('schedule.api.v1.urls')),
+]
+
+# Other URLs without i18n
 urlpatterns += [
     url(r'schedule/pentabarf\.xml', pentabarf_view, name="schedule_pentabarf"),
     url(r'schedule/xcal\.xml', xcal_view, name="schedule_xcal"),
