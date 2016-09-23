@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+    <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+        {% csrf_token %}
+        {% for field in form %}
+
+        <div class="form-group{% if field.errors %} has-error{% endif %}">
+            <label class="col-sm-3 control-label">{{ field.label }}</label>
+            <div class="col-sm-9">
+                {% if field.name == "photo" %}
+                    <img src="{{ field.value.url }}" class="img-responsive">
+                    {{ field }}
+                {% else %}
+                    {{ field }}
+                {% endif %}
+                <span class="help-text text-danger">{{ field.errors }}</span>
+            </div>
+        </div>
+
+
+        {% endfor %}
+        <button type="submit">{% trans "Guardar" %}</button>
+    </form>
+{% endblock content %}

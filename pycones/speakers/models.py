@@ -7,15 +7,11 @@ from django.conf import settings
 from django.db import models
 from django.utils.encoding import python_2_unicode_compatible
 from markupfield.fields import MarkupField
+from model_utils.models import TimeStampedModel
 
 
 @python_2_unicode_compatible
-class Speaker(models.Model):
-
-    SESSION_COUNT_CHOICES = [
-        (1, "One"),
-        (2, "Two")
-    ]
+class Speaker(TimeStampedModel):
 
     user = models.OneToOneField(settings.AUTH_USER_MODEL, null=True, related_name="speaker_profile")
     name = models.CharField(max_length=100, help_text=("As you would like it to appear in the "
@@ -31,12 +27,7 @@ class Speaker(models.Model):
     )
     photo = models.ImageField(upload_to="speaker_photos", blank=True)
     annotation = models.TextField()  # staff only
-    invite_email = models.CharField(max_length=200, unique=True, null=True, db_index=True)
-    invite_token = models.CharField(max_length=40, db_index=True)
-    created = models.DateTimeField(
-        default=datetime.datetime.now,
-        editable=False
-    )
+    is_keynoter = models.BooleanField(default=False)
 
     class Meta:
         ordering = ['name']
