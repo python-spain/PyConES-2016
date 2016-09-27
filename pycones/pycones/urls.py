@@ -23,6 +23,7 @@ urlpatterns = i18n_patterns(
     url(r'^reviewers/', include('reviewers.urls', namespace="reviewers")),
     url(r'^schedule/', include('schedule.urls', namespace="schedule")),
     url(r'^attendees/', include('attendees.urls', namespace="attendees")),
+    url(r'^speakers/', include('speakers.urls', namespace="speakers")),
 )
 
 # API
