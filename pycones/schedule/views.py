@@ -1,14 +1,19 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+from braces.views import LoginRequiredMixin
+from django.contrib import messages
+from django.core.urlresolvers import reverse
 from django.http import Http404
 from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404, redirect
+from django.utils.translation import ugettext_lazy as _
 from django.views.generic import View
 
 from configurations.models import Option
+from schedule.forms import PresentationForm
 from schedule.helpers import export_to_pentabarf, export_to_xcal, export_to_icalendar
-from schedule.models import Schedule, Slot
+from schedule.models import Schedule, Slot, Presentation
 
 
 def check_schedule_view(request):
@@ -52,6 +57,35 @@ class ShowSlot(View):
         data = {
             "slot": slot
         }
+        return render(request, self.template_name, data)
+
+
+class EditPresentation(LoginRequiredMixin, View):
+    template_name = "schedule/presentations/edit.html"
+
+    def get_login_url(self):
+        return reverse("speakers:sign-in")
+
+    def get(self, request, presentation_id):
+        presentation = get_object_or_404(Presentation, pk=presentation_id, speaker=request.user.speaker_profile)
+        form = PresentationForm(instance=presentation)
+        data = {
+            "presentation": presentation,
+            "form": form
+        }
+        return render(request, self.template_name, data)
+
+    def post(self, request, presentation_id):
+        presentation = get_object_or_404(Presentation, pk=presentation_id, speaker=request.user.speaker_profile)
+        form = PresentationForm(request.POST, request.FILES, instance=presentation)
+        data = {
+            "presentation": presentation,
+            "form": form
+        }
+        if form.is_valid():
+            form.save()
+            messages.success(request, _("Datos actualizados correctamente"))
+            return redirect(reverse("speakers:edit"))
         return render(request, self.template_name, data)
 
 

@@ -235,7 +235,7 @@ class Presentation(models.Model):
     video_url = models.URLField(_("video URL"), blank=True, null=True)
 
     keynote_url = models.URLField(_("keynote URL"), blank=True, null=True)
-    keynote = models.FileField(_("keynote file"), blank=True, null=True, upload_to="keynotes")
+    keynote = models.FileField(_("Fichero de presentación"), blank=True, null=True, upload_to="keynotes")
 
     @property
     def number(self):
