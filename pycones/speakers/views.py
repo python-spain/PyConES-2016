@@ -42,8 +42,11 @@ class SignInView(CsrfExemptMixin, View):
                 request=request
             )
             if user is not None:
-                login(request, user)
-                return redirect(next_page)
+                if Speaker.objects.filter(user=user).exists():
+                    login(request, user)
+                    return redirect(next_page)
+                else:
+                    messages.error(request, _("El usuario no es un ponente"))
         data = {"form": form, "next": next_page}
         return render(request, self.template_name, data)
 
