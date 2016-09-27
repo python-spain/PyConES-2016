@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from django import forms
 from django.contrib.auth.models import User
+from django.core.exceptions import MultipleObjectsReturned
 from django.utils.translation import ugettext_lazy as _
 from markupfield.widgets import AdminMarkupTextareaWidget
 
@@ -95,6 +96,13 @@ class SignInForm(forms.Form):
                 return username
             else:
                 raise forms.ValidationError(_("Email no encontrado"))
+        except MultipleObjectsReturned:
+            email = email_validator.clean(username)
+            speakers = Speaker.objects.filter(user__email=email)
+            if not speakers.exists():
+                raise forms.ValidationError(_("Email no encontrado"))
+            elif speakers.count() > 1:
+                raise forms.ValidationError(_("Este email no se puede usar para acceder al sistema"))
         except forms.ValidationError:
             if not User.objects.filter(username=username).exists():
                 raise forms.ValidationError(_("Nombre de usuario no encontrado"))
