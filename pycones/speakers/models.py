@@ -23,7 +23,7 @@ class Speaker(TimeStampedModel):
         max_length=100, help_text=("As you would like it to appear in the "
                                                        "conference program."))
     biography = MarkupField(
-        verbose_name=_("Biografia"),
+        verbose_name=_("Biografía"),
         blank=True,
         default="",
         default_markup_type='markdown',

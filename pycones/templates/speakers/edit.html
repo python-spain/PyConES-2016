@@ -41,7 +41,8 @@
             </form>
         </div>
         <div class="col-sm-4">
-            <h2>{% trans "Propuestas aceptadas" %}</h2>
+            <h2>{% trans "Charlas/Talleres" %}</h2>
+            <p>{% trans "Lista de las propuestas que tienes acepatadas. Puedes pinchar en ellas para acceder a un formario que te permitirá <strong>subir el fichero de la presentación</strong>." %}</p>
             <ul>
                 {% for presentation in presentations %}
                     <li><a href="{% url "schedule:edit-presentation" presentation.pk %}">{{ presentation.get_title }} ({{ presentation.slot.day.date|date:"l j F" }}, {{ presentation.slot.start }})</a></li>

@@ -4,8 +4,8 @@
 {% block content %}
     <div class="row">
         <div class="col-sm-12">
-            <h1>{% trans "Editar datos de la presentación" %}</h1>
-            <p>{% trans "Sube desde este formulario el fichero de la presentación" %}</p>
+            <h1>{% trans "Editar datos" %}</h1>
+            <p>{% trans "Sube desde este formulario el fichero de la charla o taller." %}</p>
             <form method="post" enctype="multipart/form-data" class="form-horizontal">
                 {% csrf_token %}
                 {% for field in form %}
