@@ -7,6 +7,7 @@ from django.core.urlresolvers import reverse
 from django.http import Http404
 from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404, redirect
+from django.utils.html import remove_tags
 from django.utils.translation import ugettext_lazy as _
 from django.views.generic import View
 
@@ -55,7 +56,8 @@ class ShowSlot(View):
         except ValueError:
             slot = get_object_or_404(Slot, content_ptr__slug=slot)
         data = {
-            "slot": slot
+            "slot": slot,
+            "biography": remove_tags(slot.content.speaker.biography, ['script'])
         }
         return render(request, self.template_name, data)
 
