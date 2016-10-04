@@ -19,6 +19,9 @@
             {% else %}
                 <strong>{{ slot.start }}</strong>
                 {{ slot.content_override }}
+                {% if slot.kind.plenary %}
+                <p class="default-room">{{ slot.default_room.name }}</p>
+                {% endif %}
             {% endif %}
             {% if slot.get_video_url or slot.get_keynote_url %}
                 <ul class="list-unstyled">
