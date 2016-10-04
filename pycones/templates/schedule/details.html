@@ -9,6 +9,7 @@
 
                 <h1>
                     {{ slot.content.get_title }} <br>
+                    <img src="{{ slot.content.speaker.photo_url }}" class="img-circle img-thumbnail" style="width: 64px; height: 64px">
                     <small>{{ slot.content.speaker.name }}</small>
                 </h1>
 
@@ -32,7 +33,7 @@
                 {% endif %}
                 {% if slot.content.speaker.has_biography %}
                 <h2>{% trans "Acerca de" %}</h2>
-                <p>{{ slot.content.speaker.biography }}</p>
+                <p>{{ biography }}</p>
                 {% endif %}
             </div>
         </div>
