@@ -11,7 +11,7 @@
                     <h2>{{ day.date }}</h2>
                 </div>
             </div>
-            <div class="row">
+            <div class="row track-title-row">
                 {% for track in day.tracks %}
                 <div class="col-xs-12 {% slot_col_size day.tracks|length %} track-title track-title-{{ forloop.counter }}">
                     <h3>{{ track.name }}</h3>
