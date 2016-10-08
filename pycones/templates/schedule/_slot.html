@@ -15,7 +15,7 @@
                 <p><strong>{{ slot.content_ptr.speaker.name }}</strong></p>
                 {% if slot.kind.plenary %}
                 <p class="default-room">{{ slot.default_room.name }}</p>
-                {% else %}
+                {% elif slot.default_room %}
                 <p class="default-room visible-xs">{{ slot.default_room.name }}</p>
                 {% endif %}
             {% else %}
@@ -23,7 +23,7 @@
                 {{ slot.content_override }}
                 {% if slot.kind.plenary %}
                 <p class="default-room">{{ slot.default_room.name }}</p>
-                {% else %}
+                {% elif slot.default_room %}
                 <p class="default-room visible-xs">{{ slot.default_room.name }}</p>
                 {% endif %}
             {% endif %}
