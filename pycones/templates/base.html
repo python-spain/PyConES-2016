@@ -65,7 +65,7 @@
                     {% endif %}
 
                     <li><a href="{% url "blog:list" %}">{% trans "Blog" %}</a></li>
-                    {#                    <li><a href="{% static "photos/index.html" %}">{% trans "Fotos" %}</a></li>#}
+                    <li><a href="{% static "photos/index.html" %}">{% trans "Fotos" %}</a></li>
                     {% if not request.user.is_authenticated and is_attendees_zone_activated %}
                         <li><a href="{% url "attendees:sign_in" %}">{% trans "Zona de Asistentes" %}</a></li>
                     {% elif request.user.is_authenticated %}
